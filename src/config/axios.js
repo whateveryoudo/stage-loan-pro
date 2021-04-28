@@ -5,6 +5,7 @@ import { Toast } from 'mint-ui';
 const _axios = axios.create({
   timeout: 600 * 1000,
   baseURL: baseUrl,
+  withCredentials: true,
   headers: {
     'Content-Type': 'application/json'
   },

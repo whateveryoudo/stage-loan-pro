@@ -1,12 +1,22 @@
-const userLogin = r => require.ensure([], () => r(require('../page/login/userLogin.vue')), 'userLogin');
-const userRegist = r => require.ensure([], () => r(require('../page/login/userRegist.vue')), 'userRegist');
+/*
+ * @Description: 路由配置
+ * @Autor: ykx
+ * @Date: 2021-04-28 20:43:40
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-29 00:15:25
+ */
+const userLogin = () => import('../page/login/userLogin.vue')
+const userRegist = () => import('../page/login/userRegist.vue')
+const loanFlow = () => import('../page/loanFlow')
+const loanInfo = () => import('../page/loanFlow/loanInfo.vue')
+
+// 第一版界面
 const deal = r => require.ensure([], () => r(require('../page/deal/deal.vue')), 'deal');
 const confirmLoan = r => require.ensure([], () => r(require('../page/confirmLoan/confirmLoan.vue')), 'confirmLoan');
 const repayDetail = r => require.ensure([], () => r(require('../page/repayDetail/repayDetail.vue')), 'repayDetail');
 const repayPlanList = r => require.ensure([], () => r(require('../page/repayPlanList/repayPlanList.vue')), 'repayPlanList');
 const repayResult = r => require.ensure([], () => r(require('../page/repayResult/repayResult.vue')), 'repayResult');
 
-const Test = r => require.ensure([], () => r(require('../page/test/test.vue')), 'sendStatus');
 
 export default
   [
@@ -31,10 +41,23 @@ export default
       }
     },
     {
-      path: '/test',
-      name: '测试界面',
-      component: Test
+      path: '/loanFlow',
+      name: 'loanFlow',
+      component: loanFlow,
+      redirect: '/loanFlow/loanInfo',
+      children: [
+        {
+          path: '/loanFlow/loanInfo',
+          name: 'loanInfo',
+          component: loanInfo,
+          meta: {
+            title: '申请借款'
+          }
+        }
+      ]
     },
+
+    /**********下面是第一版的界面********/
     {
       path: '/confirmLoan',
       name: 'confirmLoan',

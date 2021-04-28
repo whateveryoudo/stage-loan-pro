@@ -1,44 +1,38 @@
-/**
- * Created by Administrator on 2017/10/10.
+/*
+ * @Description: 顶部进度
+ * @Autor: ykx
+ * @Date: 2021-04-28 20:39:51
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-29 01:12:19
  */
 import Vue from 'vue'
 import Vuex from 'vuex'
-import loginMutations  from './login/mutations'
-import loginActions  from './login/actions'
 Vue.use(Vuex)
 
-const loginGetters = {
-    reqId : state => state.reqId
+const store = {
+  state: {
+    //顶部进度控制
+    progressSteps: [
+      {
+        title: '借款申请',
+        isComplete: false
+      },
+      {
+        title: '资格验证',
+        isComplete: false
+      },
+      {
+        title: '信息补充',
+        isComplete: false
+      },
+      {
+        title: '绑定银行卡',
+        isComplete: false
+      }
+    ]
+  },
+  mutations: {},
+  actions: {},
+  getters: {}
 }
-const login = {
-    state : {
-        userInfo : {
-            phone : ''
-        },
-        //顶部进度控制
-        progressSteps : [
-            {
-                title : '登录',
-                isComplete : false
-            },
-            {
-                title : '查询',
-                isComplete : false
-            },
-            {
-                title : '',
-                isComplete : false
-            }
-        ],
-        reqId : '',
-        firstMsgSendTimestamp : ''
-    },
-    mutations  : loginMutations,
-    actions : loginActions,
-    getters: loginGetters
-}
-export default new Vuex.Store({
-    modules : {
-        login
-    }
-})
+export default new Vuex.Store(store)

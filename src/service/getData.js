@@ -23,5 +23,5 @@ export const getReqid = () => axios('/mobile/session', {}, 'post', false);//获�
 
 export const toLogin = (params) => axios.post('/user/login', params)// 快贷用户登录
 export const fetchCaptcha = () => axios.get('/getCaptcha')// 获取图形验证码
-export const toRegist = () => axios.post('/user/regist')// 用户注册
+export const toRegist = (params) => axios.post('/user/regist', params)// 用户注册
 

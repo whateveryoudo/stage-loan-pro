@@ -52,8 +52,7 @@
   </div>
 </template>
 <script>
-import headTop from "@/components/header/headTop";
-import nextBtn from "@/components/common/nextBtn";
+import nextBtn from "@/components/common/NextBtn";
 import topProgress from "@/components/common/topProgress";
 import { verifyRules } from "@/config/verifyRules";
 import { Toast } from "mint-ui";

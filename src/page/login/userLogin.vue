@@ -2,15 +2,9 @@
   <div class="login_container">
     <div class="rating-page">
       <div class="logo">
-        <img
-          :src="logo"
-          alt=""
-        />
+        <img :src="logo" alt="" />
       </div>
-      <div
-        class="nav_wrapper"
-        style="display: none"
-      >
+      <div class="nav_wrapper" style="display: none">
         <div
           class="nav_item"
           @click="toggleTab(0)"
@@ -34,10 +28,7 @@
             placeholder="请输入手机号码"
             v-model="userInfo.username"
           ></mt-field>
-          <div
-            class="divider-block"
-            style="background: #fff"
-          ></div>
+          <div class="divider-block" style="background: #fff"></div>
           <mt-field
             v-show="selectedTab === 0"
             label="账号密码"
@@ -71,7 +62,9 @@
         ></span>
         <div>
           我已阅读并同意
-          <router-link :to="{ path: '/deal/1' }">《马上消费金融注册协议》</router-link>
+          <router-link :to="{ path: '/deal/1' }"
+            >《马上消费金融注册协议》</router-link
+          >
           <br />
           <router-link :to="{ path: '/deal/2' }">《隐私权政策》</router-link>
         </div>
@@ -92,26 +85,26 @@
   </div>
 </template>
 <script>
-import nextBtn from "@/components/common/nextBtn";
-import { verifyRules } from "@/config/verifyRules";
-import { Toast } from "mint-ui";
-import { toLogin } from "@/service/getData";
-import { Indicator } from "mint-ui";
+import nextBtn from '@/components/common/NextBtn'
+import { verifyRules } from '@/config/verifyRules'
+import { Toast } from 'mint-ui'
+import { toLogin } from '@/service/getData'
+import { Indicator } from 'mint-ui'
 export default {
-  data() {
+  data () {
     return {
-      logo: require("@/assets/app_logo.png"),
+      logo: require('@/assets/app_logo.png'),
       selectedTab: 0,
       timer: null,
       count: 59,
-      btnText: "发送验证码",
+      btnText: '发送验证码',
       isSendBtnEable: true,
       userInfo: {
-        username: "",
-        password: "",
-        dealFlag: true,
-      },
-    };
+        username: '',
+        password: '',
+        dealFlag: true
+      }
+    }
   },
   computed: {
     validSuc: function () {
@@ -121,52 +114,62 @@ export default {
       ) {
         //手机号正确
         if (this.selectedTab === 0 && this.userInfo.password) {
-          return true;
+          return true
         }
       }
-      return false;
-    },
+      return false
+    }
   },
   components: {
-    nextBtn,
+    nextBtn
   },
-  mounted() {},
-  created() {},
+  mounted () {},
+  created () {
+    const { params } = this.$route
+    // 从注册返回，赋值到输入框
+    if (params && Object.keys(params).length > 0) {
+      this.userInfo = {
+        ...this.userInfo,
+        username: params.username,
+        password: params.password
+      }
+    }
+  },
   methods: {
     //切换登录方式
-    toggleTab(index) {
-      this.selectedTab = index;
+    toggleTab (index) {
+      this.selectedTab = index
     },
     //勾选协议
-    toggleDealStatus() {
-      this.userInfo.dealFlag = !this.userInfo.dealFlag;
+    toggleDealStatus () {
+      this.userInfo.dealFlag = !this.userInfo.dealFlag
     },
-    submitForm() {
-      Indicator.open("登录中...");
+    submitForm () {
+      Indicator.open('登录中...')
       // 校验输入是否正确
       if (verifyRules.phone(this.userInfo.username)) {
         //md5加密账号密码(提交上传)
         toLogin(this.userInfo)
-          .then((res) => {
-            Indicator.close();
-            const { data } = res;
+          .then(res => {
+            Indicator.close()
+            const { data } = res
             // 将token存入本地
-            sessionStorage.setItem("token", data.token);
+            sessionStorage.setItem('token', data.token)
             if (res.code === 200) {
-              Toast("登录成功!");
-              this.$router.push("/confirmLoan");
+              Toast('登录成功!')
+              this.$router.push('/loanFlow')
             }
           })
           .catch(() => {
-            Indicator.close();
-          });
+            Indicator.close()
+          })
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 <style lang="scss" scope>
-@import "src/style/scss/mixin";
+@import 'src/style/scss/mixin';
 .logo {
   text-align: center;
   width: 0.7rem;
@@ -191,7 +194,7 @@ export default {
       color: #000;
     }
     &.selected:after {
-      content: " ";
+      content: ' ';
       background-color: $color-primary;
       width: 0.3rem;
       height: 3px;

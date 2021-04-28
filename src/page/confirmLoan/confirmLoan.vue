@@ -58,7 +58,6 @@
   </div>
 </template>
 <script>
-import nextBtn from "@/components/common/nextBtn";
 export default {
   data() {
     return {
@@ -86,7 +85,6 @@ export default {
     },
   },
   components: {
-    nextBtn,
   },
   mounted() {},
   created() {},

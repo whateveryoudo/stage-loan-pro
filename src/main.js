@@ -1,8 +1,8 @@
 /*
  * @Author: ykx
  * @Date: 2021-04-28 09:46:16
- * @LastEditTime: 2021-04-28 10:45:06
- * @LastEditors: your name
+ * @LastEditTime: 2021-04-29 00:26:05
+ * @LastEditors: Please set LastEditors
  * @Description: 
  * @FilePath: \stage-load-pro\src\main.js
  */
@@ -12,13 +12,13 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import store from "./store";
-import header from '@/components/header'
+import globalComs from '@/components/registGlobalComs'
 import "./config/rem";
 import "mint-ui/lib/style.css";
 import "./style/scss/common.scss";
 import "./style/scss/mint-ui-reset.scss";
 //注册组件
-Vue.use(header);
+Vue.use(globalComs);
 import { Field, Button, Popup } from "mint-ui";
 Vue.component(Field.name, Field);
 Vue.component(Button.name, Button);

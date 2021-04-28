@@ -57,7 +57,7 @@
   </div>
 </template>
 <script>
-import nextBtn from "@/components/common/nextBtn";
+import nextBtn from "@/components/common/NextBtn";
 import moment from "moment";
 
 export default {

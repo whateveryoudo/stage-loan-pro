@@ -13,7 +13,6 @@
     </div>
 </template>
 <script>
-    import headTop from '@/components/header/headTop'
     import topProgress from '@/components/common/topProgress'
     import {mapMutations} from 'vuex'
     export default{
@@ -23,7 +22,6 @@
             }
         },
         components : {
-            headTop,
             topProgress
         },
         mounted(){

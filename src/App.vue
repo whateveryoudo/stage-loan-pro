@@ -1,3 +1,10 @@
+<!--
+ * @Description: 主入口
+ * @Autor: ykx
+ * @Date: 2021-04-28 20:43:40
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-29 00:56:08
+-->
 <template>
   <div id="app">
     <router-view></router-view>
@@ -6,7 +13,7 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
 }
 </script>
 
