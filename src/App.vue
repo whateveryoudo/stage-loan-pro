@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <transition name="router-fade" mode="out-in">
-      <!--<keep-alive>-->
-      <router-view v-if="!$route.meta.keepAlive"></router-view>
-      <!--</keep-alive>-->
-    </transition>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -16,7 +12,7 @@ export default {
 
 <style lang="scss">
 
-  /*页面之间的切换效果*/
+  /*页面之间的切换效果 兼容问题先不加...*/
   .router-fade-enter-active,.router-fade-leave-active{
     transition:opacity .3s;
   }
