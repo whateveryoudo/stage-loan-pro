@@ -1504,7 +1504,6 @@
   </div>
 </template>
 <script>
-import headTop from '@/components/header/headTop'
 export default {
   data () {
     return {
@@ -1514,7 +1513,6 @@ export default {
   },
   computed: {},
   components: {
-    headTop
   },
   mounted () {
     this.dealType = Number(this.$route.params.type)

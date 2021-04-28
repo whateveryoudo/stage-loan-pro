@@ -1,3 +1,11 @@
+<!--
+ * @Author: ykx
+ * @Date: 2021-04-28 18:38:32
+ * @LastEditTime: 2021-04-28 18:42:15
+ * @LastEditors: your name
+ * @Description: 
+ * @FilePath: \stage-load-pro\src\page\test\test.vue
+-->
 <template>
     <div>
         判断视图不更新情况
@@ -35,7 +43,7 @@
 //            this.info = JSON.parse(JSON.stringify(this.userList[1]));
         },
         methods: {
-            change (index) {
+            change () {
 //                this.$set(this.testArr, index, '小明')
 //                this.testArr[index] = 'xiaoming'
                   this.userList[1].nickName = '小明'

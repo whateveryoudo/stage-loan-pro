@@ -57,12 +57,7 @@
   </div>
 </template>
 <script>
-import headTop from "@/components/header/headTop";
 import nextBtn from "@/components/common/nextBtn";
-import { MessageBox, Toast } from "mint-ui";
-import { mapMutations, mapActions, mapGetters } from "vuex";
-import { getLoginMsg, toLogin } from "@/service/getData";
-import { Indicator } from "mint-ui";
 import moment from "moment";
 
 export default {
@@ -93,7 +88,6 @@ export default {
     },
   },
   components: {
-    headTop,
     nextBtn,
   },
   mounted() {},
