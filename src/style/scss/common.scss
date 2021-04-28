@@ -1,0 +1,95 @@
+@import "./mixin";
+html,body{
+  font-size:14px;
+}
+
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption, {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  font-weight: normal;
+  font-family: "Microsoft Yahei";
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-font-smoothing: antialiased;
+  &:hover{
+    outline: none;
+  }
+}
+
+html,body,#app{
+  height: 100%;
+  background-color: #eee;
+}
+
+
+
+/*子组件过度效果*/
+.router-slid-enter-active,.router-slid-leave-active{
+  transition: all 0.4s;
+}
+.router-slid-enter,.router-slid-leave-active{
+  transform: translateX(2rem);
+  opacity: 0;
+}
+//通用子路由页面样式
+.rating-page{
+  position: fixed;
+  top: 0.45rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f5f5f5;
+  //z-index: 204;
+  overflow-y: auto;
+  //padding-top: 1.95rem;
+  p, span, input{
+    font-family: Helvetica Neue,Tahoma,Arial;
+  }
+}
+//设置文字溢出
+.tdd{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*规格弹窗样式*/
+.shadow{
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background: rgba(0,0,0,.4);
+  z-index: 17;
+}
+/*fade切换*/
+.fade-choose-enter-active,.fade-choose-leave-active{
+  transition: opacity .5s;
+}
+/*动画结束隐藏元素*/
+.fade-choose-leave,.fade-choose-leave-active{
+  display: none;
+}
+.btn-container {
+  margin: 0.15rem auto;
+  padding: 0 0.1rem;
+  .mint-button{
+    height:41px;
+  }
+}
+//顶部提示
+.tip_con{
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,.7);
+  .top_tip{
+    line-height: 50px;
+    color:#fff;
+  }
+}
+
+
