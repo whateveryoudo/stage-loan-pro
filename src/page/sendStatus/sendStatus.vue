@@ -13,7 +13,7 @@
     </div>
 </template>
 <script>
-    import topProgress from '@/components/common/topProgress'
+    import TopProgress from '@/components/common/TopProgress'
     import {mapMutations} from 'vuex'
     export default{
         data(){
@@ -22,7 +22,7 @@
             }
         },
         components : {
-            topProgress
+            TopProgress
         },
         mounted(){
 

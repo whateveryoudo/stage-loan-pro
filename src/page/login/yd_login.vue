@@ -52,8 +52,8 @@
   </div>
 </template>
 <script>
-import nextBtn from "@/components/common/NextBtn";
-import topProgress from "@/components/common/topProgress";
+import NextBtn from "@/components/common/NextBtn";
+import TopProgress from "@/components/common/TopProgress";
 import { verifyRules } from "@/config/verifyRules";
 import { Toast } from "mint-ui";
 import { mapMutations, mapActions, mapGetters } from "vuex";
@@ -79,8 +79,8 @@ export default {
   },
   components: {
     headTop,
-    nextBtn,
-    topProgress,
+    NextBtn,
+    TopProgress,
   },
   mounted() {},
   created() {

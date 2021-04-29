@@ -1,8 +1,8 @@
 /*
  * @Author: ykx
  * @Date: 2021-04-28 09:46:16
- * @LastEditTime: 2021-04-29 00:26:05
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-29 16:56:25
+ * @LastEditors: your name
  * @Description: 
  * @FilePath: \stage-load-pro\src\main.js
  */
@@ -13,18 +13,16 @@ import App from "./App";
 import router from "./router";
 import store from "./store";
 import globalComs from '@/components/registGlobalComs'
+import mintUI from 'mint-ui'
+import { Toast } from 'mint-ui'
 import "./config/rem";
 import "mint-ui/lib/style.css";
 import "./style/scss/common.scss";
 import "./style/scss/mint-ui-reset.scss";
+Vue.prototype.$toast = Toast;
 //注册组件
+Vue.use(mintUI);
 Vue.use(globalComs);
-import { Field, Button, Popup } from "mint-ui";
-Vue.component(Field.name, Field);
-Vue.component(Button.name, Button);
-Vue.component(Popup.name, Popup);
-Vue.config.productionTip = false;
-console.log(router);
 /* eslint-disable no-new */
 new Vue({
   router,

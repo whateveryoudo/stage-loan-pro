@@ -28,8 +28,8 @@
     </div>
 </template>
 <script>
-    import nextBtn from '@/components/common/NextBtn'
-    import topProgress from '@/components/common/topProgress'
+    import NextBtn from '@/components/common/NextBtn'
+    import TopProgress from '@/components/common/TopProgress'
     import {verifyRules} from '@/config/verifyRules'
     import {mapGetters} from 'vuex'
     import {Toast,MessageBox} from 'mint-ui'
@@ -74,8 +74,8 @@
             ]),
         },
         components : {
-            nextBtn,
-            topProgress
+            NextBtn,
+            TopProgress
         },
         mounted(){
 
@@ -214,7 +214,7 @@
         top: 1rem;
     }
     .forgetPwd{
-        color:$blue;
+        color:$red;
     }
     .getCaptcha.mint-button{
         height:35px;

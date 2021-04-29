@@ -36,6 +36,11 @@
     width: 85px;
   }
 }
+// 修改cell label宽度
+.mint-cell-title{
+  flex: none;
+  width: 105px;
+}
 .info-block-item{
   .mint-cell-text{
     color:#888;

@@ -2,8 +2,8 @@
  * @Description: 顶部nav
  * @Autor: ykx
  * @Date: 2021-04-28 20:43:40
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-29 01:03:06
+ * @LastEditors: your name
+ * @LastEditTime: 2021-04-29 15:11:04
 -->
 <template>
   <header :class="theme">
@@ -72,6 +72,7 @@ header {
   }
   &.light {
     @include sc(0.17rem, #333);
+    background-color: #fff;
     i.arrow_left {
       background: url(../../assets/icons/arrow-left-black.png) no-repeat;
       background-size: 100% 100%;

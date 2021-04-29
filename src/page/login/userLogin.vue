@@ -85,7 +85,7 @@
   </div>
 </template>
 <script>
-import nextBtn from '@/components/common/NextBtn'
+import NextBtn from '@/components/common/NextBtn'
 import { verifyRules } from '@/config/verifyRules'
 import { Toast } from 'mint-ui'
 import { toLogin } from '@/service/getData'
@@ -121,7 +121,7 @@ export default {
     }
   },
   components: {
-    nextBtn
+    NextBtn
   },
   mounted () {},
   created () {
@@ -168,7 +168,15 @@ export default {
   }
 }
 </script>
-<style lang="scss" scope>
+<style lang="scss">
+.login_container{
+  .btn-container{
+    margin:.2rem 0;
+  }
+}
+
+</style>
+<style lang="scss" scoped>
 @import 'src/style/scss/mixin';
 .logo {
   text-align: center;
@@ -217,7 +225,8 @@ export default {
 }
 .login_container {
   .rating-page {
-    top: 0.5rem;
+    top: 0;
+    padding-top:.45rem;
     background-color: #fff;
   }
 }
