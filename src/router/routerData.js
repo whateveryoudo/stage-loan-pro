@@ -3,13 +3,16 @@
  * @Autor: ykx
  * @Date: 2021-04-28 20:43:40
  * @LastEditors: your name
- * @LastEditTime: 2021-04-29 17:04:33
+ * @LastEditTime: 2021-05-02 23:51:34
  */
 const userLogin = () => import('../page/login/userLogin.vue')
 const userRegist = () => import('../page/login/userRegist.vue')
 const loanFlow = () => import('../page/loanFlow')
 const loanInfo = () => import('../page/loanFlow/loanInfo.vue')
 const qualityVerify = () => import('../page/loanFlow/qualityVerify.vue')
+const basicInfo = () => import('../page/loanFlow/basicInfo.vue')
+const cardInfo = () => import('../page/loanFlow/cardInfo.vue')
+const loanResult = () => import('../page/loanResult')
 
 // 第一版界面
 const deal = r => require.ensure([], () => r(require('../page/deal/deal.vue')), 'deal');
@@ -62,10 +65,30 @@ export default
           meta: {
             title: '资格验证'
           }
-        }
+        },
+        {
+          path: '/loanFlow/basicInfo',
+          name: 'basicInfo',
+          component: basicInfo,
+          meta: {
+            title: '信息补充'
+          }
+        },
+        {
+          path: '/loanFlow/cardInfo',
+          name: 'cardInfo',
+          component: cardInfo,
+          meta: {
+            title: '绑定银行卡'
+          }
+        },
       ]
     },
-
+    {
+      path: '/loanResult',
+      name: 'loanResult',
+      component: loanResult
+    },
     /**********下面是第一版的界面********/
     {
       path: '/confirmLoan',

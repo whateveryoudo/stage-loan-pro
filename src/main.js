@@ -1,7 +1,7 @@
 /*
  * @Author: ykx
  * @Date: 2021-04-28 09:46:16
- * @LastEditTime: 2021-04-29 16:56:25
+ * @LastEditTime: 2021-05-02 15:08:33
  * @LastEditors: your name
  * @Description: 
  * @FilePath: \stage-load-pro\src\main.js
@@ -16,10 +16,12 @@ import globalComs from '@/components/registGlobalComs'
 import mintUI from 'mint-ui'
 import { Toast } from 'mint-ui'
 import "./config/rem";
+import utils from '@/utils'
 import "mint-ui/lib/style.css";
 import "./style/scss/common.scss";
 import "./style/scss/mint-ui-reset.scss";
 Vue.prototype.$toast = Toast;
+Vue.prototype.$utils = utils;
 //注册组件
 Vue.use(mintUI);
 Vue.use(globalComs);

@@ -3,25 +3,25 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:04:34
  * @LastEditors: your name
- * @LastEditTime: 2021-04-29 17:24:11
+ * @LastEditTime: 2021-05-02 21:23:24
 -->
 
 <template>
   <div class="apply-info-form">
-    <mt-cell
+    <cell-select
       title="借款金额"
       is-link
+      :value="selectMoney"
       @click.native="moneyPopVisible = true"
     >
-      <span>{{selectMoney && selectMoney.text}}</span>
-    </mt-cell>
-    <mt-cell
+    </cell-select>
+    <cell-select
       title="还款期限"
       is-link
+      :value="selectDate"
       @click.native="datePopVisible = true"
     >
-      <span>{{selectDate && selectDate.text}}</span>
-    </mt-cell>
+    </cell-select>
     <mt-field
       label="借款用途"
       placeholder="请输入借款用途"
@@ -29,6 +29,7 @@
     ></mt-field>
     <!-- 借款金额选择 -->
     <mt-popup
+      v-if="moneyPopVisible"
       v-model="moneyPopVisible"
       position="bottom"
       class="bto-pop"
@@ -43,6 +44,7 @@
     </mt-popup>
     <!-- 日期选择 -->
     <mt-popup
+      v-if="datePopVisible"
       v-model="datePopVisible"
       position="bottom"
       class="bto-pop"
@@ -56,22 +58,21 @@
       ></mt-picker>
     </mt-popup>
     <section class="btn-container">
-      <mt-button
-        type="primary"
-        @click="submitForm"
-        size="large"
-      >下一步</mt-button>
+      <mt-button type="primary" @click="submitForm" size="large"
+        >下一步</mt-button
+      >
     </section>
   </div>
 </template>
 
 <script>
+import AsyncValidator from "async-validator";
 import { mapMutations } from "vuex";
 export default {
   data() {
     return {
       applyInfo: {
-        momeny: "",
+        money: "",
         date: "",
         use: "",
       },
@@ -79,6 +80,11 @@ export default {
       selectMoney: null,
       datePopVisible: false,
       moneyPopVisible: false,
+      rules: {
+        money: [{ required: true, message: "请选择借款金额" }],
+        date: [{ required: true, message: "请选择还款期限" }],
+        use: [{ required: true, message: "请输入借款用途" }],
+      },
       numSlots: [
         {
           values: [
@@ -111,10 +117,20 @@ export default {
       values[0] && (this.applyInfo[key] = values[0].value); // 初始化form的值
     },
     // 表单提交
-    submitForm() {
-      if (!this.applyInfo.use) {
+    async submitForm() {
+      const validator = new AsyncValidator(this.rules);
+      const errors = await new Promise((resolve) => {
+        validator.validate(
+          this.applyInfo,
+          { first: true },
+          (errors) => {
+            resolve(errors);
+          }
+        );
+      });
+      if (errors && errors.length > 0) {
         this.$toast({
-          message: "请输入借款用途",
+          message: errors[0].message,
         });
         return;
       }

@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:04:34
  * @LastEditors: your name
- * @LastEditTime: 2021-04-29 17:56:52
+ * @LastEditTime: 2021-05-02 21:28:53
 -->
 
 <template>
@@ -31,83 +31,40 @@
             :key="index"
             type="number"
             @input="handleJumpInput(index)"
-            v-model='pwdValueArr[index]'
-          >
+            v-model="pwdValueArr[index]"
+          />
         </div>
       </mt-cell>
     </div>
-    <!-- 借款金额选择 -->
-    <mt-popup
-      v-model="moneyPopVisible"
-      position="bottom"
-      class="bto-pop"
-    >
-      <mt-picker
-        :slots="numSlots"
-        value-key="text"
-        @change="(...args) => onPickerChange('money', 'selectMoney', ...args)"
-        :visible-item-count="5"
-        :show-toolbar="false"
-      ></mt-picker>
-    </mt-popup>
-    <!-- 日期选择 -->
-    <mt-popup
-      v-model="datePopVisible"
-      position="bottom"
-      class="bto-pop"
-    >
-      <mt-picker
-        :slots="dateSlots"
-        value-key="text"
-        @change="(...args) => onPickerChange('date', 'selectDate', ...args)"
-        :visible-item-count="5"
-        :show-toolbar="false"
-      ></mt-picker>
-    </mt-popup>
+    <!-- <mt-switch v-model="value">开通小额免密支付，每笔&lt;=500元时免输入支付密码</mt-switch> -->
     <section class="btn-container">
-      <mt-button
-        type="primary"
-        @click="submitForm"
-        size="large"
-      >下一步</mt-button>
+      <mt-button type="primary" @click="submitForm" size="large"
+        >下一步</mt-button
+      >
     </section>
   </div>
 </template>
 
 <script>
+import AsyncValidator from "async-validator";
+import utils from "@/utils";
 import { mapMutations } from "vuex";
 export default {
   data() {
     return {
       pwdValueArr: Array.apply(null, { length: 6 }),
+      value: false,
       qualityInfo: {
         realName: "",
         idCard: "",
-        use: "",
       },
-      selectDate: null,
-      selectMoney: null,
-      datePopVisible: false,
-      moneyPopVisible: false,
-      numSlots: [
-        {
-          values: [
-            { value: 3000, text: 3000 },
-            { value: 6000, text: 6000 },
-            { value: 9000, text: 9000 },
-          ],
-        },
-      ],
-      dateSlots: [
-        {
-          values: [
-            { value: 1, text: "3月" },
-            { value: 6, text: "6月" },
-            { value: 9, text: "9月" },
-            { value: 12, text: "12月" },
-          ],
-        },
-      ],
+      rules: {
+        realName: [{ required: true, message: "请输入真实姓名" }],
+        idCard: [
+          { required: true, message: "请输入身份证号" },
+          { pattern: utils.idCardRge, message: "身份证号格式错误" },
+        ],
+      },
     };
   },
   computed: {
@@ -127,32 +84,37 @@ export default {
     // 这里不更新值，仅处理跳转
     handleJumpInput(index) {
       const val = this.pwdValueArr[index];
-      debugger
       const inputElem = this.$refs["pwdInput" + index];
       const inputElemNext =
         index <= this.pwdValueArr.length
           ? this.$refs["pwdInput" + (index + 1)]
           : null;
       if (val.length === 1) {
-        inputElem.blur();
-        inputElemNext && inputElemNext.focus();
+        inputElem[0].blur();
+        inputElemNext && inputElemNext[0] && inputElemNext[0].focus();
       }
     },
-    // picker选择
-    onPickerChange(key, selectKey, picker, values) {
-      this[selectKey] = values[0]; // 初始选中第一项
-      values[0] && (this.qualityInfo[key] = values[0].value); // 初始化form的值
-    },
     // 表单提交
-    submitForm() {
-      if (!this.qualityInfo.use) {
+    async submitForm() {
+      const validator = new AsyncValidator(this.rules);
+      const errors = await new Promise((resolve) => {
+        validator.validate(this.qualityInfo, { first: true }, (errors) => {
+          resolve(errors);
+        });
+      });
+      if (errors && errors.length > 0) {
         this.$toast({
-          message: "请输入借款用途",
+          message: errors[0].message,
         });
         return;
       }
-      this.$router.push("");
-      console.log(this.qualityInfo);
+      if (this.pwdValueArr.some((val) => val === undefined || val === null)) {
+        this.$toast({
+          message: "请填写完整的支付密码",
+        });
+        return;
+      }
+      this.$router.push("/loanFlow/basicInfo");
     },
   },
 };
@@ -160,7 +122,7 @@ export default {
 
 <style lang="scss" scoped>
 .quality-info-form {
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
   .pwd-inputs-wrapper {
     input {
       width: 0.3rem;

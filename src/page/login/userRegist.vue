@@ -67,8 +67,7 @@
         ></span>
         <div>
           我已阅读并同意
-          <router-link :to="{ path: '/deal/1' }">《马上消费金融注册协议》</router-link>
-          <br />
+          <router-link :to="{ path: '/deal/1' }">《好分期注册协议》</router-link>
           <router-link :to="{ path: '/deal/2' }">《隐私权政策》</router-link>
         </div>
       </div>

@@ -165,12 +165,20 @@ span.checkbox{
 
 // 表单块
 .field-block{
+  h2{
+    font-size: 16px;
+    padding-left: 0.1rem;
+  }
   .title{
     height:.2rem;
     line-height: .2rem;
     padding-left: .1rem;
     font-size: 12px;
     margin-bottom: .05rem;
+    margin-top: .05rem;
     color:#888;
+  }
+  h2 + .title{
+    margin-top:0;
   }
 }

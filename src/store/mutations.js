@@ -1,7 +1,7 @@
 /*
  * @Author: ykx
  * @Date: 2021-04-28 09:46:16
- * @LastEditTime: 2021-04-29 17:21:05
+ * @LastEditTime: 2021-05-02 21:37:39
  * @LastEditors: your name
  * @Description: mutation修改state
  * @FilePath: \stage-load-pro\src\store\mutations.js
@@ -28,6 +28,7 @@ export default {
         item.isComplete = true;
       }
     });
+    console.log(tempSteps);
     state.progressSteps = tempSteps;
   },
 };

@@ -5,14 +5,24 @@
       <!--顶部留白padding无法改变高度-->
       <section class="prev_step_con">
         <section
-          :class="['progress_item', item.isComplete && 'stepOver', item.waiting && 'waiting']"
+          :class="[
+            'progress_item',
+            item.isComplete && 'stepOver',
+            item.waiting && 'waiting',
+          ]"
           v-for="(item, index) in prevSteps"
           :key="index"
         >
           <div class="line"></div>
           <span class="step_name">{{ item.title }}</span>
         </section>
-        <div class="last_step_con" :class="lastStep.isComplete && 'stepOver'">
+        <div
+          :class="[
+            'last_step_con',
+            lastStep.isComplete && 'stepOver',
+            lastStep.waiting && 'waiting',
+          ]"
+        >
           <span class="step_name">{{ lastStep.title }}</span>
         </div>
       </section>
@@ -21,35 +31,33 @@
 </template>
 <script>
 export default {
-  data () {
-    return {}
+  data() {
+    return {};
   },
   computed: {
     prevSteps: function () {
       //去除最后一项
       let progressSteps = JSON.parse(
         JSON.stringify(this.$store.state.progressSteps)
-      ) //深拷贝
-      progressSteps.splice(progressSteps.length - 1, 1)
-      return progressSteps
+      ); //深拷贝
+      progressSteps.splice(progressSteps.length - 1, 1);
+      return progressSteps;
     },
     lastStep: function () {
       let progressSteps = JSON.parse(
         JSON.stringify(this.$store.state.progressSteps)
-      )
-      return progressSteps[progressSteps.length - 1]
-    }
+      );
+      return progressSteps[progressSteps.length - 1];
+    },
   },
-  mounted () {},
-  created () {},
-  methods: {}
-}
+  mounted() {},
+  created() {},
+  methods: {},
+};
 </script>
 <style lang="scss">
-@import 'src/style/scss/mixin';
-.progress-wrapper{
-  height: .7rem;
-}
+@import "src/style/scss/mixin";
+
 .fill {
   @include wh(100%, 0.1rem);
   top: 0.45rem;
@@ -63,7 +71,7 @@ export default {
   top: 0.55rem;
   padding-bottom: 0.3rem;
   background-color: #fff;
-  @include wh(100%, .7rem);
+  @include wh(100%, 0.7rem);
 
   .prev_step_con {
     width: 100%;
@@ -85,7 +93,7 @@ export default {
         left: 0;
       }
       &:after {
-        content: ' ';
+        content: " ";
         display: inline-block;
         @include wh(0.15rem, 0.15rem);
         border-radius: 50%;
@@ -123,7 +131,7 @@ export default {
     width: 0.17rem;
     position: relative;
     &:after {
-      content: ' ';
+      content: " ";
       display: inline-block;
       @include wh(0.15rem, 0.15rem);
       border-radius: 50%;
@@ -144,6 +152,10 @@ export default {
       font-size: 12px;
       right: 0;
       text-align: right;
+    }
+    &.waiting:after {
+      background-color: $red;
+      border-color: $red;
     }
   }
 }

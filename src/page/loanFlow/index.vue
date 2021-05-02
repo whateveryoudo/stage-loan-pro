@@ -3,10 +3,10 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:14:56
  * @LastEditors: your name
- * @LastEditTime: 2021-04-29 16:49:44
+ * @LastEditTime: 2021-05-02 17:15:21
 -->
 <template>
-  <div>
+  <div class="flow-pages">
     <head-top :headTitle="$route.meta.title"></head-top>
     <div class="rating-page">
       <top-progress class="progress-wrapper"></top-progress>
@@ -29,5 +29,8 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+.flow-pages .rating-page {
+  top: 1.2rem;
+}
 </style>

@@ -41,14 +41,17 @@
   flex: none;
   width: 105px;
 }
-.info-block-item{
-  .mint-cell-text{
-    color:#888;
-  }
-  .mint-cell-value{
-    color:#333;
-  }
+.mint-cell-value{
+  color:#333;
 }
+// .info-block-item{
+//   .mint-cell-text{
+//     color:#888;
+//   }
+//   .mint-cell-value{
+//     color:#333;
+//   }
+// }
 
 .mint-field-state.is-default {
   margin-left: .07rem;
