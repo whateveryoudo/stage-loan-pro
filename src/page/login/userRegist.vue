@@ -1,15 +1,9 @@
 <template>
   <div class="regist-container">
-    <head-top
-      :isBack="true"
-      theme="light"
-    ></head-top>
+    <head-top :isBack="true" theme="light"></head-top>
     <div class="rating-page">
       <div class="logo">
-        <img
-          :src="logo"
-          alt=""
-        />
+        <img :src="logo" alt="" />
       </div>
       <div class="login_form">
         <section class="field-item-container">
@@ -18,10 +12,7 @@
             placeholder="请输入手机号码"
             v-model="userInfo.username"
           ></mt-field>
-          <div
-            class="divider-block"
-            style="background: #fff"
-          ></div>
+          <div class="divider-block" style="background: #fff"></div>
           <mt-field
             label="账号密码"
             placeholder="请输入账号密码"
@@ -67,7 +58,9 @@
         ></span>
         <div>
           我已阅读并同意
-          <router-link :to="{ path: '/deal/1' }">《好分期注册协议》</router-link>
+          <router-link :to="{ path: '/deal/1' }"
+            >《好分期注册协议》</router-link
+          >
           <router-link :to="{ path: '/deal/2' }">《隐私权政策》</router-link>
         </div>
       </div>
@@ -163,10 +156,14 @@ export default {
         toRegist(this.userInfo)
           .then((res) => {
             Indicator.close();
-            const { data } = res;
+            const { data, code } = res;
+            if (code === 10001) {
+              this.getImgCaptcha();
+              return;
+            }
             // 将token存入本地
             sessionStorage.setItem("token", data.token);
-            if (res.code === 200) {
+            if (code === 200) {
               Toast("注册成功!");
               // 返回登录界面，回填数据
               this.$router.push("/login", { params: { username, password } });
@@ -180,7 +177,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" >
+<style lang="scss">
 .regist-container {
   .btn-container {
     margin: 0.2rem 0;
