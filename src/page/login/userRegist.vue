@@ -12,7 +12,6 @@
             placeholder="请输入手机号码"
             v-model="userInfo.username"
           ></mt-field>
-          <div class="divider-block" style="background: #fff"></div>
           <mt-field
             label="账号密码"
             placeholder="请输入账号密码"
@@ -68,9 +67,14 @@
       <next-btn
         :enable="validSuc"
         formType="login"
-        text="注册"
+        text="注册并登录"
         @toNext="submitForm"
       ></next-btn>
+       <div class="bto-wrapper">
+        <router-link to="/login">
+          <span>已有账号，去登录</span>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -149,7 +153,7 @@ export default {
     },
     submitForm() {
       Indicator.open("注册中...");
-      const { username, password } = this.userInfo;
+      const { username } = this.userInfo;
       // 校验输入是否正确
       if (verifyRules.phone(username)) {
         //md5加密账号密码(提交上传)
@@ -164,9 +168,9 @@ export default {
             // 将token存入本地
             sessionStorage.setItem("token", data.token);
             if (code === 200) {
-              Toast("注册成功!");
-              // 返回登录界面，回填数据
-              this.$router.push("/login", { params: { username, password } });
+              Toast("登录成功!");
+              // 这里直接取登录后的界面（新注册的用户跳转填写资料）
+              this.$router.push("/loanFlow");
             }
           })
           .catch(() => {
@@ -255,6 +259,9 @@ export default {
 .bto-wrapper {
   padding: 0 0.15rem;
   text-align: right;
+  a{
+    color:#333
+  }
 }
 
 .captcha-img {
