@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:04:34
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-05-06 23:26:57
+ * @LastEditTime: 2021-05-07 00:46:39
 -->
 
 <template>
@@ -23,7 +23,11 @@
       ></mt-field>
     </div>
     <section class="btn-container">
-      <mt-button type="primary" @click="submitForm" size="large"
+      <mt-button
+        type="primary"
+        :loading="btnLoading"
+        @click="submitForm"
+        size="large"
         >完成</mt-button
       >
     </section>
@@ -34,6 +38,7 @@
 import AsyncValidator from 'async-validator'
 import { updateUserStatus } from '@/service/getData'
 import { mapMutations } from 'vuex'
+import { Indicator } from 'mint-ui'
 export default {
   data () {
     return {
@@ -43,6 +48,7 @@ export default {
         name: '',
         cardNo: ''
       },
+      btnLoading: false,
       rules: {
         name: [{ required: true, message: '请输入持卡人姓名' }],
         cardNo: [
@@ -73,7 +79,7 @@ export default {
     // 只匹配了长度
     validateCardNo (rule, value, callback) {
       const tempVal = value && value.replace(/\s+/g, '')
-      if (!/^\d{16,24}$/g.test(tempVal)) {
+      if (!/^\d{16,20}$/g.test(tempVal)) {
         callback('银行卡号格式错误')
       }
       callback()
@@ -97,7 +103,9 @@ export default {
       }
       // 更新用户状态
       const userInfo = JSON.parse(sessionStorage.getItem('userInfo'))
+      Indicator.open('提交中...')
       const res = await updateUserStatus(userInfo.userId) // 这里直接更新用户状态
+      Indicator.close()
       if (res && res.code === 200) {
         this.$router.push('/loanResult')
       }

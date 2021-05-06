@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-05-06 23:10:38
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-05-06 23:29:44
+ * @LastEditTime: 2021-05-07 00:47:00
  */
 let baseUrl;
 let routerMode = 'history';
