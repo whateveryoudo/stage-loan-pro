@@ -1,13 +1,10 @@
-/**
- * 配置编译环境和线上环境之间的切换
- *
- * phpbaseUrl: php接口域名地址
- * javabaseUrl: php接口域名地址
- * routerMode: 路由模式
- * imgBaseUrl: 图片所在域名地址
- *
+/*
+ * @Description: 配置编译环境和线上环境之间的切换
+ * @Autor: ykx
+ * @Date: 2021-05-06 23:10:38
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-05-06 23:29:44
  */
-
 let baseUrl;
 let routerMode = 'history';
 let imgBaseUrl = 'https://gw.alicdn.com/tfs/';
@@ -17,7 +14,6 @@ if (process.env.NODE_ENV == 'development') {
 } else if (process.env.NODE_ENV == 'production') {
   baseUrl = 'https://quickloanapi.applinzi.com';
 }
-// baseUrl = 'https://quickloanapi.applinzi.com';
 export {
   baseUrl,
   routerMode,
