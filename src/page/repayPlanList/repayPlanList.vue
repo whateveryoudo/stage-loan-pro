@@ -1,21 +1,20 @@
 <template>
   <div class="plan_list_container">
-    <div class='rating-page'>
+    <head-top :headTitle="$route.meta.title"></head-top>
+    <div class="rating-page">
       <div class="plan-list-wrapper">
         <ul>
-          <li
-            v-for="(item, index) in loanList"
-            class="list-item"
-            :key="index"
-          >
+          <li v-for="(item, index) in loanList" class="list-item" :key="index">
             <div class="prefix"></div>
             <div class="list-item-content">
-              <div class="right-info-item">第{{item.period}}期</div>
+              <div class="right-info-item">第{{ item.period }}期</div>
               <div class="right-info-item">
-                <span>还款金额&nbsp;&nbsp;￥{{item.money.toFixed(2)}}</span>
-                <span>{{payStatusMap[item.status]}}</span>
+                <span>还款金额&nbsp;&nbsp;￥{{ item.money.toFixed(2) }}</span>
+                <span>{{ payStatusMap[item.status] }}</span>
               </div>
-              <div class="right-info-item">应还日期&nbsp;&nbsp;{{item.repayDate}}</div>
+              <div class="right-info-item">
+                应还日期&nbsp;&nbsp;{{ item.repayDate }}
+              </div>
             </div>
           </li>
         </ul>
@@ -33,19 +32,19 @@ export default {
         {
           period: 1,
           status: 0,
-          money: 1057.5,
+          money: 2057.5,
           repayDate: moment().add(1, "M").date(9).format("YYYY.MM.DD"),
         },
         {
           period: 2,
           status: 0,
-          money: 1057.5,
+          money: 2057.5,
           repayDate: moment().add(2, "M").date(9).format("YYYY.MM.DD"),
         },
         {
           period: 3,
           status: 0,
-          money: 1057.5,
+          money: 2057.5,
           repayDate: moment().add(3, "M").date(9).format("YYYY.MM.DD"),
         },
       ],

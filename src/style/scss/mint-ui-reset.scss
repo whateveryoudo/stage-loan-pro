@@ -1,49 +1,61 @@
 //scss文件覆盖部分组件样式
 @import "./mixin";
 
-.mint-button{
-  font-size:14px;
-  height:35px;
-  &.disabled{
+.mint-button {
+  font-size: 14px;
+  height: 35px;
+
+  &.disabled {
     background-color: #bbb;
   }
 }
+
 //按钮样式
 .mint-button--primary {
   background-color: $color-primary;
 }
-.mint-button{
+
+.mint-button {
   border-radius: 30px;
 
 }
+
 //switch
-.mint-switch-input:checked + .mint-switch-core{
-  border-color:  $color-primary;
-  background-color:  $color-primary;
+.mint-switch-input:checked+.mint-switch-core {
+  border-color: $color-primary;
+  background-color: $color-primary;
 }
+
 //表单样式
-.login_container{
+.login_container {
   .mint-cell:first-child .mint-cell-wrapper {
     background-origin: content-box;
   }
-  .mint-cell-wrapper{
-    padding:0 .15rem;
+
+  .mint-cell-wrapper {
+    padding: 0 .15rem;
     background-size: 100% 1px;
     font-size: 14px;
     background-position: bottom left;
   }
+
   .mint-field .mint-cell-title {
     width: 85px;
   }
 }
+
 // 修改cell label宽度
-.mint-cell-title{
-  flex: none;
-  width: 105px;
+.form {
+  .mint-cell-title {
+    flex: none;
+    width: 105px;
+  }
 }
-.mint-cell-value{
-  color:#333;
+
+.mint-cell-value {
+  color: #333;
 }
+
 // .info-block-item{
 //   .mint-cell-text{
 //     color:#888;
@@ -56,6 +68,10 @@
 .mint-field-state.is-default {
   margin-left: .07rem;
 }
+
 .mint-cell:last-child {
   background-image: none;
+}
+.picker-slot{
+  font-size: 16px;
 }

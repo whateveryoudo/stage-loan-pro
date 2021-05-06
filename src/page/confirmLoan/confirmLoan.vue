@@ -1,15 +1,14 @@
 <template>
   <div class="loan_info_container">
-    <div class='rating-page'>
+    <head-top :headTitle="$route.meta.title"></head-top>
+    <div class="rating-page">
       <div class="loan-info-top">
         <p class="title">借款金额(元)</p>
-        <p class="money">{{money}}</p>
+        <p class="money">{{ money }}</p>
       </div>
       <div class="loan-info-content">
         <div class="info-block-item">
-          <div class="info-block-item-header">
-            贷款详情
-          </div>
+          <div class="info-block-item-header">贷款详情</div>
           <div class="info-block-item-body">
             <mt-cell
               title="期限"
@@ -19,55 +18,49 @@
               title="到账金额(元)"
               :value="loanInfoDetail.actualMoney.toFixed(2)"
             ></mt-cell>
-            <mt-cell
-              title="还款总额(元)"
-              :value="totalMoneyStr"
-            ></mt-cell>
+            <mt-cell title="还款总额(元)" :value="totalMoneyStr"></mt-cell>
           </div>
         </div>
         <div class="divider-block"></div>
         <div class="info-block-item">
-          <div class="info-block-item-header">
-            收款银行卡
-          </div>
+          <div class="info-block-item-header">收款银行卡</div>
           <div class="info-block-item-body">
             <div class="info-item-cell">
-              <img
-                class="bank-logo"
-                :src="bankLogo"
-                alt=""
+              <img class="bank-logo" :src="bankLogo" alt="" />
+              <span
+                >{{ cardInfo.bankName }}&nbsp;&nbsp;&nbsp;{{
+                  cardInfo.cardDesc
+                }}</span
               >
-              <span>{{cardInfo.bankName}}&nbsp;&nbsp;&nbsp;{{cardInfo.cardDesc}}</span>
             </div>
           </div>
         </div>
       </div>
       <!--底部下一步按钮组件-->
-      <next-btn
-        :enable="true"
-        text="确认借款"
-        @toNext="toNext"
-      ></next-btn>
+      <next-btn :enable="true" text="确认借款" @toNext="toNext"></next-btn>
       <div class="footer">
-        <p>贷款有风险，借款需谨慎；请根据个人能力合理贷款，理性消费，避免逾期</p>
+        <p>
+          贷款有风险，借款需谨慎；请根据个人能力合理贷款，理性消费，避免逾期
+        </p>
         <p>贷款额度、放款时间以实际审批结果为准</p>
-        <p>贷款资金由马上消费金融股份有限公司及/或其合作金融机构提供</p>
-        <p>2015-2020 马上消费金融股份有限公司 版权所有 渝ICP备15005075号</p>
+        <p>贷款资金由好分期及/或其合作金融机构提供</p>
+        <p>2015-2021好分期版权所有 渝ICP备15005075号</p>
       </div>
     </div>
   </div>
 </template>
 <script>
+import NextBtn from '@/components/common/NextBtn'
 export default {
   data() {
     return {
       headTitle: "确认借款",
       bankLogo: require("../../assets/icons/bank-logo.png"),
-      money: 3000,
+      money: 6000,
       loanInfoDetail: {
         periodNum: 3,
-        actualMoney: 3000,
-        repayTotalMoney: 3172.5,
+        actualMoney: 6000,
+        repayTotalMoney: 6172.5,
         accrual: 172.5,
       },
       cardInfo: {
@@ -84,8 +77,7 @@ export default {
       );
     },
   },
-  components: {
-  },
+  components: { NextBtn },
   mounted() {},
   created() {},
   methods: {
@@ -107,7 +99,7 @@ export default {
   padding-bottom: 0.35rem;
   margin-bottom: 0.1rem;
   p.title {
-    @include sc(14px, #bbb);
+    @include sc(14px, #555);
   }
   p.money {
     @include sc(25px, #000);
@@ -125,5 +117,6 @@ export default {
   font-size: 10px;
   line-height: 1.8;
   text-align: center;
+  padding: 0 .05rem;
 }
 </style>

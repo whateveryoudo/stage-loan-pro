@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-04-28 20:43:40
  * @LastEditors: your name
- * @LastEditTime: 2021-05-02 23:51:34
+ * @LastEditTime: 2021-05-06 10:26:56
  */
 const userLogin = () => import('../page/login/userLogin.vue')
 const userRegist = () => import('../page/login/userRegist.vue')
@@ -14,12 +14,11 @@ const basicInfo = () => import('../page/loanFlow/basicInfo.vue')
 const cardInfo = () => import('../page/loanFlow/cardInfo.vue')
 const loanResult = () => import('../page/loanResult')
 
-// 第一版界面
-const deal = r => require.ensure([], () => r(require('../page/deal/deal.vue')), 'deal');
-const confirmLoan = r => require.ensure([], () => r(require('../page/confirmLoan/confirmLoan.vue')), 'confirmLoan');
-const repayDetail = r => require.ensure([], () => r(require('../page/repayDetail/repayDetail.vue')), 'repayDetail');
-const repayPlanList = r => require.ensure([], () => r(require('../page/repayPlanList/repayPlanList.vue')), 'repayPlanList');
-const repayResult = r => require.ensure([], () => r(require('../page/repayResult/repayResult.vue')), 'repayResult');
+const deal = () => import('../page/deal/deal.vue');
+const confirmLoan = () => import('../page/confirmLoan/confirmLoan.vue');
+const repayDetail = () => import('../page/repayDetail/repayDetail.vue');
+const repayPlanList = () => import('../page/repayPlanList/repayPlanList.vue');
+const repayResult = () => import('../page/repayResult/repayResult.vue');
 
 
 export default
@@ -87,28 +86,42 @@ export default
     {
       path: '/loanResult',
       name: 'loanResult',
-      component: loanResult
+      component: loanResult,
+      meta: {
+        title: '申请状态'
+      }
     },
-    /**********下面是第一版的界面********/
     {
       path: '/confirmLoan',
       name: 'confirmLoan',
-      component: confirmLoan
+      component: confirmLoan,
+      meta: {
+        title: '借款信息'
+      }
     },
     {
       path: '/repayDetail',
       name: 'repayDetail',
-      component: repayDetail
+      component: repayDetail,
+      meta: {
+        title: '还款详情'
+      }
     },
     {
       path: '/repayPlanList',
       name: 'repayPlanList',
-      component: repayPlanList
+      component: repayPlanList,
+      meta: {
+        title: '还款计划'
+      }
     },
     {
       path: '/repayResult',
       name: 'repayResult',
-      component: repayResult
+      component: repayResult,
+      meta: {
+        title: '还款状态'
+      }
     },
     {
       path: '/deal/:type',

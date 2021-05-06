@@ -1,5 +1,6 @@
 <template>
   <div class="repay_info_container">
+    <head-top :headTitle="$route.meta.title"></head-top>
     <div class="rating-page">
       <div class="repay-info-top">
         <div class="info-item">
@@ -25,7 +26,6 @@
             ></mt-cell>
           </div>
         </div>
-        <div class="divider-block"></div>
         <div class="info-block-item">
           <div class="info-block-item-header">
             <span>还款计划</span>
@@ -34,7 +34,6 @@
             >
           </div>
         </div>
-        <div class="divider-block"></div>
         <div class="info-block-item">
           <div class="info-block-item-header">还款银行卡</div>
           <div class="info-block-item-body">
@@ -66,12 +65,12 @@ export default {
       headTitle: "还款详情",
       bankLogo: require("../../assets/icons/bank-logo.png"),
       repayInfo: {
-        money: 3000,
+        money: 6000,
         date: moment().add(1, "M").date(9).format("YYYY.MM.DD"),
       },
       loanInfoDetail: {
         periodNum: 3,
-        actualMoney: 3000,
+        actualMoney: 6000,
       },
       cardInfo: {
         bankName: "中国工商银行",

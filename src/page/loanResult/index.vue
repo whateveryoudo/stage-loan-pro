@@ -5,7 +5,8 @@
         <img :src="sucImg" alt="" />
         <div class="desc">
           <h2>获得额度：<strong>6000</strong></h2>
-          <br />更多操作请前往好分期app
+          <br />
+          <mt-button type="primary" @click="toLoanPage">查看借款信息</mt-button>
         </div>
       </div>
     </div>
@@ -24,7 +25,9 @@ export default {
   mounted() {},
   created() {},
   methods: {
-    toNext() {},
+    toLoanPage () {
+      this.$router.push('/confirmLoan')
+    }
   },
 };
 </script>

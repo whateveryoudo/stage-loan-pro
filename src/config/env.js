@@ -17,6 +17,7 @@ if (process.env.NODE_ENV == 'development') {
 } else if (process.env.NODE_ENV == 'production') {
   baseUrl = 'https://quickloanapi.applinzi.com';
 }
+// baseUrl = 'https://quickloanapi.applinzi.com';
 export {
   baseUrl,
   routerMode,

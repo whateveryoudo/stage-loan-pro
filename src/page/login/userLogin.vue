@@ -154,9 +154,15 @@ export default {
             const { data } = res
             // 将token存入本地
             sessionStorage.setItem('token', data.token)
+            sessionStorage.setItem('userInfo', JSON.stringify(data)) // 存入当前用户信息
             if (res.code === 200) {
               Toast('登录成功!')
-              this.$router.push('/loanFlow')
+              // 判断用户是否已经进件过，进件过 -> 查看贷款额度界面    未进件  -> 走申请流程
+              if (data.isApplyed === 0) {
+                this.$router.push('/loanFlow');
+              } else if (data.isApplyed === 1) {
+                this.$router.push('/confirmLoan');
+              }
             }
           })
           .catch(() => {

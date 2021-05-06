@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:04:34
  * @LastEditors: your name
- * @LastEditTime: 2021-05-02 23:52:07
+ * @LastEditTime: 2021-05-06 09:43:49
 -->
 
 <template>
@@ -32,6 +32,7 @@
 
 <script>
 import AsyncValidator from "async-validator";
+import { updateUserStatus } from "@/service/getData";
 import { mapMutations } from "vuex";
 export default {
   data() {
@@ -101,7 +102,12 @@ export default {
         });
         return;
       }
-      this.$router.push('/loanResult')
+      // 更新用户状态
+      const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
+      const res = await updateUserStatus(userInfo.userId); // 这里直接更新用户状态
+      if (res && res.code === 200) {
+        this.$router.push("/loanResult");
+      }
     },
   },
 };

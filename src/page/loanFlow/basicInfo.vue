@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:04:34
  * @LastEditors: your name
- * @LastEditTime: 2021-05-02 21:34:15
+ * @LastEditTime: 2021-05-06 15:47:09
 -->
 
 <template>
@@ -13,22 +13,22 @@
       <div class="title">准确有效的信息，有助于您的额度审批</div>
       <cell-select
         title="职业"
-        @click.native="handleShowPicker('profession')"
+        @click.native="handleShowPicker('profession', '职业')"
         :value="pickerValues.profession"
       />
       <cell-select
         title="学历"
-        @click.native="handleShowPicker('education')"
+        @click.native="handleShowPicker('education', '学历')"
         :value="pickerValues.education"
       />
       <cell-select
         title="婚姻状况"
-        @click.native="handleShowPicker('marriage')"
+        @click.native="handleShowPicker('marriage', '婚姻状况')"
         :value="pickerValues.marriage"
       />
       <cell-select
         title="现居住区域"
-        @click.native="handleShowPicker('address')"
+        @click.native="handleShowPicker('address', '现居住区域')"
         :value="pickerValues.address"
       />
       <mt-field
@@ -38,7 +38,7 @@
       ></mt-field>
       <cell-select
         title="借款偏好"
-        @click.native="handleShowPicker('preferences')"
+        @click.native="handleShowPicker('preferences', '借款偏好')"
         :value="pickerValues.preferences"
       />
     </div>
@@ -57,7 +57,7 @@
       ></mt-field>
       <cell-select
         title="关系"
-        @click.native="handleShowPicker('familyRela')"
+        @click.native="handleShowPicker('familyRela', '关系')"
         :value="pickerValues.familyRela"
       />
     </div>
@@ -76,40 +76,20 @@
       ></mt-field>
       <cell-select
         title="关系"
-        @click.native="handleShowPicker('urgencyRela')"
+        @click.native="handleShowPicker('urgencyRela', '关系')"
         :value="pickerValues.urgencyRela"
       />
     </div>
     <!-- 简易的通用picker -->
-    <mt-popup
-      v-if="$data[`${curPickerKey}PopVisible`]"
-      v-model="$data[`${curPickerKey}PopVisible`]"
-      position="bottom"
-      class="bto-pop"
-    >
-      <mt-picker
-        :slots="$data[`${curPickerKey}Slots`]"
-        value-key="text"
-        @change="onPickerChange"
-        :visible-item-count="5"
-        :show-toolbar="false"
-      ></mt-picker>
-    </mt-popup>
-    <!-- 区域选择picker -->
-    <mt-popup
-      v-if="addressPopVisible"
-      v-model="addressPopVisible"
-      position="bottom"
-      class="bto-pop"
-    >
-      <mt-picker
-        :slots="addressSlots"
-        value-key="text"
-        @change="onAddressChange"
-        :visible-item-count="5"
-        :show-toolbar="false"
-      ></mt-picker>
-    </mt-popup>
+    <select-picker
+      :dataSlots="curDataSlots"
+      :isAddress="curPickerKey === 'address'"
+      :visible="$data[`${curPickerKey}PopVisible`]"
+      :title="curPickerTitle"
+      :curValue="$data.basicFormInfo[curPickerKey]"
+      @toggleVisible="toggleVisible"
+      @onConfirm="onConfirm"
+    ></select-picker>
     <section class="btn-container">
       <mt-button type="primary" @click="submitForm" size="large"
         >下一步</mt-button
@@ -125,6 +105,7 @@ import utils from "@/utils";
 export default {
   data() {
     return {
+      curPickerTitle: "",
       curPickerKey: "", //当前选中picker key
       // 控制显示隐藏的变量
       professionPopVisible: false,
@@ -171,7 +152,7 @@ export default {
         familyName: [{ required: true, message: "请输入家庭联系人姓名" }],
         familyPhone: [
           { required: true, message: "请输入家庭联系人手机号" },
-          { pattern: utils.phoneRge, message: "手机号码格式错误" }
+          { pattern: utils.phoneRge, message: "手机号码格式错误" },
         ],
         familyRela: [{ required: true, message: "请选择家庭联系人关系" }],
         urgencyName: [{ required: true, message: "请输入紧急联系人姓名" }],
@@ -266,27 +247,36 @@ export default {
         },
       ];
     },
+    curDataSlots() {
+      return this[`${this.curPickerKey}Slots`];
+    },
   },
   created() {
     this.UPDATE_PROGRESS({ stepIndex: 2, attrs: { waiting: true } }); // 更初始状态
   },
   methods: {
     ...mapMutations(["UPDATE_PROGRESS"]),
-    handleShowPicker(key) {
+    // 用于picker内部调用
+    toggleVisible(flag = true) {
+      this[`${this.curPickerKey}PopVisible`] = flag;
+    },
+    handleShowPicker(key, title) {
       this.curPickerKey = key;
+      this.curPickerTitle = title;
       this[`${key}PopVisible`] = true;
-      console.log(this[`${key}PopVisible`]);
     },
-    // picker选择
-    onPickerChange(picker, values) {
-      this.pickerValues[this.curPickerKey] = values[0]; // 初始选中第一项
-      values[0] && (this.basicFormInfo[this.curPickerKey] = values[0].value); // 初始化form的值
-    },
-    // 地区picker选择
-    onAddressChange(picker, values) {
-      picker.setSlotValues(1, this.$utils.addressData[values[0]]);
-      this.pickerValues.address = values[0] + "-" + values[1];
-      this.basicFormInfo.address = values[0] + "-" + values[1];
+    onConfirm(values) {
+      if (!values || values.length === 0) {
+        return;
+      }
+      if (values.length > 1) {
+        // 地区选中情况
+        this.pickerValues[this.curPickerKey] = values.join("-");
+        this.basicFormInfo[this.curPickerKey] = values.join("-");
+      } else {
+        this.pickerValues[this.curPickerKey] = values[0]; // 初始选中第一项
+        values[0] && (this.basicFormInfo[this.curPickerKey] = values[0].value); // 初始化form的值
+      }
     },
     // 表单提交
     async submitForm() {
@@ -308,7 +298,7 @@ export default {
         });
         return;
       }
-     this.$router.push("/loanFlow/cardInfo")
+      this.$router.push("/loanFlow/cardInfo");
     },
   },
 };

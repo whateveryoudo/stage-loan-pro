@@ -3,14 +3,14 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:14:56
  * @LastEditors: your name
- * @LastEditTime: 2021-05-02 17:15:21
+ * @LastEditTime: 2021-05-06 10:08:24
 -->
 <template>
   <div class="flow-pages">
     <head-top :headTitle="$route.meta.title"></head-top>
     <div class="rating-page">
       <top-progress class="progress-wrapper"></top-progress>
-      <div class="main-form-wrapper">
+      <div class="main-form-wrapper form">
         <router-view></router-view>
       </div>
     </div>
@@ -25,6 +25,12 @@ export default {
   },
   components: {
     TopProgress,
+  },
+  created() {
+    const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
+    if (userInfo.isApplyed === 1) { // 防止用户手动输入地址
+      this.$router.push("/confirmLoan");
+    }
   },
 };
 </script>
