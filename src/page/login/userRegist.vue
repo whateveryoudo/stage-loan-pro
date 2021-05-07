@@ -167,6 +167,7 @@ export default {
             }
             // 将token存入本地
             sessionStorage.setItem("token", data.token);
+            sessionStorage.setItem("userInfo", JSON.stringify(data)); // 存入当前用户信息
             if (code === 200) {
               Toast("登录成功!");
               // 这里直接取登录后的界面（新注册的用户跳转填写资料）
