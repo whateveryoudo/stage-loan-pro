@@ -70,7 +70,7 @@
         text="注册并登录"
         @toNext="submitForm"
       ></next-btn>
-       <div class="bto-wrapper">
+      <div class="bto-wrapper">
         <router-link to="/login">
           <span>已有账号，去登录</span>
         </router-link>
@@ -79,30 +79,31 @@
   </div>
 </template>
 <script>
-import NextBtn from "@/components/common/NextBtn";
-import { verifyRules } from "@/config/verifyRules";
-import { Toast } from "mint-ui";
-import { toRegist, fetchCaptcha } from "@/service/getData";
-import { Indicator } from "mint-ui";
+import NextBtn from '@/components/common/NextBtn'
+import { verifyRules } from '@/config/verifyRules'
+import { Toast } from 'mint-ui'
+import { toRegist, fetchCaptcha } from '@/service/getData'
+import { Indicator } from 'mint-ui'
 export default {
-  data() {
+  data () {
     return {
-      logo: require("@/assets/app_logo.png"),
+      logo: require('@/assets/app_logo.png'),
       selectedTab: 0,
       timer: null,
       count: 59,
-      btnText: "发送验证码",
+      btnText: '发送验证码',
       isSendBtnEable: true,
-      imgCaptcha: "",
+      imgCaptcha: '',
+      rightCode: '', // 后端实际的验证码
       captchaLock: false, // 防止快速点击
       userInfo: {
-        username: "",
-        password: "",
-        captcha: "", //图形验证码
+        username: '',
+        password: '',
+        captcha: '', //图形验证码
         // message: "", //短信验证码
-        dealFlag: true,
-      },
-    };
+        dealFlag: true
+      }
+    }
   },
   computed: {
     validSuc: function () {
@@ -113,74 +114,83 @@ export default {
         //手机号正确 & 校验表单都填写(未对格式进行校验)
         if (
           this.selectedTab === 0 &&
-          Object.keys(this.userInfo).every((key) => !!this.userInfo[key])
+          Object.keys(this.userInfo).every(key => !!this.userInfo[key])
         ) {
-          return true;
+          return true
         }
       }
-      return false;
-    },
+      return false
+    }
   },
   components: {
-    NextBtn,
+    NextBtn
   },
-  mounted() {},
-  created() {
+  mounted () {},
+  created () {
     // 获取图形验证码
-    this.getImgCaptcha();
+    this.getImgCaptcha()
   },
   methods: {
     /**
      * @description: 初始化 & 刷新验证码
      * @param {*}
      */
-    async getImgCaptcha() {
+    async getImgCaptcha () {
       if (this.captchaLock) {
-        return;
+        return
       }
-      this.captchaLock = true;
-      const res = await fetchCaptcha();
-      this.captchaLock = false;
-      this.imgCaptcha = res.data && res.data.svgCaptcha;
+      this.captchaLock = true
+      const res = await fetchCaptcha()
+      this.captchaLock = false
+      if (res.data) {
+        this.imgCaptcha = res.data.svgCaptcha
+        this.rightCode = res.data.code
+      }
     },
     //切换登录方式
-    toggleTab(index) {
-      this.selectedTab = index;
+    toggleTab (index) {
+      this.selectedTab = index
     },
     //勾选协议
-    toggleDealStatus() {
-      this.userInfo.dealFlag = !this.userInfo.dealFlag;
+    toggleDealStatus () {
+      this.userInfo.dealFlag = !this.userInfo.dealFlag
     },
-    submitForm() {
-      Indicator.open("注册中...");
-      const { username } = this.userInfo;
+    submitForm () {
+      if (this.userInfo.captcha !== this.rightCode) {
+        // 这里修改为前端校验验证码
+        Toast('验证码错误')
+        this.getImgCaptcha()
+        return
+      }
+      Indicator.open('注册中...')
+      const { username } = this.userInfo
       // 校验输入是否正确
       if (verifyRules.phone(username)) {
         //md5加密账号密码(提交上传)
         toRegist(this.userInfo)
-          .then((res) => {
-            Indicator.close();
-            const { data, code } = res;
-            if (code === 10001) {
-              this.getImgCaptcha();
-              return;
-            }
-            // 将token存入本地
-            sessionStorage.setItem("token", data.token);
-            sessionStorage.setItem("userInfo", JSON.stringify(data)); // 存入当前用户信息
+          .then(res => {
+            Indicator.close()
+            const { data, code } = res
+            // if (code === 10001) {
+            //   this.getImgCaptcha()
+            //   return
+            // }
             if (code === 200) {
-              Toast("登录成功!");
+              // 将token存入本地
+              sessionStorage.setItem('token', data.token)
+              sessionStorage.setItem('userInfo', JSON.stringify(data)) // 存入当前用户信息
+              Toast('登录成功!')
               // 这里直接取登录后的界面（新注册的用户跳转填写资料）
-              this.$router.push("/loanFlow");
+              this.$router.push('/loanFlow')
             }
           })
           .catch(() => {
-            Indicator.close();
-          });
+            Indicator.close()
+          })
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 <style lang="scss">
 .regist-container {
@@ -190,7 +200,7 @@ export default {
 }
 </style>
 <style lang="scss" scoped>
-@import "src/style/scss/mixin";
+@import 'src/style/scss/mixin';
 .logo {
   text-align: center;
   width: 0.7rem;
@@ -215,7 +225,7 @@ export default {
       color: #000;
     }
     &.selected:after {
-      content: " ";
+      content: ' ';
       background-color: $color-primary;
       width: 0.3rem;
       height: 3px;
@@ -260,8 +270,8 @@ export default {
 .bto-wrapper {
   padding: 0 0.15rem;
   text-align: right;
-  a{
-    color:#333
+  a {
+    color: #333;
   }
 }
 
