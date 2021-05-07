@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:14:56
  * @LastEditors: your name
- * @LastEditTime: 2021-05-06 10:08:24
+ * @LastEditTime: 2021-05-07 09:42:10
 -->
 <template>
   <div class="flow-pages">
@@ -26,12 +26,7 @@ export default {
   components: {
     TopProgress,
   },
-  created() {
-    const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
-    if (userInfo.isApplyed === 1) { // 防止用户手动输入地址
-      this.$router.push("/confirmLoan");
-    }
-  },
+  created() {},
 };
 </script>
 

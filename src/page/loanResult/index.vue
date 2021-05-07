@@ -5,6 +5,7 @@
         <img :src="sucImg" alt="" />
         <div class="desc">
           <h2>获得额度：<strong>6000</strong></h2>
+          <h2 style="margin-top:5px">提现请前往好分期APP完成</h2>
           <!-- <mt-button type="primary" @click="toLoanPage">查看借款信息</mt-button> -->
         </div>
       </div>
@@ -42,7 +43,6 @@ export default {
   }
   p.desc {
     @include sc(16px, #333);
-    line-height: 1.5;
   }
 }
 </style>
