@@ -12,9 +12,9 @@ let imgBaseUrl1 = 'https://gw.alicdn.com/i3/';
 if (process.env.NODE_ENV == 'development') {
   baseUrl = 'http://localhost:5050';
 } else if (process.env.NODE_ENV == 'production') {
-  baseUrl = 'https://quickloanapi.applinzi.com';
+  // baseUrl = 'https://quickloanapi.applinzi.com';
+  baseUrl = 'http://hongexinxi.cn';
 }
-// baseUrl = 'https://quickloanapi.applinzi.com';
 export {
   baseUrl,
   routerMode,
