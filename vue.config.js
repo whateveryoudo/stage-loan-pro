@@ -8,11 +8,12 @@
  */
 module.exports = {
   configureWebpack: config => {
-    config.devtool = 'source-map'
     if (process.env.NODE_ENV === 'production') {
       // 为生产环境修改配置...
     } else {
       // 为开发环境修改配置...
+    config.devtool = 'source-map'
+
     }
   },
   chainWebpack: config => {
