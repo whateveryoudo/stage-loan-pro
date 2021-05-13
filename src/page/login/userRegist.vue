@@ -75,6 +75,7 @@
           <span>已有账号，去登录</span>
         </router-link>
       </div>
+      <footer-msg style="margin-top:1.4rem"></footer-msg>
     </div>
   </div>
 </template>

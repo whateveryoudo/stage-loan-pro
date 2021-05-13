@@ -2,8 +2,8 @@
  * @Description: 配置编译环境和线上环境之间的切换
  * @Autor: ykx
  * @Date: 2021-05-06 23:10:38
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-05-07 19:31:35
+ * @LastEditors: your name
+ * @LastEditTime: 2021-05-13 15:39:22
  */
 let baseUrl;
 let routerMode = 'history';

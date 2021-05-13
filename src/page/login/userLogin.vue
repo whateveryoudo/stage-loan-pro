@@ -79,6 +79,7 @@
           <span>新用户注册</span>
         </router-link>
       </div>
+      <footer-msg style="margin-top:1.8rem"></footer-msg>
     </div>
   </div>
 </template>
