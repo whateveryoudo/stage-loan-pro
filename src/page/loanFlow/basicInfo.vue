@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:04:34
  * @LastEditors: your name
- * @LastEditTime: 2021-05-06 15:47:09
+ * @LastEditTime: 2021-06-08 09:17:56
 -->
 
 <template>
@@ -107,7 +107,7 @@ export default {
     return {
       curPickerTitle: "",
       curPickerKey: "", //当前选中picker key
-      // 控制显示隐藏的变量
+      // 控制显示隐藏的变量(这里用一个值就行了)
       professionPopVisible: false,
       educationPopVisible: false,
       marriagePopVisible: false,
