@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-05-06 23:10:38
  * @LastEditors: your name
- * @LastEditTime: 2021-05-13 15:39:22
+ * @LastEditTime: 2021-10-26 22:20:52
  */
 let baseUrl;
 let routerMode = 'history';
@@ -13,8 +13,10 @@ if (process.env.NODE_ENV == 'development') {
   baseUrl = 'http://localhost:5050';
 } else if (process.env.NODE_ENV == 'production') {
   // baseUrl = 'https://quickloanapi.applinzi.com';
+  // baseUrl = 'http://hongexinxi.cn';
   baseUrl = 'http://hongexinxi.cn';
 }
+// baseUrl = 'http://hongexinxi.cn';
 export {
   baseUrl,
   routerMode,
