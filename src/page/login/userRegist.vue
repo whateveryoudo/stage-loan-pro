@@ -40,12 +40,18 @@
             v-model="userInfo.captcha"
             :attr="{ maxlength: 4 }"
           >
-            <span
+            <!-- <span
               class="captcha-img"
               @click="getImgCaptcha"
               v-html="imgCaptcha"
             >
-            </span>
+            </span> -->
+            <img
+              :src="captchaImgs[captchaIndex]"
+              alt=""
+              class="captcha-img"
+              @click="getImgCaptcha"
+            />
           </mt-field>
         </section>
       </div>
@@ -83,8 +89,9 @@
 import NextBtn from '@/components/common/NextBtn'
 import { verifyRules } from '@/config/verifyRules'
 import { Toast } from 'mint-ui'
-import { toRegist, fetchCaptcha } from '@/service/getData'
+import { toRegist } from '@/service/getData'
 import { Indicator } from 'mint-ui'
+
 export default {
   data () {
     return {
@@ -95,8 +102,16 @@ export default {
       btnText: '发送验证码',
       isSendBtnEable: true,
       imgCaptcha: '',
-      rightCode: '', // 后端实际的验证码
       captchaLock: false, // 防止快速点击
+      captchaIndex: Math.floor(Math.random() * 5),
+      captchaImgs: [
+        require('@/assets/icons/8ydq.png'),
+        require('@/assets/icons/egmp.png'),
+        require('@/assets/icons/kpma.png'),
+        require('@/assets/icons/qw6x.png'),
+        require('@/assets/icons/uwwy.png')
+      ],
+      captchaCodes: ['8ydq', 'egmp', 'kpma', 'qw6x', 'uwwy'],
       userInfo: {
         username: '',
         password: '',
@@ -107,6 +122,9 @@ export default {
     }
   },
   computed: {
+    rightCode () {
+      return this.captchaCodes[this.captchaIndex]
+    },
     validSuc: function () {
       if (
         verifyRules.phone(this.userInfo.username, false) &&
@@ -129,11 +147,11 @@ export default {
   mounted () {},
   created () {
     // 获取图形验证码
-    this.getImgCaptcha()
+    // this.getImgCaptcha()
   },
   methods: {
     /**
-     * @description: 初始化 & 刷新验证码
+     * @description: 初始化 & 刷新验证码, fix:由于网络问题，采用本地存储
      * @param {*}
      */
     async getImgCaptcha () {
@@ -141,12 +159,14 @@ export default {
         return
       }
       this.captchaLock = true
-      const res = await fetchCaptcha()
+      this.captchaIndex = Math.floor(Math.random() * 5)
       this.captchaLock = false
-      if (res.data) {
-        this.imgCaptcha = res.data.svgCaptcha
-        this.rightCode = res.data.code
-      }
+      // const res = await fetchCaptcha()
+      // this.captchaLock = false
+      // if (res.data) {
+      //   this.imgCaptcha = res.data.svgCaptcha
+      //   this.rightCode = res.data.code
+      // }
     },
     //切换登录方式
     toggleTab (index) {
