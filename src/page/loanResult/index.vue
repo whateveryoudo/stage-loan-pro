@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @Autor: ykx
+ * @Date: 2021-05-07 19:06:36
+ * @LastEditors: 
+ * @LastEditTime: 2022-06-23 02:11:30
+-->
 <template>
   <div class="result_container">
     <div class="rating-page">
@@ -31,7 +38,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scope>
+<style lang="scss" scoped>
 @import "src/style/scss/mixin";
 .result-wrapper {
   margin-top: 0.8rem;

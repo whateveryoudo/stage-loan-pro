@@ -75,3 +75,36 @@
 .picker-slot{
   font-size: 16px;
 }
+
+// 国美界面部分组件样式覆盖
+.simple-form{
+  .mint-cell-wrapper {
+    background-image: none;
+  }
+  .mint-cell{
+    background-color: transparent;
+  }
+  &.field-item-container .mint-cell {
+    padding: 0 .37rem;
+    margin-bottom: .15rem;
+    .mint-cell-wrapper{
+      border: 1px solid #C9C8CD;
+      border-radius: .3rem;
+    }
+  }
+}
+.guomei-page{
+  .mint-button--primary {
+    background-color: $gm-color-primary;
+  }
+}
+
+.rn-page{
+  .mint-button--primary {
+    background-color: $rn-btn-color;
+  }
+  .mint-cell-wrapper{
+    padding: 0 .15rem;
+    background-image: none
+  }
+}

@@ -80,7 +80,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scope>
+<style lang="scss" scoped>
 @import "src/style/scss/mixin";
 .info-block-item,
 .loan-info-top {

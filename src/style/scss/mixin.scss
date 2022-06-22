@@ -3,6 +3,12 @@ $bc: #e4e4e4;
 $fc:#fff;
 /* 覆盖mint-ui的primary颜色，这里采用京东红 */
 $color-primary: #FE142D;
+
+// 
+$gm-color-primary: #6175AE;
+$gm-color-primary1: #4B65B2;
+$rn-color-primary: #42C14C;
+$rn-btn-color: #F19238;
 // 背景图片地址和大小
 @mixin bis($url) { 
 	background-image: url($url);
