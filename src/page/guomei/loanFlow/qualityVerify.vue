@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:04:34
  * @LastEditors: your name
- * @LastEditTime: 2022-06-23 23:18:05
+ * @LastEditTime: 2022-06-24 00:26:22
 -->
 
 <template>
@@ -145,8 +145,8 @@ export default {
   margin-top: 0.15rem;
   .pwd-inputs-wrapper {
     input {
-      width: 0.3rem;
-      height: 0.3rem;
+      width: 0.25rem;
+      height: 0.25rem;
       border: 2px solid #ccc;
       margin-right: 0.1rem;
       padding: 0.05rem;

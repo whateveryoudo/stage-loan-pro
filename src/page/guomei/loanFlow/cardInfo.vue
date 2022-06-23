@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:04:34
  * @LastEditors: your name
- * @LastEditTime: 2022-06-23 22:46:28
+ * @LastEditTime: 2022-06-24 00:03:38
 -->
 
 <template>
@@ -110,8 +110,8 @@ export default {
       Indicator.open("提交中...");
       const res = await updateUserStatus(userInfo.userId); // 这里直接更新用户状态
       Indicator.close();
-      if (res && res.code === 200) { // 这里直接跳转借款成功界面
-        this.$router.push("/guoMei/confirmLoan");
+      if (res && res.code === 200) {
+        this.$router.push("/guoMei/loanResult");
       }
     },
   },

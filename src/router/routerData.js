@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-04-28 20:43:40
  * @LastEditors: your name
- * @LastEditTime: 2022-06-23 23:14:03
+ * @LastEditTime: 2022-06-24 00:02:56
  */
 // 好分期
 const userLogin = () => import("../page/login/userLogin.vue");
@@ -35,6 +35,9 @@ const GmQualityVerify = () =>
   import("@/page/guomei/loanFlow/qualityVerify.vue");
 const GmBasicInfo = () => import("@/page/guomei/loanFlow/basicInfo.vue");
 const GmCardInfo = () => import("@/page/guomei/loanFlow/cardInfo.vue");
+
+const GmLoanResult = () => import("@/page/guomei/loanResult");
+
 // 马上消费金融
 const RnLayout = () => import("@/layout/RightNowLayout");
 const RnUserLogin = () => import("@/page/rightNow/login/userLogin.vue");
@@ -52,6 +55,7 @@ const RnQualityVerify = () =>
   import("@/page/rightNow/loanFlow/qualityVerify.vue");
 const RnBasicInfo = () => import("@/page/rightNow/loanFlow/basicInfo.vue");
 const RnCardInfo = () => import("@/page/rightNow/loanFlow/cardInfo.vue");
+const RnLoanResult = () => import("@/page/rightNow/loanResult");
 
 export default [
   {
@@ -219,6 +223,13 @@ export default [
         ],
       },
       {
+        path: "loanResult",
+        component: RnLoanResult,
+        meta: {
+          title: "申请状态",
+        },
+      },
+      {
         path: "repayDetail",
         component: RnRepayDetail,
         meta: {
@@ -296,6 +307,13 @@ export default [
             },
           },
         ],
+      },
+      {
+        path: "loanResult",
+        component: GmLoanResult,
+        meta: {
+          title: "申请状态",
+        },
       },
       {
         path: "confirmLoan",
