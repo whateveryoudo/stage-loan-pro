@@ -1,1527 +1,815 @@
 <template>
   <div class="deal-container">
-    <div class="deal-page" v-show="dealType === 1">
-      <h3
-        class="tc"
-        style='font-size:15px;text-align:center;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        注册服务协议
-      </h3>
-      <p
-        class="tc"
-        style='font-size:15px;text-align:center;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        最后更新时间：【2020】年【07】月【27】日
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        北京微财科技有限公司（以下简称“公司”或“本公司”）合法运营的“<span
-          class="tu"
-          >好分期</span
-        >”平台（包括对应网站及公司已经开发及将来不时开发的自行或委托重庆市黑卡小额贷款有限公司发布的提供部分或全部公司服务功能的移动终端软件或微信平台，以下简称“本服务平台”）是一个为您提供商品交易服务、商品交易消费分期咨询服务及互联网借贷交易信息服务或与其他合作机构（包括但不限于银行、小额贷款公司、消费金融公司等金融机构、征信机构和第三方数据机构、信用咨询及管理服务机构等，以下或简称“合作机构”或“交易服务商”）共同向您提供消费分期、互联网借贷交易信息传递、信用咨询、信息审核管理、交易撮合及资金管理等技术辅助服务的网络平台，为本服务平台的注册用户（以下简称
-        “用户”或“您”）以及合作机构提供互联网信息及技术服务。在成为本服务平台用户前，请您务必仔细阅读以下条款，<span
-          class="fb"
-          style="font-weight:bold;"
-          >尤其是加粗条款（包括但不限于第十一条“适用法律和管辖”项下有关本协议争议应向本协议签署地有管辖权的人民法院提起诉讼解决的约定。），</span
-        >充分理解各条款内容后再选择是否接受本协议。<span
-          class="fb"
-          style="font-weight:bold;"
-          >一旦您提交用户注册申请，即意味着您已阅读本协议所有条款，并对本协议条款的含义及相应的法律后果已全部通晓并充分理解，同意受本协议约束。</span
-        >
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        本协议已对与您的权益具有或可能具有重大关系的条款，及对公司具有或可能具有免责或限制责任的条款用粗体字予以标注，请您注意。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        一、 本协议的签署和修订
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">1.1</span
-        >&nbsp;用户应当为持有中华人民共和国有效身份证件的<span
-          class="fb"
-          style="font-weight:bold;"
-          >22周岁（含）以上且具有完全民事行为能力和民事权利能力的自然人。</span
-        >如您违反前述注册限制注册账户并使用本服务平台服务，公司有权随时中止或终止您的用户资格，并要求您的监护人承担相应的责任。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">1.2</span
-        >&nbsp;本协议内容包括本协议正文所载之各条款及公司通过本服务平台已经发布的或将来可能发布的各类服务规则（以下简称“使用规则”）；<span
-          class="fb"
-          style="font-weight:bold;"
-          >所有该等使用规则均为本协议不可分割的一部分，与本协议正文具有同等法律效力。</span
-        >本协议是您与公司自愿共同签订的，适用于您在本服务平台的全部活动。<span
-          class="fb"
-          style="font-weight:bold;"
-          >在您注册成为用户时，您已经阅读、理解并接受本协议正文的全部条款及全部使用规则，并承诺阅读、理解并接受在您注册成为用户后公司不时发布的使用规则；您同意遵守中国的各类法律、法规及规范性文件的规定，如有违反而导致任何法律后果的发生，您应以自己的名义独立承担所有相应的法律责任。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">1.3</span>&nbsp;<span
-          class="fb"
-          style="font-weight:bold;"
-          >公司有权根据需要不时地修改本协议正文各条款或制定、修改各使用规则并在本服务平台相关系统板块发布，无需另行单独通知。</span
-        >您应不时地注意本协议正文各条款及各使用规则的变更，若您在本协议正文相关条款和/或使用规则内容公告变更后继续使用本服务平台服务的，表示您已充分阅读、理解并接受修改后的内容，也将遵循修改后的本协议正文条款和/或使用规则使用本服务平台服务。若您不同意修改后的协议内容，您应停止使用本服务平台服务。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">1.4</span
-        >&nbsp;您通过自行或授权有关主体根据本协议及有关使用规则、说明操作确认本协议后，本协议即在您和公司之间产生法律效力。<span
-          class="fb"
-          style="font-weight:bold;"
-          >您因接受本服务平台服务而与您的交易服务商及其他服务的公司的合作机构及其注册用户之间产生的法律关系或法律纠纷均由您自行承担及解决，公司不承担任何责任；您在此同意将全面接受和履行通过本服务平台与交易服务商及其注册用户之间以电子形式签订的任何法律文件，并承诺按该等法律文件享有和/或放弃相应的权利、承担和/或豁免相应的义务。</span
-        >
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        二、 服务的提供
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.1</span
-        >&nbsp;公司通过本服务平台提供的服务包括但不限于：
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">2.1.1</span>账户注册
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="fb" style="font-weight:bold;"
-          >公司根据您提供的数据与信息，经过相应身份验证程序后接受您注册为本服务平台用户。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">2.1.2</span>信息传递
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="fb" style="font-weight:bold;"
-          >当您在本服务平台账户进行相关操作并根据要求完成资料提交时，公司将根据您的选择和授权，自行或委托合作机构对您的信用等级、资产状况和还款能力等进行评估，并及时向您反馈您的预估可用信用额度、实际可用信用额度及申请结果等信息（以届时本服务平台实际提供的信息为准）。通过信用审核、评估后，公司会根据您的选择，为您提供借款撮合、信用卡分期还款以及商品交易消费分期服务。您在此不可撤销地同意并授权，公司可以为本第2.1.2条之目的将您向公司提供的信息提交至公司合作机构以满足您的借款或消费分期需求而向您提供进一步的服务。本服务平台通过与合作机构实现系统对接或其他方式，为您提供您与上述机构间的信息传递服务，并为您与该等合作机构签署信用咨询与管理服务及/或其他法律文件提供技术辅助服务。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">2.1.3</span>信用额度评估
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        公司会通过您向公司提供的信息以及公司自行搜集的信息对您的还款能力、还款意愿和资产状况进行评估、分析，并基于此等评估、分析不时确定、更新您的信用额度评估情况。您可通过本服务平台实时查询您的信用额度评估情况。同时，公司会将对您的信用额度评估情况实时同步至公司合作机构，以促成您与该等合作机构为您提供进一步的信用咨询与管理服务合作，或直接将您推荐至合作机构由其为您提供信用额度评估服务。公司有权根据您的信用状况随时调整对您的信用额度评估情况。您在此不可撤销的同意并授权，公司可以将本第2.1.3条项下的全部或部分事项委托给包括合作机构在内的第三方处理。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">2.1.4</span
-        >互联网借贷交易信用咨询及管理服务及信用卡分期还款服务，包括但不限于将您推荐至本公司合作银行，由合作银行向您提供借款，并由本公司向您提供还款管理等服务。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">2.1.5</span
-        >商品交易消费分期服务，包括但不限于向您提供商品展示、交易、消费分期等相关服务。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">2.1.6</span
-        >资金管理技术辅助服务，包括但不限于为您提供还款资金充值、代收、代付、查询等技术辅助服务。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">2.1.7</span>本服务平台不时提供的其他服务内容。<span
-          class="fb"
-          style="font-weight:bold;"
-          >本服务平台提供的其他服务内容，具体将以届时实际提供的服务内容为准。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.2</span
-        >&nbsp;本服务平台将不时更新商品之价格、数量等商品信息且不另行向您通知，当您使用本服务平台的商品交易消费分期服务时，请您仔细确认您所选购的商品名称、型号、规格、价格、数量等商品信息，并准确填写您的收货地址、收货人及联系电话等信息。收货人与您本人不一致的，收货人进行收货等行为和意思表示均视为您本人的行为和意思表示，用户应对该等行为和意思表示承担连带责任。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.3</span
-        >&nbsp;您同意并知悉，本服务平台所提供的商品之具体功能、用途等相关描述应以商品生产者提供的使用说明书为准，并按照商品生产者所提供的售后服务政策享受相关售后服务，具体请以商品订购页面展示为准。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.4</span
-        >&nbsp;基于法律法规、监管部门的要求及/或运行和交易安全的需要，公司可以限制、改变、减少、终止或暂时停止提供本服务平台服务的部分功能，或提供、增加新的功能。在任何功能减少、增加或者变化时，只要您仍然使用本服务平台服务，即表示您同意因该等功能减少、增加或者变化而带来/导致的本协议的变更和调整并受其约束。同时，<span
-          class="fb"
-          style="font-weight:bold;"
-          >公司有权基于交易安全、交易公平和合规性等方面的考虑以及司法机关和仲裁机构、行政机关、军事机关等有权机关不时对您使用本服务平台服务设定相应的限制，包括但不限于限制交易额度、交易次数、冻结或划扣资金等。您了解，本服务平台的前述设定可能会对您造成一定不便或限制，您对此没有异议。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.5</span
-        >&nbsp;您确认，您按本服务平台服务流程通过电子的方式所确认的交易状态、操作将成为您进行相关交易或操作（包括但不限于向交易服务商发送指令、要求/授权冻结资金、充值、代为支付或收取款项、订立合同等）的明确指令。您同意本服务平台以及公司有权按您的相关指令依据本协议和/或对应法律文件对相关事项进行处理，并同意承担因此造成或引发的法律后果及责任。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.6</span
-        >&nbsp;由于您未能及时对交易状态或操作进行修改或确认或未能提交相关申请所引起的任何纠纷或损失均由您本人负责，本服务平台以及公司不承担任何责任。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.7</span
-        >&nbsp;您同意，公司拥有通过邮件、短信或电话等各种形式向您发送您使用本服务平台相关服务时所产生的订单信息、促销活动等信息的权利。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        三、 账户管理及费用
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">3.1</span
-        >&nbsp;在您成功注册后，您可以自行或授权您的代理人根据使用规则和说明，通过本服务平台以点击确认的方式提交服务需求（包括但不限于借款、信用卡分期还款、购买商品及消费分期等），由公司对您的服务需求和您的信息资料进行审核、评估以及决定是否向您提供相应的服务。<span
-          class="fb"
-          style="font-weight:bold;"
-          >在任何情况下，公司不对合作机构提供的交易信息的真实性、合法性作出明示或暗示、直接或间接的担保或承担其他责任。您使用本服务平台服务进行交易而产生的交易风险、损失，均由您自行承担。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">3.2</span>&nbsp;<span
-          class="fb"
-          style="font-weight:bold;"
-          >您应确保您向公司提供的注册资料真实、准确、完整且合法有效，如您的注册资料发生变动，应及时进行更新。如您提供的注册资料不真实、不准确、不完整或不合法，您需承担因此引起的任何责任及后果，公司保留终止您使用本服务平台各项服务的权利。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">3.3</span>&nbsp;<span
-          class="fb"
-          style="font-weight:bold;"
-          >公司将在服务过程中根据有关法律文件和相关使用规则收取必要的服务或管理费用，其具体内容、比例、金额等事项请参见交易过程中您签署的法律文件及相关使用规则。</span
-        >
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        四、 交易资金管理
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">4.1</span
-        >&nbsp;为了便利您的交易，公司将提供技术服务，以便于您的交易服务商通过第三方合作机构（包括但不限于支付机构、金融机构等，下称第三方机构）为您提供交易资金管理服务（具体的交易资金管理服务以您和相关方签署的法律文件约定为准）。同时，如果您的交易服务商通过本服务平台的充值等功能为您提供代收、代付等服务，则本服务平台将为您和您的交易服务商如实记录您的充值、还款、提现等交易记录。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">4.2</span
-        >&nbsp;您了解，上述第三方机构将在您接受交易服务商的资金管理服务过程中为您提供有关资金划付、存管、查询等方面的服务。<span
-          class="fb"
-          style="font-weight:bold;"
-          >如果就该等服务事宜，您与第三方机构另行签署了相应的法律文件，则具体服务事项以及各方权利义务以该等法律文件约定为准。</span
-        >您同意：(a)
-        受第三方机构可能仅在工作日进行资金代扣及划转等各种原因所限，公司及您的交易服务商不对前述服务的资金到账时间做任何承诺，也不承担与此相关的责任，包括但不限于由此产生的利息、货币贬值等损失；(b)
-        一旦您使用前述服务，即表示您不可撤销地进行相关操作，且该等操作是不可逆转的，您不能以任何理由拒绝付款或要求取消交易；(c)就第三方机构提供的服务，您应按照有关法律文件及第三方机构的规定向其支付相应的费用，同时，<span
-          class="fb"
-          style="font-weight:bold;"
-          >您与第三方机构之间就服务提供、费用支付等事项而产生的争议或纠纷，均由当事方自行解决，公司不承担任何直接或间接、全部或部分赔偿责任、担保责任和其他任何法律责任。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">4.3</span
-        >&nbsp;您保证并承诺您通过本服务平台进行交易的资金来源合法。您同意，公司有权按照包括但不限于司法机关和仲裁机构、行政机关、军事机关等有权机关的要求协助其对您的账户及资金等进行查询、冻结或扣划等操作。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">4.4</span
-        >&nbsp;如果本服务平台出现因系统故障或其他原因导致的处理错误，无论是有利于公司、任何交易方或交易服务商还是有利于您，公司都应当并有权通知您该等故障或错误以及纠正该等错误，各方权利义务应恢复至如果没有发生该等系统故障或处理错误双方应该享有或承担的权利义务。如果该等错误导致您实际支付或获得的金额与您应当支付或获得的金额不一致的，则在公司通知您该等处理错误后，您将收到您因该等处理错误而少收或多付的款项，您亦有义务按照公司的通知将您多收或少付的款项予以返还或补足。<span
-          class="fb"
-          style="font-weight:bold;"
-          >您理解并同意，您因前述处理错误而少收或多付的款项均不计利息，除按照前述规定进行返还或划扣外，公司不承担因前述处理错误而导致的任何其他损失或责任（包括您可能因前述错误导致的利息、汇率等损失）。</span
-        >
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        五、 配送
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">5.1</span
-        >&nbsp;当您使用本服务平台订购商品时，本服务平台可能自行或委托第三方合作平台向您提供配送服务，将您订购的商品配送至您指定收货地址。本服务平台所展示的配送时间仅供参考，实际配送时间可能根据库存情况、交通路况以及天气状况等有所变化。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">5.2</span
-        >&nbsp;如您提供的配送信息错误或不准确，商品送达无人签收，情势变更或不可抗力（包括但不限于自然灾害、交通管制或战争等）导致无法配送的，本服务平台不承担因迟延配送所产生的任何责任。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        六、 电子合同
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">6.1</span
-        >&nbsp;您因接受本服务平台服务而与公司之间签署的包括本协议在内的各项法律文件，均采用电子方式订立，每一份法律文件可以有多份副本，并且每份副本均具有同等法律效力。<span
-          class="fb"
-          style="font-weight:bold;"
-          >本服务平台对您提供的身份证件信息进行验证并生成了与您的账户对应之唯一登录信息（包括但不限于绑定邮箱、昵称、ID等，以公司不时要求为准）、您设置了对应的登录密码后，任何人通过您的账户之登录信息和登录密码登录进入您的账户后，在本服务平台或通过本服务平台的信息传递服务（无论是您直接操作、指令，还是您委托公司代理您进行操作、指令）而签署的法律文件、发出的指令、进行的操作，均视为您本人的真实意思表示和您本人的行为，一经成立生效即不可撤销，且对您具有法律约束力并产生强制执行效力。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">6.2</span
-        >&nbsp;您根据本协议以及相关的使用规则以电子方式在本服务平台上或通过本服务平台跳转至合作机构之网站、网页界面签署相应法律文件后，非经法定或约定的方式和程序，对应的法律文件不得擅自修改。公司向您提供该等法律文件的保管、查询、核对等服务，如您对该等法律文件的真伪或内容有任何疑问，您可通过本服务平台的相关系统板块查阅并进行核对。如您经查询仍对法律文件的真伪、版本有任何争议，应以本服务平台和/或相关合作机构或其委托第三方的服务器记录为准。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">6.3</span>&nbsp;<span
-          class="fb"
-          style="font-weight:bold;"
-          >您同意本协议及在本服务平台上签署的相应法律文件均由公司在其或其分支机构、或其委托的第三方的服务器上以电子形式保存，该等服务器所在地为北京市朝阳区。您同意通过本服务平台跳转至合作机构之网站、网页界面签署的相应法律文件均根据交易文件约定方式以电子形式保存。</span
-        >
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        七、 用户信息及隐私保护
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">7.1</span>&nbsp;用户信息的提供、搜集及核实
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">7.1.1</span
-        ><span class="fb" style="font-weight:bold;"
-          >您承诺并保证在注册时如实填写自己的个人资料和信息，并保证及时更新您的个人信息，以确保诸如个人身份信息、电子邮件地址、联系电话（含手机号码，下同）、地址信息、邮政编码等个人资料的有效性、安全性和及时更新。如果公司无法根据您提供的联系方式与您取得联系，由此导致您在使用本服务平台服务过程中遭受任何损失或增加任何费用或产生其他任何不利后果的，均应由您自行承担。</span
-        >
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.1.2</span
-        >除了您自主填写和提供的个人信息和资料，您同意并授权公司可以自行或通过其他机构（包括但不限于征信机构、行业协会及其他第三方机构，下同）依法收集您的额外资料和信息，以实现公司在本协议项下提供的各项服务，搜集的资料和信息范围包括但不限于：
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">（1）</span
-        >您的其他个人信息，包括但不限于证件类型、工作信息、学历信息、个人生物识别信息以及能够单独或者与其他信息结合识别您个人身份的其他信息；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">（2）</span
-        >您在公司的关联方和合作伙伴或其他第三方机构及其运营的网络平台上留存以及形成的任何数据和信息，包括但不限于您的证券账户和/或银行账户信息、您在公司、公司的关联方或公司及关联方之合作伙伴的网络平台上留存、形成的任何数据和信息，包括但不限于您的交易记录、金融理财产品账户信息、投融资项目信息、履约或违约行为信息以及其他任何个人信息或行为数据；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">（3）</span
-        >您的信用信息，包括但不限于您的征信信息、征信记录和信用报告；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">（4）</span
-        >您的财产信息，包括但不限于您的店铺/企业经营状况、收入情况、财税信息、社会保险及公积金信息、房产信息、车辆信息、基金、保险、股票、信托、债券等投资理财信息和负债信息等；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">（5）</span
-        >您在行政机关、司法机关留存的任何信息，包括但不限于户籍信息、工商信息、诉讼信息、执行信息和违法犯罪信息等；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">（6）</span
-        >与您申请或使用的与公司服务相关的、您留存在其他自然人、法人和组织的其他相关信息。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.1.3</span
-        >本协议提及之用户“信息和资料”包括第6.1.1和第6.1.2条规定指资料和信息。您同意公司可以自行或通过合作机构对您提交或公司搜集的用户信息（包括但不限于您的个人身份证信息等）进行核实，并对获得的核实结果进行查看、使用和留存等操作。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.1.4</span
-        >您同意公司有权按照您在本服务平台上的行为自动追踪您的资料和信息。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">7.1.5</span
-        >您同意公司有权通过本服务平台使用诸如“Cookies”等装置以搜集、追踪相关信息和资料并提供只有通过
-        “Cookies”等装置才可得到的功能。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.1.6</span
-        >您同意当您使用本服务平台过程中，公司通过本服务平台向您明示并经您确认同意后，公司有权通过本服务平台向您开启收集地理位置、读取通讯录、读取短信、使用摄像头、启用录音等功能。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">7.1.7</span
-        >您同意公司有权将您提交的个人信息和资料、公司搜集的关于您的信息和资料以及您使用本服务平台服务的记录、信息进行搜集、保存。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">7.2</span>&nbsp;用户信息的使用和披露
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="fb" style="font-weight:bold;"
-          >公司承诺对您的个人信息和资料（包括您主动提交的和公司搜集、记录的所有数据、信息、资料和相应的交易行为记录、交易文件，下同）承担保密义务，不将您的信息向第三方进行出租或出售，并采取必要的措施防止用户个人信息泄露、毁损、篡改或者丢失；但您在此同意并授权，公司可以直接将您的个人信息和资料用于如下用途而无需额外取得您的同意和/或授权：</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">7.2.1</span
-        >&nbsp;向您的交易方或向您提供服务的合作机构提供。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">7.2.2</span
-        >&nbsp;进行用户身份识别、资料核查和验证，以确保在本服务平台或通过本服务平台进行的交易的安全性和防范违法犯罪活动。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">7.2.3</span
-        >&nbsp;进行内部归类、模型建设和分析等内部使用，以改进本服务平台对您及其他用户提供的服务。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.2.4</span
-        >&nbsp;向您推荐公司提供的商品、服务或推广活动，以及与公司的关联方、合作方共享，以向您提供或推荐公司的关联方、合作方的商品、服务或推广活动。您不可撤销地同意公司、公司的关联方及合作方通过站内信、电子邮件、电话、短信等方式向您提供、发送服务状态的通知、营销活动及其他商业性信息。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.2.5</span
-        >&nbsp;公司根据您的授权提交有关操作指令，在您拟通过合作机构进行交易时，将您必要的个人信息和资料（包括但不限于真实姓名、联系方式、信用状况等）披露给合作机构及其用户（如有）；当您违反本协议、各使用规则和/或您与公司签署的和/或通过公司与合作机构及其用户签署的法律文件（包括借款交易文件）之约定或任何法律法规规定时，公司有权因你的违约、违法行为或根据交易方、合作机构的通知，披露您的个人信息和资料以及您的违法、违约行为和对应的交易文件而无需承担任何责任，披露的方式包括但不限于：①在本服务平台公共页面、其他合作机构网站公布；②向与您交易的主体以及有权的仲裁机构和司法、行政等权力机关提供；③向受公司、合作机构及其用户或与您交易之出借人委托的专业法律顾问、催收机构等服务机构提供；④其他披露方式。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.2.6</span
-        >&nbsp;根据有关法律法规要求向有权的仲裁机构或司法、行政、立法等权力机关提供您的个人资料和信息。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.2.7</span
-        >&nbsp;提供给依法设立的征信机构和个人信用数据库，以供有关单位和个人依法查询和使用。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.2.8</span
-        >&nbsp;提供给公司的关联方、合作方（包括但不限于合作机构，下同）以用于完成公司对您提供的服务（包括但不限于对您的个人资料和信息进行核实、对您的信用情况进行评估等）。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.2.9</span
-        >&nbsp;基于服务用户之目的，在公司的关联方、合作方同意承担保密义务的情况下，与公司的关联方、合作方共享您的个人资料和信息，以便关联方、合作方向您展示公司提供的商品、服务或推广活动。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.2.10</span
-        >&nbsp;当您使用或申请使用公司的关联方、合作方提供的服务或与其或拟与其进行交易时，将您的个人信息和资料共享予该等公司关联方、合作方，使其可以对您的个人信息和资料。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">7.2.11</span
-        >&nbsp;您授权的其他情形。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j2" style="font-weight:500;">7.3</span
-        >&nbsp;您清楚知晓、充分理解并接受上述信息被提供、采集和使用可能产生的不利后果，包括但不限于：将上述信息应用于对您本人的信用评估和/或出具信用报告后，可能导致本人在向其他机构申请某项业务时，提供该等业务的机构因参考上述信用评估和/或出具的信用报告而最终拒绝或终止向您本人提供该等业务，以及虽然采取了严格的安全保护措施对所采集的上述信息实施了安全保护，但仍可能因不可抗力或高科技本身所不可克服的漏洞或意外的恶意黑客攻击所导致的部分信息泄露的风险。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        八、 风险提示及责任限制
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j2" style="font-weight:500;">8.1</span
-        >&nbsp;您使用本服务平台服务、通过本服务平台进行交易，存在如下风险：
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">8.1.1</span
-        >您的借款需求无法通过公司的评审和推荐服务得到满足的风险；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">8.1.2</span
-        >因为①网络服务运营商、网站设备供应商等外部第三方的故意或过失，②技术限制带来的系统或设备缺陷，③本服务平台系统或相关网站维护，④法律法规变化、黑客攻击、网络故障、电力中断、计算机病毒或其他不可抗力因素，而引起的交易中断和/或交易错误的风险；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">8.1.3</span
-        >您账户的登录信息、登录密码被窃取或泄露而导致您个人财产损失的风险；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">8.1.4</span
-        >您的个人信息和资料被不法分子窃取、泄露的风险以及由此带来的您个人隐私、生活受到干扰、侵犯的风险；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">8.1.5</span>其他风险。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j2" style="font-weight:500;">8.2</span>&nbsp;责任限制
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">8.2.1</span
-        >&nbsp;在任何情况下，非因公司的原因导致的您在使用本服务平台服务过程中遭受的损失（损失原因包括但不限于您的操作失误导致的损失、第三方机构导致的损失、交易对手违约导致的损失，您本人使用的电脑、手机终端设备感染病毒或安全防御系统被突破造成您无法正常使用本服务平台服务或账户、个人信息泄露而导致的损失，损失类型包括但不限于本息损失），均应由您自行承担或解决；此外，您理解公司基于技术限制和要求需要不时地对本服务平台系统或相关网站进行升级或维护并可能需要中断对您的服务，公司对由此导致的后果不承担责任。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">8.2.2</span
-        >&nbsp;公司及其股东、创建人、高级职员、董事、代理人、关联方和雇员（以下称“公司方”）均不以任何明示或默示的方式对您在前述情形下的直接或间接损失承担法律责任，包括但不限于资金损失、预期收益的损失、营业中断损失等。您应当仔细阅读本协议、各项使用规则、交易的相关法律文件，明确知悉并理解存在的风险，并在独立判断后作出交易决策。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">8.2.3</span
-        >&nbsp;公司不能保证在本服务平台和/或在合作机构及其交易平台（如有）上交易各方展示的信息内容的真实性、充分性、可靠性、准确性、完整性和有效性，并且不承担任何由此引起的法律责任，除非该等信息的不真实、不充分、不准确、不完整、无效最终被有权的仲裁机构、司法机关或行政机关生效的裁定、判决、裁决或命令认定为是因公司的故意或过失所导致且公司因此应当承担相应的法律责任。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">8.2.4</span
-        >&nbsp;您有义务选择/使用公司官方开发的本服务平台软件系统，任何通过其他网站链接、邮件链接或其他方式登录非官方平台并由此造成的风险和损失由您自行承担。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">8.2.5</span
-        >&nbsp;公司不能保证也没有义务保证与本服务平台链接或者您自行登录的第三方网站上的信息的真实性和有效性，您应当自行对第三方网站提供的信息、服务、产品进行判断并谨慎作出决策，公司对第三方网站提供的信息、服务、产品均不承担任何责任。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        九、 账户的管理和使用
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">9.1</span
-        >&nbsp;您在接受本协议并通过本服务平台软件注册成为用户后，将取得对应之唯一账户（统称为
-        “账户”）。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">9.2</span
-        >&nbsp;您可自行为您的账户设置密码，并通过该账户登录本服务平台进行相关操作来接受公司提供的各项服务；本服务平台将通过您的账户登录信息和密码识别您的指示。在任何情况下，您应直接通过本服务平台以登录您的账户，而不要通过邮件或其他网站提供的链接登录；您以电话方式传递任何信息时应拨打公司专属客户服务电话：<span>【4000856608】</span>（如公司以公告等形式发布新的客服电话，请届时拨打新的客服电话），而不要拨打其他任何电话。<span
-          class="fb"
-          style="font-weight:bold;"
-          >您应妥善保管您的账户登录信息和密码，除您有效授权的代理人外，您不得以借用、租用或其他任何方式提供给第三方使用。公司在此郑重提醒您，无论是您还是您的代理人或其他第三方（包括但不限于您的用户名、密码泄露导致），以您的账户名和密码登录本服务平台后的一切行为和言论均视为您本人的行为，并应由您承担相应的法律后果。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">9.3</span>&nbsp;<span
-          class="fb"
-          style="font-weight:bold;"
-          >请您务必妥善保管您的账户登录信息和密码，防止泄露或被不法分子窃取。您若发现您的账户和密码被盗用，应立即以有效方式通知公司，要求公司对您的账户暂停相关服务，否则由此产生的一切责任均由您本人承担。</span
-        >同时，您理解公司对您的请求采取行动需要合理期限，在此之前，公司对第三人使用该服务所导致的您的损失不承担任何直接或间接的赔偿、担保以及其他责任。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j2" style="font-weight:500;">9.4</span>&nbsp;账户使用限制
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">9.4.1</span
-        >&nbsp;您承诺合法使用本服务平台提供的服务及内容，不得利用公司服务和本服务平台从事任何违反或可能违反所有适用法律、法规、政府规章和命令（包括但不限于中国的法律、法规、政府规章和命令）的行为，亦不得利用公司服务和本服务平台从事任何侵犯或可能侵犯其他主体任何权利、权益的行为。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">9.4.2</span
-        >&nbsp;构成本服务平台软件的全部内容均属于公司所有，该等内容包括但不限于文本、数据、文章、设计、源代码、软件、图片、照片及其他全部信息（以下称“本服务平台内容”），且您同意并承诺、确认该等本服务平台内容为公司之财产。未经公司事先书面同意，您不得以任何方式和形式复制、模仿、传播、出版、公布、展示、使用前述内容，包括但不限于电子的、机械的、复印的、录音录像的方式和形式等，您亦不得将任何本服务平台内容镜像到任何其他网站或者服务器。任何未经授权对本服务平台内容的使用均属于违法行为，公司将追究您的法律责任。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">9.4.3</span
-        >&nbsp;公司有义务根据有权的仲裁机构、司法机关、行政机关或其他政府机构的有效的法律文书、裁决、命令，不经事先通知而先行对您的账户采取包括但不限于冻结、锁定、注销、划扣、处置您委托您的交易服务商管理的资金（如有）的措施以及其他措施，和/或暂停、中断或终止向您提供本协议项下的全部或部分服务。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">9.4.4</span
-        >&nbsp;公司有权基于单方独立判断，在认为发生或可能发生危害交易安全、破坏公平交易秩序、损害其他主体的权益等情形时，不经通知而采取包括但不限于：先行暂停、中断向您提供本协议项下的全部或部分服务，以及/或者将您在本服务平台发表的内容和/或您的个人资料和信息移除或删除，以及/或者处置您委托公司或通过公司委托您的交易服务商管理的资金等资产（如有）等措施，且无需对您或任何第三方承担任何责任。前述情形包括但不限于：
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">（1）</span
-        >&nbsp;公司认为您提供的个人资料不具有真实性、有效性或完整性；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">（2）</span
-        >&nbsp;公司发现您的账户存在异常交易或认为您的账户存在异常交易的可能时；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">（3）</span
-        >&nbsp;公司认为您的账户涉嫌洗钱、信用卡套现、传销等违法违规行为，或认为您的账户存在被冒用或其他公司认为可能损害您或者其他用户的合法权益的情形；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">（4）</span
-        >&nbsp;公司认为您已经违反或可能违反本协议各项规定时；
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">（5）</span
-        >公司不时公告的其他各项情形。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j2" style="font-weight:500;">9.5</span
-        >&nbsp;服务终止和账户的关闭、注销
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">9.5.1</span
-        >&nbsp;您同意：根据有权的仲裁机构、司法机关、行政机关或其他政府机构的有效的法律文书、裁决、命令，或者发生第9.4.4条规定的各项情形时，公司有权无需进行事先通知即终止提供本协议项下的各项服务，并关闭、注销您的账户、删除该账户中的所有相关资料及档案
-        或 进行去识别 化
-        处理，同时将您滞留于您的账户的全部合法资金（如有）退回到您的银行账户或者根据权力机关的要求进行其他处置。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">9.5.2</span
-        >&nbsp;如果您决定不再使用您的账户时，应首先清偿在通过公司的服务而达成之借款交易项下所有应付款项（包括但不限于借款本金、利息、罚息、违约金、服务费、管理费等），并按照本协议、使用规则以及您与公司、交易服务商、第三方机构另行签署的关于账户管理与使用的有效法律文件，通过您的账户向公司、交易服务商、第三方机构发出有效的资金支付指令，将您在该账户中记载的由公司或交易服务商管理的可用款项（如有）全部转移至您的银行账户，再向公司申请注销该用户账户。经公司审核同意后，您可正式注销您的账户。您的账户注销，并不必然导致您在合作机构及其网络平台（如有）上的账户注销，您在合作机构及其网络平台账户的关闭和注销，应当遵守其《注册服务协议》及相关服务规则进行操作。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">9.5.3</span
-        >&nbsp;如果用户死亡或被宣告死亡的，其在本协议项下以及有关借款交易协议项下的各项权利义务由其合法的继承人享有和承担。若用户丧失全部或部分民事权利能力或民事行为能力的，公司有权根据有效法律文书（包括但不限于生效的法院判决等）或其法定监护人的指示处置其账户及该等账户内的款项（如有），该等用户在本协议以及有关借款交易协议项下的权利义务依据法律法规规定处理。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j3">9.5.4</span
-        >&nbsp;您应保证您注册账户时使用的第三方网站账户、手机号码为您个人合法所有；如果您因为该等第三方网站账户、手机号码失效、注销、更换导致您无法正常使用账户的，公司对此不承担任何责任。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j3" style="font-weight:300;">9.5.5</span
-        >&nbsp;如果公司、为您提供资金管理服务的交易服务商、第三方支付机构或金融机构在前述第9.5.1条至9.5.4条规定情况下另有要求的，以其要求为准。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">9.6</span
-        >&nbsp;您同意并确认：您的账户的暂停、中断或终止不代表您责任的终止，您仍应继续履行您使用本服务平台服务期间所签署之各项法律文件（包括但不限于本协议、对应的借款交易协议）项下未履行完毕之义务，并对您使用本服务平台服务期间的行为承担可能的违约或损害赔偿责任；此外，在该等情况下，公司仍可保存您的个人信息和资料并根据本协议规定予以使用和披露。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        十、 通知
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="fb" style="font-weight:bold;"
-          >对于本协议项下的各项通知，公司有权以在本服务平台公示的方式发送，也可以向您的账户、您提供的您的电子邮箱和手机号码发送信息、通过系统推送、发送站内信的方式发送，还可以拨打您预留的电话号码的方式发送，以及向您预留的住址以快递、挂号信的方式发送。如以公示方式作出的，在本服务平台公示当日即视为已经送达；向您的账户、您的电子邮箱或手机号码以电子信息形式发送的，一经成功发送即视为已经送达；以电话形式发送的，通知作出之时即为送达；以快递、挂号信的方式发送的，投递之日起第三日视为送达。</span
-        ><span
-          >请您密切关注您的电子邮箱
-          、站内消息系统栏中的邮件、信息及手机中的信息，并在您的联系方式发生变更时及时通过操作本服务平台相关板块进行更新。</span
-        ><span class="fb" style="font-weight:bold;"
-          >您同时同意并确认，若您设置了不接收本服务平台的有关通知或提醒，则您有可能收不到该等通知信息，您不得以您未收到或未阅读该等通知信息主张相关通知未送达于您。</span
-        >
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        十一、 适用法律和管辖
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        因本协议的签署、履行产生的争议均适用中华人民共和国法律，并应由本协议签署地有管辖权的人民法院管辖。本协议签署地为本协议第6.3条提及之服务器所在地北京市朝阳区。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        十二、 其他
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        若本协议的部分条款被认定为无效或者无法实施时，本协议中的其他条款仍然有效并应继续予以履行。
-      </p>
-    </div>
-    <div class="deal-page" v-show="dealType === 2">
-      <h3
-        class="tc"
-        style='font-size:15px;text-align:center;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        好分期隐私权政策
-      </h3>
-      <p
-        class="tc"
-        style='font-size:15px;text-align:center;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        最后更新时间：2018年【06】月【21】日
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        好分期非常重视用户个人信息和隐私权的保护，鉴于此，我们根据相关法律法规规定，制定本隐私权政策，帮助您了解我们将如何收集、使用并保护您的个人信息。本隐私权政策适用于我们提供的产品或服务，请您在使用我们的产品或服务前认真阅读并确认充分理解本隐私权政策，以便您做出您认为适当的选择。<span
-          class="fb"
-          style="font-weight:bold;"
-          >您使用我们提供的产品或服务，</span
-        >即意味着您已阅读本隐私权政策所有条款，并对本隐私权政策条款的含义及相应的法律后果已全部通晓并充分理解，<span
-          class="fb"
-          style="font-weight:bold;"
-          >并且同意我们按照本隐私权政策收集、使用并保护您的个人信息。如果您不同意本隐私权政策的部分或全部内容、或对本隐私权政策内容有任何疑问，您应立即停止使用我们提供的产品或服务，并通过好分期客服与我们联系。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        本隐私权政策已对与您的权益具有或可能具有重大关系的条款，及对我们具有或可能具有免责或限制责任的条款用粗体字予以标注，请您注意。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        需要特别说明的是，好分期平台也可能含有到其他网站的链接，我们对该等链接网站的信息保护措施不负责任。我们建议您查看该等网站的隐私权政策，以了解他们如何处理您的信息，以便审慎决策。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        本隐私权政策将帮助您了解以下内容：
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        一. 我们如何收集和使用您的个人信息
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        二. 我们如何共享、转让、公开披露您的个人信息
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        三. 我们如何保存您的个人信息
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        四. 我们如何保护您的个人信息
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        五. 您可以如何管理个人信息
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        六. 未成年人的个人信息保护
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        七. 通知和修订
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        八. 您如何联系我们
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        九. 可分割性
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        十. 其他
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        一.&nbsp;<span class="tu">我们如何收集和使用您的个人信息</span>
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        个人信息是指以电子或者其他方式记录的能够单独或者与其他信息结合识别特定自然人身份或者反映特定自然人活动情况的各种信息。我们将在如下流程中，基于实现该流程所需的目的收集您的个人信息：
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">1.1</span>&nbsp;&nbsp;&nbsp;
-        当您注册好分期账号时，我们将收集您的真实姓名、手机号码、身份证件号码、电子邮箱、登录密码、手势密码或面部特征等个人生物识别信息，收集此类信息是为了满足相关法律法规的网络实名制要求并保护您的账号安全。如果您仅需使用基础浏览服务，您可以选择不进行注册及提供上述信息。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">1.2</span>&nbsp;&nbsp;&nbsp;
-        当您希望通过我们提供的产品或服务获得互联网借贷交易信用咨询及管理服务、信用卡分期还款咨询服务、商品交易消费分期咨询服务时，我们将收集您的如下个人信息：
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        i
-        您的真实姓名、身份证件号码、性别、手机号码、电子邮箱、婚姻状态、年龄、学历、户口所在地、现居住地（如居住地证明）、工作情况（如工作证明）、收入情况（如个人银行流水）、征信报告和其他财产证明（如房产、车产等）；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        ii
-        您的订单信息（如收货人、收货地址、收货人手机号码，订单金额、支付方式等）；您的浏览信息（我们可能进行数据分析并形成用户画像后向您展示您可能感兴趣的商品）；以及您的位置信息（用于向您推荐您所在区域可以选购的商品、预估配送时间等）；
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        iii
-        您的社保、公积金信息，芝麻信用报告，在此信息收集过程中可能需要您提供有关账户名、密码和短信验证码；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        iv
-        借款项目名称、借款金额、借款期限、借款用途、还款方式、还款来源、还款保障措施；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        v
-        借款资金运用情况，您的经营状况及财务状况、还款能力变化情况，您的借款逾期情况，以及您的涉诉情况、受行政处罚情况；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        vi
-        您的通讯录、通话详单，您的亲戚朋友、联系人及其手机号码，请您确保您在向我们提供该信息时已经获得您的亲戚朋友、联系人的同意，以便我们、我们的关联方或合作方可以通过您提供的联系方式进行联系。如您向我们提供的亲戚朋友、联系人及其手机号码的行为未经过其本人同意，我们与您的亲戚朋友、联系人进行联系所发生的风险及责任将由您承担。<span
-          class="fb"
-          style="font-weight:bold;"
-          >当您违反与好分期的约定时，为维护好分期的合法权益，您同意好分期可向与好分期合作的律师事务所、催收机构，及好分期认为可向您传达信息的亲戚朋友、联系人等披露您的违约信息；若好分期与您的亲戚朋友、联系人等关联方存在纠纷未能协商解决的，好分期可能会自行或通过催收机构、律师事务所、法院、仲裁委员会和其他有权机关与您联系，请您帮助好分期或上述机构向您的亲戚朋友、联系人等关联方转达相关诉求，上述转达以您自愿为基础，并不会让您承担额外的法律义务或责任；</span
-        >以及
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        vii
-        为实现本隐私权政策目的所需的、或者本隐私权政策或其他协议中经您授权许可的其他收集方式下所收集的信息。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        收集此类信息是为了完成借款人身份识别、信用审核和/或逾期账务提醒以及为您提供商品选购服务等，如果您不提供此类信息，您可能无法正常使用我们的服务。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j2" style="font-weight:normal;">1.3</span
-        >&nbsp;&nbsp;&nbsp;
-        为更好地向您提供产品和服务，也为了我们自身的风险防控，以及保护各方的合法权益，您同意并授权我们可以通过您自主填写和提供的个人信息和资料自行或通过其他机构（包括但不限于征信机构、行业协会及其他第三方机构，下同）依法收集您的额外资料和信息，以在您使用我们提供的产品或服务前期对您的履约情况、信用情况进行审核、在后期对您进行必要的催收、以及实现我们为您提供的各项服务，我们搜集的资料和信息范围包括但不限于：
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        i
-        您的其他个人信息，包括但不限于工作信息、学历信息以及能够单独或者与其他信息结合识别您个人身份的其他信息；
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        ii
-        您在我们的关联方和合作方处留存以及形成的任何数据和信息，包括但不限于您的证券账户和/或银行账户信息等；您在我们、我们的关联方或合作方以及其他机构的网络平台上留存、形成、产生的有关法律文件以及任何个人信息或行为数据，包括但不限于您的交易信息、账户信息、借贷项目信息、履约或违约行为信息等；
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        iii 您的信用信息，包括但不限于您的征信记录和信用报告及其他信用信息；
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        iv
-        您的财产信息，包括但不限于您的店铺/企业经营状况、财税信息、房产信息、车辆信息、基金、保险、股票、信托、债券等投资理财信息和负债信息等；
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        v
-        您在行政机关、司法机关留存的任何信息，包括但不限于户籍信息、工商信息、诉讼信息、执行信息和违法犯罪信息等；以及
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        vi
-        与您申请或使用的产品或服务相关的、您留存在其他自然人、法人和组织的其他相关信息。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j2" style="font-weight:normal;">1.4</span
-        >&nbsp;&nbsp;&nbsp;
-        您同意我们可以自行或通过合作方（包括但不限于合作机构、行业协会）对您提交或我们搜集的用户信息（包括但不限于您的个人身份证信息等）进行核实、验证，并对获得的核实、验证结果进行查看、收集、使用和留存等操作。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">1.5</span>&nbsp;&nbsp;&nbsp;
-        我们将在您使用我们提供的产品或服务的过程中收集您的个人常用设备信息（包括设备名称、设备型号、设备识别码、操作系统和应用程序版本）和日志信息（如访问内容、IP地址、访问日期和时间及访问记录等），收集这些信息是为了向您提供更好的产品和/或服务并改善用户体验。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j2" style="font-weight:normal;">1.6</span
-        >&nbsp;&nbsp;&nbsp;
-        您在此同意并授权，我们可以直接将您的个人信息和资料用于如下用途：
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        i
-        进行用户身份识别、资料核查和验证，以审核用户的履约情况、信用情况，确保交易的合理性、安全性和防范违法犯罪活动；
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        ii
-        为向您提供适合于您的服务，并持续维护、改善、优化该等服务，对您的信息进行内部归类、模型建设和分析等内部使用；
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        iii
-        用于预防、发现、调查欺诈、危害安全、非法或违反与我们或我们关联方协议、政策或规则的行为，以保护您、我们的其他用户、我们或我们关联方的合法权益；
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        iv
-        我们可能会将来自某项服务的信息与来自其他服务的信息结合起来，以便为您提供更优质、个性化的服务、内容和建议；
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        v 用于向您收取应支付的各类费用（如有）；
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        vi
-        向我们的合作方提供您的订单信息、支付信息以及配送信息，以便确认您的支付指令完成支付，并向您安排送货；向第三方提供必要的订单信息以实现您购买商品的需求，以便其为您提供相关售后服务；
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        vii
-        有针对性地向您推荐我们提供的商品、服务或推广活动，以及与我们的关联方、合作方共享，以向您提供或推荐我们的关联方、合作方的商品、服务或推广活动。您同意我们、我们的关联方及合作方通过站内信、电子邮件、电话、短信等方式向您提供、发送服务状态的通知、营销活动及其他商业性信息。如不需要我们推广相关信息，您可联系好分期客服取消、退订该类信息推广服务；以及
-      </p>
-      <p
-        class="fb t2"
-        style='font-size:15px;font-weight:bold;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        viii
-        为实现本隐私权政策目的所需的、或者本隐私权政策或其他协议中经您授权许可的其他使用方式。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j2" style="font-weight:normal;">1.7</span
-        >&nbsp;&nbsp;&nbsp;
-        您充分知晓，以下情形中，我们收集、使用个人信息无需征得您的授权或同意：
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        i 与国家安全、国防安全有关；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        ii 与公共安全、公共卫生、重大公共利益有关；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        iii 与犯罪侦查、起诉、审判和判决执行等有关；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        iv
-        出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        v 所收集的个人信息是个人信息主体自行向社会公众公开的；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        vi
-        从合法公开披露的信息中收集的您的个人信息，如合法的新闻报道、政府信息公开等渠道；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        vii 根据您的要求签订合同所必需的；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        viii
-        用于维护所提供的产品与/或服务的安全稳定运行所必需，例如发现、处置产品与/或服务的故障；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        ix 为合法的新闻报道所必需；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        x
-        学术研究机构基于公共利益开展统计或学术研究所必要，且对外提供学术研究或描述的结果时，对结果中所包含的个人信息进行匿名化处理的；以及
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        xi 法律法规规定的其他情形。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">1.8</span>&nbsp;&nbsp;&nbsp;
-        您知晓并同意，在收集您的个人信息后，我们可能会通过技术手段对您的个人信息进行脱敏。<span
-          class="fb"
-          style="font-weight:bold;"
-          >我们有权在不透露您个人信息的前提下使用已经脱敏的信息。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">1.9</span>&nbsp;&nbsp;&nbsp;
-        为了了解您的偏好、进行咨询或数据分析、改善产品服务及用户体验、提高广告效果、及时发现并防范安全风险、为用户和合作方提供更好的服务，您同意我们有权使用诸如“Cookie”等装置以搜集、追踪相关信息和资料并提供只有通过“Cookie”等装置才可得到的功能。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">1.10</span>&nbsp;&nbsp;&nbsp;
-        我们不会将“Cookie”用于本隐私权政策所述目的之外的任何用途，您可根据自己的偏好留存或删除“Cookie”。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        二.&nbsp;<span class="tu"
-          >我们如何共享、转让、公开披露您的个人信息</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.1</span>&nbsp;&nbsp;&nbsp;
-        我们承诺会根据相关法律法规及监管规定对您的个人信息（包括您主动提供的和我们收集、记录的所有数据、信息、资料和相应的交易行为记录、交易文件，下同）承担保密义务。但为了向您提供更多元化、个性化、优质的服务，您同意并授权我们在以下情形下将您的信息向第三方进行共享。并且，我们将促使该等第三方在使用您信息的过程中对您的信息采取适当保密与安全措施：
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        i 事先获得您的明确同意或授权；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        ii
-        根据可适用的法律法规、法律程序的要求、强制性的行政或司法要求所必须的情况下进行提供；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        iii
-        提供给依法设立的征信机构和个人信用数据机构，以供有关单位和个人依法查询和使用；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        iv
-        提供给合法成立的行业协会，以供有关单位和个人依法查询和使用，并按照行业协会的要求依法进行信息披露和展示；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        v
-        在法律法规允许的范围内，为维护我们、我们的关联方或合作方，您或其他用户，或社会公众利益、财产或安全免遭损害而有必要提供；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        vi
-        提供给我们的关联方、合作方以用于现在或将来向您提供我们、我们的关联方、合作方的相关服务，具体的服务可能包括借贷服务、理财服务等，您在此确认前述服务是您希望获得的（包括但不限于对您的个人资料和信息进行核实、对您的信用情况进行评估以决定向您提供前述服务的可行性、合理性以及决定提供服务的相关条款和条件等）；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        vii
-        符合我们、我们的关联方、合作方与您签署的相关协议（包括在线签署的电子协议以及相应的平台规则）或其他的法律文件约定所提供；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        viii
-        如我们或我们的关联方涉及合并、分立、收购、资产或业务转让或类似的交易，您的个人信息可能作为此类交易的一部分而被共享，我们将确保该等信息在共享时的机密性，您同意对此予以认可和理解；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        ix 基于学术研究而使用；
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        x 基于符合法律法规的社会公共利益而使用；以及
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        xi
-        为实现本隐私权政策目的所需的、或者本隐私权政策或其他协议中经您授权许可的其他共享方式。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.2</span>&nbsp;&nbsp;&nbsp;
-        基于服务用户之目的，在我们的关联方、<a name="_Hlk497680032"></a
-        >合作方同意承担保密义务的情况下，我们可能会与我们的关联方、合作方共享您的个人资料和信息，以便我们的关联方、合作方向您展示我们提供的商品、服务或推广活动。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.3</span>&nbsp;&nbsp;&nbsp;
-        当您使用或申请使用我们的关联方、合作方提供的服务或与其或拟与其进行交易时，我们可能会将您的个人信息和资料共享与该等关联方、合作方，使其可以对您的个人信息和资料进行核实、分析。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.4</span>&nbsp;&nbsp;&nbsp; 您对其他用户信息的使用：
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        在不违反我们与其他用户、合作机构之间的协议的前提下，发生如下任一情形时，您有权要求我们提供与您发生交易的其他用户、合作机构的信息和资料，且我们提供的该等信息和资料仅以在如下情形发生时使用并以维护您的合法权益所必须为限：
-      </p>
-      <ol style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <li>
-          与您交易的其他用户、合作机构发生了与您签署的法律文件项下的违约行为；
-        </li>
-        <li>
-          您已依法对与您交易的其他用户提起了有关您与该其他用户通过公司的服务进行的交易有关的仲裁或诉讼并提供了有效的立案（受理）证明文件；或
-        </li>
-        <li>
-          发生了有碍您在通过我们的产品进行的交易项下相关权益实现的情况，包括但不限于公司被吊销营业执照或被解散、清算、宣告破产以及其他情形。
-        </li>
-      </ol>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        对于您通过与我们签署法律文件或向我们申请披露而获知的其他用户、合作机构的资料和信息，您同意并确认：除非法律法规另有规定，或者有权的仲裁机构、司法、行政等权力机关的要求，您仅可将该等资料和信息用于实现、维护您在与该其他用户、合作机构签署的法律文件项下的权益以及履行您在该等法律文件项下的相关义务，不得将该等资料和信息用于其他用途，更不得非法出售该等信息和资料。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.5</span>&nbsp;&nbsp;&nbsp;
-        除以下情形外，我们不会将您的个人信息转让给任何公司、组织和个人：
-      </p>
-      <ol style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <li>
-          事先获得您的明确同意或授权；
-        </li>
-        <li>
-          根据可适用的法律法规、法律程序的要求、强制性的行政或司法要求所必须的情况进行提供；
-        </li>
-        <li>
-          符合我们、我们的关联方、合作方与您签署的相关协议（包括在线签署的电子协议以及相应的平台规则）或其他的法律文件约定所提供；或
-        </li>
-        <li>
-          <a name="OLE_LINK5"></a
-          ><a name="OLE_LINK6"></a
-          >如我们或我们的关联方涉及合并、分立、收购、资产或业务转让或类似的交易，您的个人信息可能作为此类交易的一部分而被转移，我们将确保该等信息在转移时的机密性，您同意对此予以认可和理解。
-        </li>
-      </ol>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">2.6</span>&nbsp;&nbsp;&nbsp;
-        我们将会在以下情况下公开披露您的个人信息：
-      </p>
-      <ol style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <li>
-          根据您的需求，在您明确同意的披露方式下披露您所指定的个人信息；
-        </li>
-        <li>
-          根据法律法规的要求、强制性的行政执法或司法要求所必须提供您个人信息的情况下，我们将会依据所要求的个人信息类型和披露方式公开披露您的个人信息。
-        </li>
-      </ol>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        三.&nbsp;<span class="tu">我们如何保存您的个人信息</span>
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">3.1</span>&nbsp;&nbsp;&nbsp; 保存地域
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        您的个人信息将储存于中华人民共和国境内。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">3.2</span>&nbsp;&nbsp;&nbsp; 保存期限
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        除法律法规另有规定外，我们将永久保存您的个人信息以及相关网络借贷业务数据。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        您的个人信息经匿名化处理后将形成可以使用及流通的数据，我们对此类数据的保存及处理无需另行通知并征得您的同意。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">3.3</span>&nbsp;&nbsp;&nbsp; 安全事件
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        i.
-        如不幸发生个人信息安全事件后，我们将按照法律法规的要求，及时向您告知安全事件的基本情况和可能的影响、我们已采取或将要采取的处理措施、您可自主防范和降低的风险的建议、对您的补救措施等。<span
-          class="fb"
-          style="font-weight:bold;"
-          >我们会及时将事件相关情况以站内通知、短信通知、电话、邮件等您预留的联系方式告知您，难以逐一告知时我们会采取合理、有效的方式发布公告。</span
-        >
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        ii.
-        我们会及时处置系统漏洞、网络攻击、病毒侵袭及网络侵入等安全风险。在发生危害网络安全的事件时，<span
-          class="fb"
-          style="font-weight:bold;"
-          >我们会按照网络安全事件应急预案，及时采取相应的补救措施，并按照规定向有关主管部门报告。</span
-        >
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        iii.
-        如果我们的物理、技术或管理防护设施遭到破坏，导致信息被非授权访问、公开披露、篡改或损毁，导致您的合法权益受损，我们将严格依照法律的规定承担相应的责任。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        四.&nbsp;<span class="tu">我们如何保护您的个人信息</span>
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">4.1</span>&nbsp;&nbsp;&nbsp;
-        我们非常重视个人信息安全，将采取一切合理可行的技术安全措施，保护您的个人信息：
-      </p>
-      <ol style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <li>
-          我们通过https技术为您提供浏览服务，并通过相应的登录短信验证安全机制、数据库加密及日志加密措施保障用户数据安全；
-        </li>
-        <li>
-          我们建立了数据分级制度，对您的手机号、身份证号等个人敏感信息全程进行加密处理，并设置严格的数据访问权限，确保您的个人信息安全；以及
-        </li>
-        <li>
-          我们不时聘请安全专家为技术人员提供相应培训，并在技术部内部设置相应的安全专家检查系统的安全性。
-        </li>
-      </ol>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">4.2</span>&nbsp;&nbsp;&nbsp;
-        尽管我们采取了上述技术安全措施，但请您理解，在互联网行业由于技术的限制和飞速发展以及可能存在的各种恶意攻击手段，即便我们竭尽所能加强安全措施，也不可能始终保证信息的百分之百安全。请您了解，您使用我们的产品和/或服务时所用的系统和通讯网络，有可能因超出我们的控制能力之外的其他因素而出现安全问题。如您发现自己的个人信息泄密，尤其是您的账户或密码发生泄漏，您应该立即通过好分期客服与我们取得联系，以便我们采取相应措施。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        五.&nbsp;<span class="tu">您可以如何管理个人信息</span>
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        我们非常重视并保护您关于管理个人信息的权利，并为您提供了管理个人信息的方法。您有权利访问、更正、撤销自己的信息并保护自己的隐私和安全。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">5.1</span>&nbsp;&nbsp;&nbsp; 访问权
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        除法律法规规定的例外情况，无论您何时使用我们的服务，我们都会力求让您顺利访问自己的个人信息。<span
-          class="fb"
-          style="font-weight:bold;"
-          >如果您希望访问或编辑您账户中的个人资料信息（包括但不限于手机号码、电子邮箱、登录密码、手势密码、银行账户信息等），您可以在网页端或APP端中执行此类操作，或联系好分期客服进行编辑；</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">5.2</span>&nbsp;&nbsp;&nbsp; 更正权
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        当您需要更新您的个人信息时，或发现我们处理您的个人信息有错误时，您有权做出更正或更新。<span
-          class="fb"
-          style="font-weight:bold;"
-          >您可以自行在相关网页端或APP端进行更正，或通过反馈与报错等将您的更正申请提交给我们。</span
-        >在您进行更新或更正前，我们可能会现要求您验证自己的身份，然后再处理您的请求。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">5.3</span>&nbsp;&nbsp;&nbsp; 撤销权
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        您可以<span class="fb" style="font-weight:bold;"
-          >改变您授权同意的范围或撤回您的授权，但您撤回同意或授权后，我们可能将无法继续为您提供撤回同意或授权所对应的服务。同时，您知悉并理解，在您撤回同意或授权前提供的个人信息，我们将继续依照可适用的法律法规规定及本隐私权政策进行保存或披露。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">5.4</span>&nbsp;&nbsp;&nbsp; 注销权
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        您可以通过拨打好分期平台上公布的好分期客服电话申请注销您的账户，一旦您注销账户，我们将停止为您提供服务，因此请您谨慎操作。但<span
-          class="fb"
-          style="font-weight:bold;"
-          >您知悉并理解，在您注销账户前提供的个人信息，我们将继续依照可适用的法律法规规定及本隐私权政策进行保存或披露。</span
-        >
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">5.5</span>&nbsp;&nbsp;&nbsp; 管理问题
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        如果您无法通过上述方式访问、更正或撤销您的个人信息，或者您无法完成账户注销，或者您就我们收集、使用您信息存在任何疑问，您都可以通过好分期客服与我们联系。为保障安全，我们可能需要您提供书面请求，或以其他方式证明您的身份。我们将在收到您的反馈并验证您身份后尽快答复您的相关请求。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        我们将尽合理商业努力，满足您对于个人信息的访问、更正、撤销及账户注销的要求。但对于无端重复、需要过多技术手段、给他人合法权益带来风险或者非常不切实际的请求，我们可能会予以拒绝。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        对于您合理的请求，我们原则上不收取费用，但对多次重复、超出合理限度的请求，我们将视情况收取一定成本费用。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">5.6</span>&nbsp;&nbsp;&nbsp; 例外
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        按照法律法规要求，以下情况中，<span class="fb" style="font-weight:bold;"
-          >我们将无法响应您的请求：</span
-        >
-      </p>
-      <ol style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <li>
-          与国家安全、国防安全有关的；
-        </li>
-        <li>
-          与公共安全、公共卫生、重大公共利益有关的；
-        </li>
-        <li>
-          与犯罪侦查、起诉和审判等有关的；
-        </li>
-        <li>
-          有充分证据表明您存在主观恶意或滥用权利的；
-        </li>
-        <li>
-          响应您的请求将导致您或其他个人、组织的合法权益受到严重损害的。
-        </li>
-      </ol>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        六.&nbsp;<span class="tu">未成年人的个人信息保护</span>
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j2" style="font-weight:normal;">6.1</span
-        >&nbsp;&nbsp;&nbsp; 我们非常重视对未成年人个人信息的保护
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        如您是22周岁以下的未成年人，在使用我们的服务前，<span
-          class="fb"
-          style="font-weight:bold;"
-          >请务必要求您的监护人仔细阅读本隐私权政策，并请您在征得您的监护人同意的前提下使用我们的服务或向我们提供信息。</span
-        >
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="j2" style="font-weight:normal;">6.2</span
-        >&nbsp;&nbsp;&nbsp; 补救措施
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        如果您未能取得您监护人的同意或您未同意您的被监护人使用我们的服务并向我们提供信息，<span
-          class="fb"
-          style="font-weight:bold;"
-          >请您或被监护人立即停止使用我们的服务并及时与我们取得联系。</span
-        >在收到您的书面通知而知晓或我们自行知晓，我们在未事先获得监护人同意的情况下收集了未成年人的个人信息时，我们会立即停止相关信息收集及使用。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        七.&nbsp;<span class="tu">通知和修订</span>
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        本隐私权政策将会随着我们的业务的发展进行更新，以便为您提供更好的服务。我们会通过在网站、APP或其他平台上发出更新版本并在生效前通过公告或以其他适当方式提醒您相关内容的更新，请您及时访问以便了解最新的隐私权政策。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        八.&nbsp;<span class="tu">您如何联系我们</span>
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">7.1</span>&nbsp;&nbsp;&nbsp; 好分期客服
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        如果您对本隐私权政策有任何疑问、意见或建议，或您在使用我们提供的服务时，就您的个人信息的收集、使用、共享、访问、更正、撤销等相关事宜有任何意见或建议，或您在使用我们提供的服务时遇到任何问题，您都可以通过好分期平台上公布的客服电话（400-0856-608）与我们联系。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <span class="j2">7.2</span>&nbsp;&nbsp;&nbsp; 特别提示
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        i.
-        我们提醒您，如您反馈的问题涉及您的个人信息，尤其是您的个人敏感信息，请您不要直接在电话中进行透露，我们将会在确保您个人信息安全的情况下与您进一步沟通。
-      </p>
-      <p
-        class="t2"
-        style='font-size:15px;text-indent:2em;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        ii.
-        部分情况下，为保障您个人信息的安全，我们可能需要您提供书面请求，或以其他方式证明您的身份。我们将在收到您的反馈并验证您的身份后尽快答复您的相关请求。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        九.&nbsp;<span class="tu">可分割性</span>
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        如果本隐私权政策的任何条款在任何程度上被认定无效或不可执行，本隐私权政策的其余部分不应受其影响且应在法律允许的最大程度内予以执行。本隐私权政策中任何无效或不可执行的条款应被另一有效且可执行的条款取代，并且该条款应具有与该不可执行的条款的原意最接近的效力。
-      </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        十.&nbsp;<span class="tu">其他</span>
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        如本隐私权政策与好分期所运营的任何平台的用户注册/服务协议中规定的个人信息保护条款存在不一致或矛盾之处，请以本隐私权政策的条款为准。
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
+    <div
+      class="deal-page"
+      v-show="dealType === 1"
+    >
+      <p>
+      <div style="text-align:center;">
+        <strong>国美易卡服务协议</strong>
+      </div>
+      <br />
+      2021年12月16日版本<br />
+      <br />
+      欢迎您与北京国美融通科技有限公司（公司详细信息见12.4条，以下简称“我们”或“国美融通”）订立服务协议（以下简称“本协议”）。特别提醒您在确认签署本协议之前，请务必充分阅读本协议所有条款，尤其是加粗部分。如您对本协议内容及页面提示信息有疑问，请您暂停后续操作，您可通过国美易卡电话客服400-8133-233等方式咨询，以便我们为您解答和说明。<br />
+      <br />
+      我们关注且重视未成年人权益的保障，您承诺您在使用国美易卡服务时已年满十八周岁。若您未满十八周岁，应当立即取得监护人对您使用国美易卡服务的许可并在还款后关闭国美易卡服务，我们亦可即时终止对您的服务。<br />
+      <br />
+      请您知晓，一旦您通过在线点击或其他方式确认本协议，即意味着您认可：根据相关法律法规的规定，以数据电文形式订立本协议，本协议生效。国美融通作为国美易卡的运营主体，具备运营国美易卡的技术及能力，将与博盛安融（天津）融资担保有限公司（以下简称“博盛安融”）等担保机构及具有专业资质的各类金融机构(以下简称“授信机构”，即您所签署的贷款协议中所明的贷款人)合作，为您提供消费金融需求解决方案。同时，国美融通将联合其关联公司及合作方通过国美易卡平台向您提供在线商城及会员服务。<br />
+      <br />
+      请您妥善保管您的国美易卡账户、密码、与国美易卡账户绑定的手机动态校验码以及个人身份资料等重要信息，切勿向其他人泄露；在国美易卡服务中，前述账户的操作行为(如注册登陆、开通服务、申请额度、申请贷款、消费交易、查询记录、进行还款等)即视为您本人的行为，您将承担该等行为的相应法律后果。<br />
+      <br />
+      本协议签订地：北京市朝阳区<br />
+      <br />
+      协议生效日期：2022年6月22日<br />
+      <br />
+      1.相关定义<br />
+      <br />
+      1.1国美易卡/国美易卡平台：指国美融通的关联公司开发的、由国美融通负责运营的、以互联网为载体提供相关服务的平台。<br />
+      <br />
+      1.2国美易卡服务（国美易卡的营销名称可能因业务需要而被调整）：指我们联合我们的关联公司、合作方通过国美易卡平台为您提供的消费贷款、在线商城、会员相关服务，具体为：<br />
+      <br />
+      1.2.1以“国美易卡”作为运营品牌，由国美融通联合博盛安融等担保机构及合作的授信机构共同为您提供的在线消费金融服务。<br />
+      <br />
+      1.2.2以“国美易卡”作为运营品牌，由国美融通联合合作的平台或商家为您提供的在线商城服务。<br />
+      <br />
+      1.2.3以“国美易卡”作为运营品牌，由国美融通自行或联合合作方为您提供的会员相关服务。<br />
+      <br />
+      1.3担保额度：指基于博盛安融的评估，您获得的担保额度。您可在该担保额度范围内根据与博盛安融的约定使用博盛安融提供的担保相关服务。<br />
+      <br />
+      1.4授信额度：指基于授信机构的评估，您获得的授信额度。您可在该授信额度范围内根据与授信机构的约定使用授信资金。<br />
+      <br />
+      1.5授信资金：指您通过国美易卡成功获得使用的资金。<br />
+      <br />
+      1.6指定国美易卡账户：指您申请、签约、使用、终止国美易卡服务所必需的您本人的国美易卡账户。<br />
+      <br />
+      1.7关联公司：本协议项下国美融通的关联公司是指国美信科技投资有限公司、如博盛安融（天津）融资担保有限公司、国美小额贷款有限公司、国美真快乐电子商务有限公司。<br />
+      <br />
+      1.8国美易卡服务页面/服务页面：指基于网站、移动客户端、WAP页面等组成的国美易卡服务入口和功能、展示页面(以实际开放的为准)。<br />
+      <br />
+      1.9担保服务协议：指您与博盛安融之间就申请和使用博盛安融提供的担保服务所订立的协议，协议名称以您在国美易卡服务页面所确认的具体法律文件的实际名称为准。<br />
+      <br />
+      1.10授信协议：指您与授信机构之间就申请和使用授信机构贷款额度所订立的协议，协议的名称以您在国美易卡服务页面所确认的具体法律文件的实际名称为准。<br />
+      <br />
+      1.11贷款协议：指您与授信机构之间就申请及使用授信资金所订立的协议，协议的名称以您在国美易卡服务页面所确认的具体法律文件的实际名称为准。<br />
+      <br />
+      1.12担保机构：指通过国美易卡平台向您提供担保相关服务的机构，如博盛安融等。<br />
+      <br />
+      2.注册账户及用户管理<br />
+      <br />
+      2.1您在使用国美易卡服务前，应当注册并登录国美易卡平台。如果您仅需浏览国美易卡平台，您不需要注册成为我们的用户及提供上述信息。<br />
+      <br />
+      2.2您有义务在注册时依照国美易卡平台要求提供自己真实、准确、完整、合法、有效的身份等信息（包括但不限于姓名、身份证件号码、企业名称、电子邮箱、联系电话、联系地址等内容）；不得使用他人信息注册、实名认证或向平台提供其他虚假信息。<br />
+      <br />
+      2.3在注册后，如发现您以虚假信息骗取注册，或您头像、简介等注册信息存在违法和不良信息的，国美易卡有权不经通知单方采取限期改正、暂停使用、注销登记、收回等措施。如因此给国美易卡平台或其他用户造成损失的，您应当承担相应的责任。<br />
+      <br />
+      2.4您应及时修改错误信息，更新、完善相关信息。如您未及时修改、更新信息导致国美易卡平台无法按协议约定向您提供服务，由此产生的后果由您自行承担。<br />
+      <br />
+      2.5您应当妥善保管自己的账号、密码及其他有效识别信息。因您个人原因导致的账号、密码或其他有效识别信息泄露、丢失或账号和密码被窃取、篡改等导致的一切损失，由您自行承担。您须对使用账户、密码所采取的行为负责。<br />
+      <br />
+      2.6除本协议另有约定，您不应将账号、密码以及账户转让、出售或出借予他人使用。通过您的账户编辑、发布的任何信息或做出的任何行为都将视为您本人的行为。若您授权他人使用账户，应对被授权人在该账户下发生所有行为负全部责任。<br />
+      <br />
+      2.7在需要终止使用国美易卡服务时，符合以下条件的，您可以通过平台操作或联系人工服务的方式申请注销您的国美易卡账户，注销成功后，账户信息、个人身份证信息、交易记录、会员权益等将无法恢复或提供。<br />
+      <br />
+      3服务内容<br />
+      <br />
+      3.1国美融通联合博盛安融等担保机构及合作的授信机构共同为您提供在线消费金融服务。<br />
+      <br />
+      3.1.1页面展示<br />
+      <br />
+      基于个人消费贷款产品的情况，向您提供相关信息展示的服务。为此我们将通过国美易卡服务页面向您展示必要的担保及/或贷款产品信息，使您了解担保及/或贷款产品和您的担保及/或贷款情况；同时您的提款、划转、还款等各类支付结算指令由国美融通及其合作方根据您与博盛安融、授信机构、支付机构的相关约定进行处理。<br />
+      <br />
+      3.1.2信息传递与提醒<br />
+      <br />
+      (1)基于您的申请，向博盛安融等担保机构、授信机构及为您提供金融服务所必需的其他第三方机构传递您的担保额度申请、贷款申请、身份验证信息、信用信息等，以便评估您的信用以及第三方机构提供服务，并将博盛安融、授信机构反馈的信息传递给您。<br />
+      <br />
+      (2)基于您的贷款情况，向您提示服务状态、额度使用情况、资金到账、还款预提醒、运营活动等相关信息，以便您及时、便利地使用国美易卡服务。<br />
+      <br />
+      3.1.3其他<br />
+      <br />
+      (1)为了提高服务质量和用户体验，国美融通作为技术服务提供方将负责数据分发，协助您与担保机构、授信机构之间签署并保留担保及/或贷款合同等法律文件，接受您的咨询与投诉，协助担保机构/授信机构做好保后管理/贷后管理。<br />
+      <br />
+      (2)您在任一移动终端上首次使用国美易卡服务申请贷款时，在进行身份验证时，担保机构、授信机构或支付机构将向您在银行预留的手机号发送验证码进行身份验证。<br />
+      <br />
+      (3)当您使用国美易卡提供的在线消费金融服务时，我们有权验证您的相关信息，并有权基于自主判断同意或拒绝向您提供服务。<br />
+      <br />
+      3.2国美融通联合合作商家共同为您提供在线商城服务。<br />
+      <br />
+      我们为您提供在线商城服务的服务内容详见《易卡商城服务协议》。<br />
+      <br />
+      3.3国美融通为您提供会员相关服务。<br />
+      <br />
+      我们在国美易卡自在生活版块为您提供虚拟产品充值服务，您可以进行话费充值、视频影音会员充值、外卖会员充值等（具体充值服务项目以前端页面展示为准）。当您购买或核销相关权益时，我们需要收集您的必要信息提供给我们合作的供应商以协助您完成交易。您有权自主选择是否使用该项服务。我们为您提供该项服务的服务内容详见《超级会员服务协议》。<br />
+      <br />
+      4.平台服务费用<br />
+      <br />
+      针对向您提供的在线消费金融服务及在线商城服务，国美融通目前暂时不收取费用，如后续为了正常运营需要向您收费的，我们将采用在服务页面公告等方式向您告知，届时您可以选择是否继续使用该项国美易卡服务；如届时您选择不再使用该项国美易卡服务的，您可能需要根据授信机构的要求提前结清贷款或根据商家要求完成在途交易。<br />
+      <br />
+      针对向您提供的会员相关服务，国美融通有权向您收取一定的费用，具体以会员服务相关具体约定为准。<br />
+      <br />
+      5.服务规则<br />
+      <br />
+      5.1国美易卡平台统一使用规则<br />
+      <br />
+      5.1.1您在使用国美易卡服务时，必须遵守中华人民共和国相关法律法规的规定，不得利用国美易卡平台和国美易卡服务从事任何违法违规的活动，不得使用平台提供的站内信服务、群组服务或其他电子邮件转发服务发出垃圾邮件、信息、破坏信用评价系统或其他可能违反服务协议的内容。<br />
+      <br />
+      5.1.2国美易卡平台有权依照法律法规、监管规定及平台规则采取措施防范欺诈行为。如发现欺诈行为或其他损害注册会员及平台利益的情形时，有权及时公告并暂停或终止您在平台的相关活动。<br />
+      <br />
+      5.1.3国美易卡平台有权依据法律法规、监管规定、平台规则及相关协议约定采取预防、监控措施，建立健全用户身份识别制度、用户身份资料和交易记录保存制度、可疑交易报告制度，履行反洗钱和反恐怖融资义务，接受反洗钱监督管理，配合相关部门做好防范查处金融违法犯罪相关工作及互联网信息内容管理、网络与信息安全相关工作。<br />
+      <br />
+      5.1.4国美易卡平台有权依照法律法规或监管政策及商业策略暂停或终止平台服务业务。平台服务业务暂停或者终止，不影响您已经签订的平台服务相关合同的效力。平台因解散或宣告破产而终止的，在解散或破产前，妥善处理平台服务业务项下的交易，清算事宜按照有关法律法规的规定办理。<br />
+      <br />
+      5.1.5如您违反本协议或相关的服务条款的规定，导致或产生的任何国美易卡或第三方主张的任何索赔、要求或损失，包括合理的律师费，您同意赔偿国美易卡、合作机构，并使之免受损害。对此，国美易卡有权视您的行为性质，采取包括但不限于删除用户发布信息内容、暂停使用许可、终止服务、限制使用、回收账户、追究法律责任等措施。<br />
+      <br />
+      5.1.6您不得对本服务任何部分或本服务之使用而获得的我们的商业信息，进行商业目的的复制、拷贝、出售、转售等。<br />
+      <br />
+      5.2在线消费金融服务的服务规则<br />
+      <br />
+      5.2.1为实现为您提供在线消费金融服务之目的，您同意：<br />
+      <br />
+      (1)当您使用国美易卡提供的在线消费金融服务时，我们有权对您的身份及贷款意图进行核验，并有权采取相应措施保障您的交易安全。<br />
+      <br />
+      (2)我们有权根据您的业务需求及所在地域等，为您推荐相应的授信机构。<br />
+      <br />
+      (3)我们有权根据您的申请操作，将您的担保额度申请及您的申请资料传递给博盛安融，将您的贷款申请及您的申请资料传递给您选择的授信机构，并将相应的审批结果反馈给您。<br />
+      <br />
+      (4)我们有权通过国美易卡平台向您提供贷款及担保信息展示、还款计划展示、在线还款等相关服务。<br />
+      <br />
+      (5)我们有权根据您的业务申请进度通过平台、邮箱或短信等形式向您发送服务相关的通知或提醒。<br />
+      <br />
+      5.2.2我们将结合业务实际情况，根据您在国美易卡平台上的选择，为您安排相应的授信机构单独或共同为您提供授信及授信资金使用服务。为了持续向您提供消费资金支持、保障您的用户体验，您需要特别注意并接受如下规则：<br />
+      <br />
+      (1)机构选择：您通过国美易卡点击或其他方式确认本协议，则意味着您授权我们可根据业务情况向您推荐展示若干授信机构(如根据业务需要确定机构类型、机构地域等)，并根据您的在线选择向其提供您的必要信息。本协议生效即意味着：<br />
+      <br />
+      (a)您同意委托我们根据您的选择统一或分批地向不同授信机构发出要约；授信机构将视情形单独或联合其他授信机构共同对您进行授信审查，并联合国美融通为您提供国美易卡服务。<br />
+      <br />
+      (b)您同意授权我们在您申请使用授信资金时，根据您通过国美易卡选择的授信机构，统一或分批地向不同授信机构发出要约，该授信机构审批通过后，由授信机构为您提供授信资金。<br />
+      <br />
+      (c)若您的贷款申请最终由多个授信机构联合放款，您认可每个授信机构对其实际发放的授信资金享有独立且可分割的债权。<br />
+      <br />
+      (2)机构确认：您通过点击或其他方式在国美易卡服务页面确认授信机构的授信协议及/或贷款协议，即视为您同意自该授信机构审批通过后，就该确认的授信协议及/或贷款协议在您与授信机构之间生效。<br />
+      <br />
+      (3)机构变更或追加：请您知晓，如发生授信机构审批流程出现故障或资金不足等原因导致授信机构长时间无法为您提供贷款服务的，您同意我们可以根据您的在线选择为您变更或追加授信机构，一旦新的授信机构作为缔约方确认授信协议并同意放款，即视为您与新的授信机构形成相应的法律关系，并愿意依据您与新的授信机构之间达成的授信协议及/或贷款协议来继续使用国美易卡。<br />
+      <br />
+      5.2.3国美易卡服务的实现有赖于各项指令的执行，我们可能将向授信机构、担保机构及其他相关方发出各项指令，同时也可能从前述各方及您处接收各项指令，此外还可能代替授信机构、担保机构发送或接收相关指令。您同意，除非另有约定，所有指令及内容在指令方发出后均无法撤销及变更。<br />
+      <br />
+      5.2.4国美易卡服务的使用场景可能因我们的安排、风险评估、授信机构及担保机构的相关要求不时进行调整。请您勿将国美易卡服务用于消费以外的领域，如投资等，且授信资金的用途以您与授信机构订立的相关协议(如授信协议、贷款协议和其他协议(如有)等)为准。为降低您被欺诈的风险或我们发现您的交易或在国美易卡服务中的行为存在安全隐患，我们可能将临时中止您使用国美易卡进行特定交易，乃至停止全部国美易卡服务，请您谅解。<br />
+      <br />
+      5.3提供在线商城服务的服务规则<br />
+      <br />
+      我们为您提供在线商城服务的服务规则详见《易卡商城服务协议》。<br />
+      <br />
+      5.4提供会员相关服务的服务规则<br />
+      <br />
+      我们为您提供会员相关服务的服务规则详见《超级会员服务协议》<br />
+      <br />
+      6.声明与承诺<br />
+      <br />
+      6.1您的声明与承诺<br />
+      <br />
+      6.1.1除遵守本协议以及与国美易卡服务相关的页面规则、流程标准外，您愿意遵守与第三方签署的相关协议的约定；愿意遵守有关法律、法规、监管要求。<br />
+      <br />
+      6.1.2为使用国美易卡服务，您愿意按我们的要求提交真实、准确、有效的个人信息，并按照我们的要求及时补充提交相关资料。若您的基本信息，如通讯地址、电子邮件地址、手机号码等发生变更的、或您的经济状况、还款能力出现不利变化的，您将及时联系客服。<br />
+      <br />
+      6.1.3您承诺不为非法目的或以非法方式使用国美易卡服务，并承诺遵守有关国家法律、法规的规定，清楚了解互联网产品，特别是个人消费贷款产品的使用方法和使用惯例，认可以数据电文形式签署的合同的效力。<br />
+      <br />
+      6.1.4您承诺妥善保管您的国美易卡账户名、密码、数字证书、与国美易卡账户绑定的手机动态校验码以及个人身份资料等重要信息，勿向其他人泄露；在国美易卡服务中，前述账户的操作行为即视为您本人的行为，如开通服务、申请额度、申请使用授信资金、消费交易、查询记录、进行还款等，您将承担该等行为的相应法律后果。除使用密码等常用校验方式外，您亦认可担保机构或授信机构可根据交易惯例及其他可验证您身份及意思表示的方式(如生物识别方式)确认您使用国美易卡服务的意愿，您不会仅以未使用密码等验证手段为由拒绝承认使用授信资金或还款。如您发现有他人冒用或盗用您的前述信息或其他未经您合法授权之情形时，请立即通知客服。同时，请您知晓，我们对您的请求采取行动需要合理期限，在此之前若您遭受损失，除法律明确规定或我们存在过错外，将由您自行承担。<br />
+      <br />
+      6.2我们的声明与承诺<br />
+      <br />
+      我们将通过国美易卡服务页面向您展示必要的信息、提供相应的交互功能，在条件许可的前提下，我们亦将通过国美易卡服务页面或本协议约定的通知方式，对您进行服务提示。但：上述是否进行前述通知，均不能免除您在本协议及与第三方签署的协议项下须履行的义务。同时，上述通知提醒以实际提供的为准。我们向您提供的各种宣传、推广信息不构成必然向您提供国美易卡相应服务的承诺，您能否成功相应服务以实际业务为准。<br />
+      <br />
+      7.隐私保护<br />
+      <br />
+      国美易卡的《国美易卡隐私政策》及相关产品载有隐私权保护声明的文件（不论此等文件的具体名称）说明了国美易卡如何收集和使用您的个人信息。您保证在您使用国美易卡的所有产品和服务前，已经充分了解并同意国美易卡可以据此处理用户信息。<br />
+      <br />
+      7.1当您使用国美易卡进行支付、登录等操作的时候，服务器会自动接收、验证、并记录一些必要的信息，如手机号码、IP地址、服务访问异常信息、以及部分设备信息等，以保障您在使用国美易卡服务时账户登录和支付过程的安全，进而保护您的上网安全。您使用国美易卡的服务，即表示您同意国美易卡可以按照相关的隐私权政策处理您的个人信息。国美易卡可能会与合作机构共同向您提供您所要求的服务或者与合作机构合作以向您展示您可能感兴趣的内容。在信息为该项产品/服务所必须的情况下，您同意国美易卡可与其分享必要的信息。并且，国美易卡会要求其确保数据安全并且禁止用于任何其他用途。除此之外，国美易卡不会向任何无关的第三方提供或分享信息。<br />
+      <br />
+      7.2在如下情况下，国美易卡可能会披露您的信息:<br />
+      <br />
+      (1)事先获得您的授权；<br />
+      <br />
+      (2)您使用共享功能；<br />
+      <br />
+      (3)根据法律、法规、法律程序的要求或政府主管部门的强制性要求；<br />
+      <br />
+      (4)为维护国美易卡的合法权益，例如查找、预防、处理欺诈或安全方面的问题；<br />
+      <br />
+      (5)符合相关服务条款或使用协议的规定。<br />
+      <br />
+      7.3为更好地向用户提供服务，您同意国美易卡通过您的电话、短信、站内信、电子邮件等方式，合理地向您发送商业性服务信息、平台最新的有关管理、产品内容及其他平台认为有必要告知注册会员的服务通知，如果您不再希望接收某些类别的短信或通知，您可以短信退订、通过设备系统权限设置关闭推送通知。<br />
+      <br />
+      7.4为了满足相关法律法规的要求和保障您的账户安全，尤其是您在进行账户解绑、注销等敏感操作时，我们会将您提交的个人身份信息发送至银行、授信机构、运营商等机构进行验证查询，以核实您身份的真实性。<br />
+      <br />
+      8、特别约定<br />
+      <br />
+      8.1本协议任何一方违反本协议规定的内容，给另一方造成损害的，应承担违约责任，并就直接损失进行赔偿。出现下列任何状况致使我们无法履行本协议项下约定的，我们不承担违约或赔偿责任：<br />
+      <br />
+      (1)在事先通知提示的与国美易卡服务相关的系统停机维护或升级期间。<br />
+      <br />
+      (2)因台风、地震、洪水、雷电或战争、恐怖袭击等不可抗力原因。<br />
+      <br />
+      (3)您使用的电子设备和通信线路、供电线路出现故障的。<br />
+      <br />
+      (4)您操作不当或通过非我们授权或认可方式使用国美易卡服务的。<br />
+      <br />
+      (5)因病毒、木马、恶意程序攻击、网络拥堵、通讯故障、电力故障、电信设备故障、第三方银行原因、第三方服务瑕疵或政府行为等原因。<br />
+      <br />
+      8.2因国家相关主管部门颁布、变更的法律、法规、规章、规定、指引、通知、政策及其他规范性文件等，或第三方服务因自身原因等不再与我们合作，导致我们不能提供约定服务的不视为违约，各方可根据相关规定变更协议内容、中止或提前终止本协议。<br />
+      <br />
+      8.3您理解本协议所涉服务有赖于我们系统的准确运行及操作。若出现上述系统差错、故障或其他原因引发了展示错误、您或我们或第三方服务机构不当获利等情形的，我们可以自行或通过第三方采取更正差错、扣划款项、暂停服务等适当纠正措施。<br />
+      <br />
+      9.通知送达<br />
+      <br />
+      9.1国美易卡对于您的通知及任何其他的协议、告示或其他关于您使用国美易卡服务的通知，您同意国美易卡可通过平台公告、站内信、电子邮件、手机短信、无线通讯装置等电子方式或邮寄等物理方式进行。<br />
+      <br />
+      9.2任何文书、通知及法律文书，只要按照指定地址发送，即视为在下列日期被送达（向指定接收人送达视为向您本人送达）：<br />
+      <br />
+      (1)直接送达的，签收之日为送达之日；若您本人或指定接收人拒绝签收，我们工作人员在通知或法院送达回证上记明情况之日即为送达之日；<br />
+      <br />
+      (2)邮寄送达的，显示签收之日即为送达之日；<br />
+      <br />
+      (3)电子送达的，我们正确填写接收地址的，以信息发送成功之日为送达日；<br />
+      <br />
+      (4)公证送达的，若双方同时在公证处指定地点完成送达公证的，公证之日即为送达之日；若由发送方单方在公证处指定地点或者委托公证处按前述（1）-（3）项方式送达的，送达之日按前述约定标准为准。<br />
+      <br />
+      (5)公告送达的，自发出公告之日起，经过六十日，即视为送达。<br />
+      <br />
+      9.3对于您与国美易卡的任何纠纷，您同意并授权司法机关在全部诉讼阶段和程序中按照上述方式向您送达任何法律文书。。<br />
+      <br />
+      9.4您确认，您通过国美易卡平台提供的联系方式是准确、有效的，并进行实时更新。如因您提供的联系方式有误或不确切，或未及时告知变更后的联系方式，导致无法送达或送达不及时的，由您自行承担因此可能产生的法律后果。<br />
+      <br />
+      10.争议解决<br />
+      <br />
+      本协议适用中华人民共和国法律(仅为本协议之目的，为避免疑义，不包括香港特别行政区、澳门特别行政区及台湾地区法律)。本协议在履行过程中发生争议，可以协商解决，协商不成的，向协议签订地人民法院提起诉讼。在争议处理期间，本协议不涉及争议部分的条款仍须履行。<br />
+      <br />
+      11.协议终止和权利义务的转让<br />
+      <br />
+      11.1您在使用国美易卡服务过程中，如果有下列情发生，我们可暂停对您提供部分或全部服务直至终止本协议：<br />
+      <br />
+      (1)您要求关闭国美易卡服务的；<br />
+      <br />
+      (2)您注销相关国美易卡账户或上述账户因您的过错被注销的；<br />
+      <br />
+      (3)冒用他人名义、盗用他人账户使用国美易卡服务的；<br />
+      <br />
+      (4)您为非法目的使用国美易卡的；<br />
+      <br />
+      (5)您从事可能侵害国美易卡服务系统、资料之行为；<br />
+      <br />
+      (6)您违反法律法规、本协议以及您与我们、担保机构、授信机构、第三方服务机构之间的任何约定的，或您对其他第三方所负债务或违约责任可能影响您履行本协议项下义务。<br />
+      <br />
+      11.2请您知晓，在您与我们或第三方服务机构之间尚有争议，或者您的某些国美易卡服务仍在继续使用中的情况下，您无法终止本协议；我们可能因风险控制、政策变化、与第三方服务机构终止合作以及本协议约定的其相关情形等原因而暂停或终止为您提供服务。您在本协议项下的各项授权或约定在本协议终止前持续有效。除非有特别说明，我们系统时间均以北京时间计算。<br />
+      <br />
+      11.3协议权利义务的转让<br />
+      <br />
+      请您理解国美易卡服务的业务特性，未经我们书面同意，您无法向第三方转让本协议项下的权利和义务。在不对您使用国美易卡服务造成不利影响的前提下，我们可将在本协议项下的权利和义务部分转让或委托给第三方，而无需另行通知或征得您的同意。<br />
+      <br />
+      12.其他<br />
+      <br />
+      12.1国美易卡未行使或执行本服务协议任何权利或规定，不构成对前述权利或权利之放弃。<br />
+      <br />
+      12.2本协议任一条款的无效或不可执行，不影响其他条款的有效性和可执行性，也不影响整个协议的效力。<br />
+      <br />
+      12.3要特别提醒您的是：签署本协议后，本协议将取代此前的国美易卡与您就国美易卡相关事项于先前达成的约定(如有)，我们将承继相关权利义务为您提供服务。<br />
+      <br />
+      12.4公司信息：<br />
+      <br />
+      公司名称：北京国美融通科技有限公司<br />
+      <br />
+      统一社会信用代码：91110112MA00BX9B4L<br />
+      <br />
+      注册地址：北京市通州区潞城镇胡郎路80号1044室<br />
+      <br />
+      法定代表人：陈萍<br />
+      <br />
+      成立日期：2017年2月16日<br />
+      <br />
+      核准日期：2020年9月11日<br />
+      <br />
+      经营范围：技术推广、技术咨询、技术开发、技术转让、技术服务；销售建筑材料、化工产品（不含危险化学品）、机械设备、钢材、珠宝首饰；企业管理咨询；企业策划；计算机系统服务；数据处理；基础软件服务；应用软件服务（不含医用软件）；会议服务；承办展览展示；企业管理；经济贸易咨询；网上经营、销售日用杂货、电子产品、工艺品、化妆品、家用电器、纺织品、服装鞋帽、厨房用具、个人卫生用品、计算机、软件及辅助设备、家具、宠物用品、不再分装的包装饲料、办公用品、文化用品、体育用品（不含弩）、通讯设备、玩具、乐器、箱包、钟表、珠宝首饰、汽车配件、橡胶制品、黄金制品、摩托车（不含三轮摩托车）、电动自行车；票务代理；经济贸易咨询；出版物零售；零售食品；经营电信业务；互联网信息服务。（市场主体依法自主选择经营项目，开展经营活动；出版物零售、互联网信息服务、经营电信业务、零售食品以及依法须经批准的项目，经相关部门批准后依批准的内容开展经营活动；不得从事国家和本市产业政策禁止和限制类项目的经营活动。）。
+      <p>
+      <p>
         <br />
       </p>
-      <p
-        class="fb"
-        style='font-size:15px;font-weight:bold;color:rgba(0, 0, 0, 0.9);font-family:"'
-      >
-        <span class="tu">附：名词解释</span>
-      </p>
-      <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        为了帮助您更好地理解本隐私权政策，将前述条款中的部分名词进行如下解释：
-      </p>
-      <ul style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <li>
-          <span class="fb" style="font-weight:bold;">好分期</span>或<span
-            class="fb"
-            style="font-weight:bold;"
-            >我们</span
-          >是指北京微财科技有限公司及其关联方的单称或合称，好分期平台是指北京微财科技有限公司运营的包括但不限于网页端、APP端的任何平台。<span
-            class="fb"
-            style="font-weight:bold;"
-            >关联方</span
-          >是指对于任何主体（包括个人、公司、合伙企业、组织或其他任何实体）而言，即其直接或间接控制的主体，或直接或间接控制其的主体，或直接或间接与其受同一主体控制的主体。<span
-            class="fb"
-            style="font-weight:bold;"
-            >控制</span
-          >是指通过持有表决权、合约或其他方式，直接或间接地拥有对相关主体的管理和决策作出指示或责成他人作出指示的权力或事实上构成实际控制的其他关系。
-        </li>
-      </ul>
-      <ul style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <li>
-          <span class="fb" style="font-weight:bold;">Cookie</span
-          >是指支持服务器端（或者脚本）在客户端上存储和检索信息的一种机制，通过增加简单、持续的客户端状态来扩展基于Web的客户端/服务器应用。服务器在向客户端返回HTTP对象的同时发送一条状态信息，并由客户端保存。状态信息中说明了该状态下有效的URL范围。此后，客户端发起的该范围内的HTTP请求都将把该状态信息的当前值从客户端返回给服务器，这个状态信息被称为Cookie。
-        </li>
-      </ul>
-      <ul style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <li>
-          <span class="fb" style="font-weight:bold;">个人敏感信息</span
-          >是指一旦泄露、非法提供或滥用可能危害人身和财产安全，极易导致个人名誉、身心健康受到损害或歧视性待遇等的个人信息，本隐私权政策中涉及的个人敏感信息包括：姓名、身份证件号码、手机号码、银行账号、个人生物识别信息等。
-        </li>
-      </ul>
-      <ul style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <li>
-          <span class="fb" style="font-weight:bold;">匿名化</span
-          >是指通过对个人信息的技术处理，使得个人信息主体无法被识别，且处理后的信息不能被复原的过程。
-        </li>
-      </ul>
-      <ul style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
-        <li>
-          <span class="fb" style="font-weight:bold;">设备</span
-          >是指可用于使用好分期产品和/或服务的装置，例如桌面设备、平板电脑或智能手机等。
-        </li>
-      </ul>
+    </div>
+    <div
+      class="deal-page"
+      v-show="dealType === 2"
+    >
+      <div style="text-align:center;">
+        <strong>国美易卡隐私政策</strong>
+      </div>
+      <br />
+      &nbsp;<br />
+      <br />
+      【特别提示】尊敬的国美易卡用户，感谢您使用国美易卡产品和/或服务。我们始终重视您的隐私，并全力遵守国家法律法规的要求对您的个人信息进行保护。请花一些时间熟悉我们的隐私政策，如果您有任何问题，请通过正文列举的方式联系我们。本文本中如有蓝色高亮部分字体可点击查看具体的内容，请您注意查看。<br />
+      <br />
+      版本发布日期：2021年12月16日<br />
+      <br />
+      更新时间：2022年06月09日<br />
+      <br />
+      生效时间：2022年06月24日<br />
+      <br />
+      引言<br />
+      <br />
+      本隐私政策适用于北京国美融通科技有限公司(注册地址：北京市通州区潞城镇胡郎路80号1044室，统一社会信用代码：91110112MA00BX9B4L，联系方式：4008133233）及其关联公司（以下简称“国美易卡”或“我们”）提供的产品和/或服务及其延伸的功能（以下简称“国美易卡产品和/或服务”），包括国美易卡APP /网站/H5链接/小程序等。如您在使用国美易卡产品和/或服务过程中签署了单独的服务协议或授权书的，则该服务协议或授权书优先适用；该服务协议或授权书未涵盖的内容，以本隐私政策内容为准。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      我们非常重视您的隐私和个人信息保护。本隐私政策是针对国美易卡做出的隐私方面的陈述与承诺，在制定时充分考虑到您的需求，使您全面了解我们的个人信息收集和使用规则，同时确保您最终能控制提供给我们的个人信息。本隐私政策向您说明我们的业务情形和对应需要收集使用您个人信息的类型，以及我们为您提供访问、更新、删除这些信息的途径和保护措施，还有当我们共享、转让、公开披露您个人信息时需要遵守的规则。您在使用我们的产品与/或服务前请仔细阅读并确认您已经充分理解本隐私政策所写明的内容（特别是加粗字体的内容），并让您可以按照本隐私政策的指引做出您认为适当的选择。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      【如何联系我们】我们深知您的隐私和个人信息务必得到保护，因此提供专门渠道处理您的隐私诉求及问询。如果您对本隐私政策中描述的个人信息处理实践有任何疑问，请通过客服电话（4008133233）或客服邮箱（finance-service@gomefinance.com.cn）联系我们。<br />
+      <br />
+      目录<br />
+      <br />
+      为使您清晰而详尽地了解我们的个人信息收集使用惯例，请参考以下目录阅读对应章节。<br />
+      <br />
+      一、我们如何收集您的个人信息<br />
+      <br />
+      二、我们如何使用您的个人信息<br />
+      <br />
+      三、我们如何使用 Cookie 和同类技术<br />
+      <br />
+      四、我们如何共享、转让、委托处理、公开披露您的个人信息<br />
+      <br />
+      五、我们如何保存和保护您的个人信息<br />
+      <br />
+      六、您的权利<br />
+      <br />
+      七、未成年人信息的保护<br />
+      <br />
+      八、第三方网站和服务<br />
+      <br />
+      九、本隐私政策如何更新<br />
+      <br />
+      十、如何联系我们<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      一、我们如何收集您的个人信息<br />
+      <br />
+      我们会遵循正当、合法、必要的原则，收集和使用您在使用国美易卡产品与/或服务过程中主动提供或因使用产品与/或服务而产生的个人信息，以及从第三方获取您的相关个人信息。我们收集您的个人信息的目的在于向您提供我们的产品和/或服务，并且保证我们遵守适用的相关法律、法规及其他规范性文件。我们在本隐私政策中列举了国美易卡产品和/或服务的相关功能，及该功能所相应需要收集的个人信息，如您不提供相应信息，我们可能将无法向您提供对应的产品与/或服务，具体请见下文详细描述。如果我们要将您的个人信息用于本隐私政策未载明的其它用途，或将基于特定目的收集而来的信息用于其他目的，我们将以合理的方式向您告知，并在使用前再次征得您的同意。<br />
+      <br />
+      （一）个人信息的定义<br />
+      <br />
+      根据《中华人民共和国个人信息保护法》的规定，个人信息是指以电子或者其他方式记录的与已识别或者可识别的自然人有关的各种信息，不包括匿名化处理后的信息。敏感个人信息是指一旦泄露或者非法使用，容易导致自然人的人格尊严受到侵害或者人身、财产安全受到危害的个人信息，包括生物识别、宗教信仰、特定身份、医疗健康、金融账户、行踪轨迹等信息，以及不满十四周岁未成年人的个人信息。个人信息及个人敏感信息的举例可分别参考GB/T 35273-2020《信息安全技术 个人信息安全规范》附录A及附录B。<br />
+      <br />
+      （二）我们如何收集您的信息<br />
+      <br />
+      我们会通过如下三种渠道获取您的个人信息：<br />
+      <br />
+      1．您直接提供的信息：我们可能收集并存储您在使用国美易卡产品和/或服务时向我们提供的信息，包括您在我们页面中在线填写信息时、申请产品与/或服务时、参与互动/评论时、客户投诉或解决争议时所提供的信息，以及您在使用我们服务过程中产生的关于您的交易和活动的信息。<br />
+      <br />
+      2．我们主动收集的信息：在您使用国美易卡网站、APP及相关服务过程中，我们会收集您的计算机、手机及其他访问设备发送给我们的信息。<br />
+      <br />
+      3．我们从其他来源取得的信息：在取得您授权同意的前提下，我们还可能从国美易卡关联公司及合作伙伴、信用机构及依法成立并合法留存您的相关信息的第三方机构获取您的相关信息。<br />
+      <br />
+      （三）我们收集您的哪些信息<br />
+      <br />
+      1. 账号注册及登录<br />
+      <br />
+      为便于您使用国美易卡提供的产品和服务，您需要注册成为国美易卡的用户并登录国美易卡。注册国美易卡账号需要您提供个人手机号码、短信验证码、密码（可跳过），若您不提供上述信息，则您无法正常注册国美易卡APP。<br />
+      <br />
+      同时，在您使用手机号码注册国美易卡账号时，为对您在国美的账号进行统一管理，我们将向国美真快乐电子商务有限公司及国美信科技投资有限公司查询您的手机号码是否已存在对应的用户ID，若您注册的手机号码在国美真快乐电子商务有限公司或国美信科技投资有限公司已存在对应的用户ID，我们将直接收集该用户ID及密码，用于为您提供统一便捷的账号注册服务，您可使用该密码或通过短信验证码直接登录国美易卡。若您使用不同密码，则您无法正常登录国美易卡APP。<br />
+      <br />
+      在您使用国美易卡账号登录国美易卡app的过程中，为将您的国美易卡账号与您在国美易卡app上的操作行为相关联，我们将收集您的手机号码、短信验证码或密码，用于账号验证登录并保障账号安全，若您不提供上述信息，则您无法正常登录国美易卡app。<br />
+      <br />
+      2. 实名制、反洗钱等法律规定的管理功能<br />
+      <br />
+      在您申请或使用国美易卡提供的产品或服务时，根据反洗钱相关法律法规及监管要求，我们需要完成反洗钱、实名制认证，为此您需要提供您的身份基本信息（姓名、身份证号码、身份证照片）、银行卡信息（银行卡号码、银行预留手机号码）；除为了完成实名认证、客户身份识别外，也为了防范欺诈风险、保障账号安全，您需要进行人脸识别，您同意授权我们收集您的人脸照片/视频。我们会将上述信息提交给合法持有您上述信息的第三方身份验证机构，以便对您所提供信息的准确性进行核对。前述信息包含敏感个人信息，如果您不提供上述信息或您的实名验证未通过，则您无法使用相应的服务。<br />
+      <br />
+      3. 提供贷款相关服务<br />
+      <br />
+      （1）您在使用国美易卡提供的贷款相关服务时，您需要通过国美易卡平台自主填写或提交您的姓名、手机号码、身份证号码、身份证照片（根据身份证照片识别您的性别、民族、生日、户籍地址、身份证有效期、发证机关）；根据您选择的内容及服务流程，您需要提交您的婚姻状况、学历、电子邮箱、居住地址、行业与职业信息（含单位名称、性质及地址）、联系人信息（含姓名、与您的关系及手机号）、人脸影像资料、位置信息。上述信息将用于对您的身份、信贷资格、信用情况、贷款意图、偿付能力进行审核。同时，我们可能会在获得您授权的前提下，从合法持有您个人信息的公司（包括国美易卡关联公司及合作机构）获取您的信息以实现该目的。<br />
+      <br />
+      （2）为了您的资金安全，您在使用国美易卡服务时需要绑定本人的银行卡，用于在您的借款请求审批通过后向您发放款项，为此，我们会收集您的银行卡号以及银行预留用手机号码；&nbsp;<br />
+      <br />
+      （3）为保障您能使用我们的产品和服务，根据产品流程设置，我们可能还需要您填写或提交贷款申请信息。<br />
+      <br />
+      前述信息包含敏感个人信息，如果您不提供上述信息，可能导致我们无法为您提供您申请的服务。<br />
+      <br />
+      4. 保障交易安全与反欺诈<br />
+      <br />
+      （1）为了保障软件与服务的安全运行、运营的质量及效率，我们会收集您的设备信息（硬件型号、操作系统版本号、供应商标识符IDFV、国际移动设备识别码IMEI、网络设备硬件地址MAC地址、广告标识符IDFA、Android ID、Wi-Fi SSID、Wi-Fi BSSID 、IP地址、网络类型、网络接入方式、软件版本号）、位置信息。<br />
+      <br />
+      （2）为了预防恶意程序、保障运营质量及效率，我们会收集您安装的应用信息或正在运行的进程信息、应用程序的总体运行、使用情况与频率、应用崩溃情况、应用来源。<br />
+      <br />
+      （3）我们可能收集您的账户信息、设备信息（硬件型号、操作系统版本号、供应商标识符IDFV、国际移动设备识别码IMEI、网络设备硬件地址MAC地址、广告标识符IDFA、Android ID、Wi-Fi SSID、Wi-Fi BSSID 、IP地址、网络类型、网络接入方式、软件版本号）以及我们关联公司、合作方在获得您授权或依法可以共享的信息，用于判断账户安全、进行身份验证、检测及防范安全事件。<br />
+      <br />
+      上述信息包含个人敏感信息，若您不同意我们记录这类信息，我们将无法在您使用国美易卡服务过程中对您的服务及账号安全进行保护。<br />
+      <br />
+      5．提供商城服务<br />
+      <br />
+      （1）当您在国美易卡购买商品或服务时，为向您提供商品展示及购买、款项支付、物流信息展示、售后等各项服务，我们需要收集您的订单信息、收货人姓名、收货地址、收货人手机号码、物流信息、退换货信息，我们可能会将您填写的前述信息共享给第三方仓储、物流和服务供应商。若您不提供这类信息，我们将无法发货配送及提供售后服务。<br />
+      <br />
+      （2）如您在国美易卡购买商品或服务时通过支付宝进行支付的，我们或我们合作的商家将向支付宝(中国)网络技术有限公司收集并共享您订单信息及付款金额信息。如您在购买商品时采用国美分期的方式进行支付的，我们将向与我们合作的商家收集并共享您购买商品的相关信息，包括您的姓名、账户名及ID、手机号码、交易信息（包括订单金额、支付单号、商品信息、退货信息、收货地址及联系人信息、发票信息）。若您不提供这类信息，我们将无法支持您通过支付宝进行支付。<br />
+      <br />
+      （3）当您通过国美真快乐电子商务有限公司运营的“真快乐”平台（包括APP/小程序/H5链接等）或通过国美线下门店购买商品，并采用国美分期进行支付时，您同意并授权：我们将向国美真快乐电子商务有限公司收集并共享您的姓名、账户名及ID、手机号码、邮箱、身份证号码、行为信息（账户登录信息、账户变动信息等）、交易信息（包括订单金额、支付单号、商品信息、退货信息、收货地址及联系人信息等）、设备信息、申请分期相关信息（包括金额、期数、利率、还款安排）。若您不提供这类信息，我们将无法支持您通过国美分期进行支付。<br />
+      <br />
+      6. 提供会员服务及其他充值类服务<br />
+      <br />
+      （1）当您购买超级会员服务时，如您使用支付宝进行付款，我们需要收集您的订单信息及付款金额并共享给支付宝(中国)网络技术有限公司以完成支付。超级会员购买成功后将向会员账户下发第三方会员权益（如话费充值满减券、影音类会员满减券等，具体以实际下发的会员权益为准），当用户进行会员权益核销时，我们将收集您的账号信息（手机号或QQ号，以您实际绑定的会员账号为准）以及订单信息（订单金额、商品信息、支付单号）共享给我们合作的会员权益供应商重庆精准商业运营管理有限公司以帮您完成核销。<br />
+      <br />
+      （2）当您使用我们提供的其他虚拟产品充值服务（如话费充值、影音类会员充值、外卖会员充值等）时，我们将根据您的具体交易收集您的账号信息（手机号或QQ号，以您实际绑定的会员账号为准）、订单信息（订单金额、商品信息、支付单号）并共享给我们合作的会员权益供应商重庆精准商业运营管理有限公司以帮您完成交易及核销。<br />
+      <br />
+      7. 提供客户服务及进行投诉处理<br />
+      <br />
+      （1）为向您提供客户服务、响应您的权利请求、投诉请求，我们会收集您主动提交的信息，同时，客服人员会收集必要的身份信息以便核验您的身份，取决于您所请求的具体权益，包括国美易卡账号、姓名、手机号码、身份证号码。当您需要我们提供与您交易信息相关的客服与售后服务时，我们将会查询您的交易信息。上述信息包含个人敏感信息，如您不提供前述信息，可能会影响您的服务质量，但不影响您使用我们提供的其他服务。<br />
+      <br />
+      （2）为了保证您及他人的合法权益，如您被他人投诉或投诉他人，我们会根据实际情况的需要将您的姓名及有效证件号码、联系方式、投诉相关内容提供给消费者权益保护部门及监管机关，以便及时解决投诉纠纷，但法律法规明确禁止提供的除外。<br />
+      <br />
+      8．广告功能<br />
+      <br />
+      为便捷地地为您提供服务，我们还可能通过站内信、PUSH通知、手机短信、电话、闪屏或者APP内弹窗方式向您推送广告和其它商业信息，我们只会在征得您的同意时使用您的个人信息。如果您不再希望接收某些类别的短信或通知，您可以短信退订、通过设备系统权限设置关闭推送通知、通过“首页－我的－设置（右上角图标）－隐私管理”关闭APP通知及短信通知。在您每次打开APP时会收到闪屏和弹窗信息，如果您在使用APP过程中不想看到此类信息，您可以点击跳过或关闭按钮关闭相关内容，但本次关闭不影响下次打开APP时再次弹出。<br />
+      <br />
+      （四）国美易卡设备权限调用说明<br />
+      <br />
+      在您使用国美易卡服务时可能会触发以下设备权限。为使您更好地管理您的信息，我们会在权限申请时同步告知您该权限的使用目的，您在使用特定功能前，可选择是否授权开通以下权限，如您不开启该权限可能对您使用相应服务产生影响，请您仔细查阅。以下为相关功能及调用权限的用途，为您列举供参考，下列相关权限您授权后可以随时通过手机系统设置对授权进行管理：<br />
+      <br />
+      1. 设备权限（Android及IOS版本）：您运行国美易卡APP时，为正常识别您的本机识别码、保护您的账号安全、识别欺诈风险，国美易卡需要申请设备权限以获取您的设备信息（硬件型号、操作系统版本号、供应商标识符IDFV、国际移动设备识别码IMEI、网络设备硬件地址MAC地址、广告标识符IDFA、Android ID、Wi-Fi SSID、Wi-Fi BSSID 、IP地址、网络类型、网络接入方式、软件版本号）。<br />
+      <br />
+      2. 相机权限（Android及IOS版本）：您在使用国美易卡APP时，在上传身份证件照片、人脸识别的场景下，需要调用您的相机权限进行拍摄。<br />
+      <br />
+      3. 位置权限使用说明（Android及IOS版本）：为保护您的账号安全、落实业务风险控制、金融机构准入区域判断等目的，国美易卡需要申请您的位置权限。<br />
+      <br />
+      4. 通讯录权限使用说明（Android及IOS版本）：为了便于您填写联系人电话号码，国美易卡需要申请通讯录权限。<br />
+      <br />
+      5. 相册权限使用说明（IOS版本）：为了您在使用上传身份证、上传消费凭证、意见反馈等功能时能够上传图片，国美易卡需要申请相册权限。<br />
+      <br />
+      6. 通知权限（Android及IOS版本）：您在使用国美易卡app时，我们的产品使用的某些第三方功能组件如极光推送，将通过通知权限向您推送营销活动、业务通知等内容，在此情况下国美易卡需要申请通知权限。<br />
+      <br />
+      7. 麦克风权限（Android及IOS版本）：当您需要通过语音的方式进行身份验证时，国美易卡需要申请您的麦克风权限进行录音，以便我们收集您的语音内容并进行必要的处理和验证。<br />
+      <br />
+      8. 读写外部存储权限（Android版本）：您在使用国美易卡服务时涉及到需要使用保存或缓存功能，或读取您上传的图片（如身份证、消费凭证等）时，国美易卡会申请读写外部存储权限。<br />
+      <br />
+      9. 读取日志权限（Android、IOS版本）：我们产品内统计应用崩溃和各种异常信息时，国美易卡会申请读取日志权限，用于记录异常并改正。<br />
+      <br />
+      10. 读取日历权限（Android、IOS版本）：为了能够实现您主动设置的上传身份证或者活动的提醒功能，国美易卡需要申请您的日历权限，不授权该权限不影响您正常使用其他基本功能。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      （五）我们从第三方获得您个人信息的情形<br />
+      <br />
+      1、我们可能会在您的授权同意范围内从第三方（我们的关联公司及合作方）处收集并使用您的个人信息。我们保证严格依照与第三方签订的合同以及相关法律规定处理您的个人信息，同时请您详细阅读该第三方的隐私政策及用户协议（如有）。如您拒绝我们从第三方处收集、使用或者传递您的个人信息，将可能导致您无法使用相应的服务。<br />
+      <br />
+      2、贷款相关服务：在取得您同意的前提下，我们还可能从国美易卡关联公司及合作伙伴、信用机构及依法成立并合法留存您的相关信息的第三方机构（如金融信用信息基础数据库、经国务院或其他政府有权部门批准合法设立的征信机构、中国互联网金融协会、部分政府机构、司法机关等）获取您的相关信息。<br />
+      <br />
+      （六）国美APP涉及嵌入第三方代码、插件传输个人信息的情形逐项列举（请您点击查看）<br />
+      <br />
+      （七）业务功能调整或新增时的个人信息收集和权限申请规则<br />
+      <br />
+      我们收集的个人信息以及申请获取的权限将与提供的服务功能保持一致，若我们提供的业务功能调整或者新增业务功能时，我们申请的设备权限也将随之调整；如需收集的个人信息范围超出您原有同意的范围，我们将再次向您告知并征得您的同意，如果您不同意，原有的业务功能使用将不会受到影响。<br />
+      <br />
+      如果我们将信息用于本政策未载明的其他用途，或者将基于特定目的收集而来的信息用于其他目的时，会单独征求您的授权同意。<br />
+      <br />
+      （八）征得授权同意的例外<br />
+      <br />
+      依据相关法律法规及国家标准，以下情形中，我们可能会依法收集并使用您的个人信息无需征得您的同意：<br />
+      <br />
+      1．与国家安全、国防安全直接有关的；<br />
+      <br />
+      2．与公共安全、公共卫生、重大公共利益直接有关的；<br />
+      <br />
+      3．与犯罪侦查、起诉、审判和判决执行等直接有关的；<br />
+      <br />
+      4．出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到您本人同意的；<br />
+      <br />
+      5．所收集的个人信息是个人信息主体自行向社会公众公开的；<br />
+      <br />
+      6．从合法公开披露的信息中收集的您的个人信息的；<br />
+      <br />
+      7．根据您的要求签订和履行合同所必需的；<br />
+      <br />
+      8． 用于维护所提供的产品与/或服务的安全稳定运行所必需的，例如发现、处置服务的故障；<br />
+      <br />
+      9． 法律法规规定的其他情形。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      二、我们如何使用您的个人信息<br />
+      <br />
+      （一）为了遵守国家法律法规及监管要求，以及向您提供服务及提升服务质量，或保障您的账号和资金安全，我们会在以下情形中使用您的信息：<br />
+      <br />
+      1. 实现本隐私政策“我们如何收集您的个人信息”约定的目的。<br />
+      <br />
+      2. 为了保障服务的稳定性与安全性，我们会将您的信息用于身份验证、安全防范、诈骗监测、预防或禁止非法活动、降低风险、存档和备份用途。<br />
+      <br />
+      3. 为了使您知晓使用我们服务的状态，我们会向您发送服务提醒。<br />
+      <br />
+      4. 根据法律法规或监管要求向相关部门进行报告。<br />
+      <br />
+      5. 提高、完善和优化国美易卡在线服务。<br />
+      <br />
+      6. 处理您对国美易卡产品与/或服务的申请或反馈请求。<br />
+      <br />
+      7. 我们通过技术手段对数据进行去标识化处理后，去标识化处理的信息将无法识别主体。请您了解并同意，在此情况下我们有权使用已经去标识化的信息；在不透露您个人信息的前提下，我们有权对用户数据库进行分析并予以商业化的利用。<br />
+      <br />
+      8. 我们会对我们的产品与/或服务使用情况进行统计，并可能会与公众或第三方共享这些统计信息，以展示我们的产品与/或服务的整体使用趋势。但这些统计信息不包含您的任何身份识别信息。<br />
+      <br />
+      （二）当我们展示您的个人信息时，我们会采用包括内容替换、匿名处理方式对您的信息进行脱敏展示，以保护您的信息安全。<br />
+      <br />
+      （三）当我们要将您的个人信息用于本隐私政策未载明的其它用途时，或基于特定目的收集而来的信息用于其他目的时，会事先征求您的同意。请您理解，我们向您提供的产品与/或服务将不断更新变化。如果您选择使用本隐私政策中尚未列明的其他产品与/或服务时，在我们收集您的个人信息前，我们会通过业务协议、页面提示的方式向您详细说明信息收集的目的、方式、范围并征求您的明确同意。若您不同意提供前述信息，您可能无法使用该项服务，但不影响您使用其他服务。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      三、我们如何使用 Cookie 和同类技术<br />
+      <br />
+      （一）为使您获得更轻松的访问体验，我们有时会在您的计算机或移动设备上存储名为Cookie的小数据文件。Cookie 是一种网络服务器存储在计算机或移动设备上的纯文本文件，其内容只能由创建它的服务器检索或读取。每个Cookie对您的网络浏览器或移动应用程序都是唯一的。Cookie 通常包含标识符、站点名称以及一些号码和字符。借助于 Cookie，网站能够记住用户的单次访问（使用会话 Cookie）或多次访问（使用永久 Cookie）。借助于 Cookie，网站能够保存设置，例如计算机或移动设备的语言、字体大小和其他浏览偏好。这意味着，用户无需在每次访问时重新配置用户偏好设置。如果某个网站不使用 Cookie，那么在用户每一次打开网页时，该网站都会将其视为新访客。例如，如果您登录某个网站后转到另一个网页，该网站就不会识别出您，而您会被再次登出。<br />
+      <br />
+      （二）为了向您提供更为便捷的服务，我们通过Cookie等技术为您提供以下服务：<br />
+      <br />
+      1. 记住您的账号。例如，当您访问一个需要您登录才可以提供的信息或服务，当您登录时，我们会把该您的登录名加密存储在您设备的Cookie文件中，由于是不可逆转的加密存储，其他人即使可以使用该您的设备，也无法识别出您的登录名。您并不需要额外做任何工作，所有的收集、保存和加密工作都由系统自动完成。Cookie可能帮助您省去为使用我们服务而重复输入账号的步骤。<br />
+      <br />
+      2. 分析您使用我们服务的情况。例如，我们可通过Cookie、网络信标等技术来了解您使用我们服务的具体用途，或哪些网页或服务最受您的欢迎。<br />
+      <br />
+      3.我们也可能通过网络信标技术来统计匿名访问的数据，同样，这些统计信息并不包括您的个人信息。<br />
+      <br />
+      （三）我们不会将Cookie用于本隐私政策所述目的之外的任何用途。您可以随时使用自带清除Cookie功能的浏览器或操作系统软件根据自己的偏好管理或删除Cookie。您可以清除计算机上保存的所有Cookie，大部分网络浏览器会自动接受Cookie，但您通常可根据自己的需要来修改浏览器的设置以拒绝Cookie或删除Cookie。但如果您这么做，您可能需要在每一次访问我们的网站时亲自更改用户设置，可能会对您所使用服务的安全性和便捷性有一定影响，但不影响您正常使用我们提供的其他服务。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      四、我们如何共享、转让、委托处理、公开披露您的个人信息<br />
+      <br />
+      （一）共享<br />
+      <br />
+      我们不会与除国美易卡及关联公司以外的任何公司、组织和个人共享您的个人信息，除非获得您的明确同意或属于“共享、转让、公开披露个人信息时事先征得授权同意的例外”。我们在征得您的同意的前提下，可能会向关联公司、合作伙伴等第三方共享您的个人信息，以保障为您提供的服务顺利完成；但我们仅会出于合法、正当、必要、特定、明确的目的共享您的个人信息，并且只会共享提供服务所必要的个人信息。该等第三方无权将共享的个人信息用于任何其他用途。对我们与之共享个人信息的公司、组织和个人，我们会与其签署严格的保密协定，要求他们按照我们的协议、本隐私政策要求的保密和安全措施来处理个人信息。<br />
+      <br />
+      1．业务共享<br />
+      <br />
+      （1）在您注册国美易卡账号时，为对您在国美的账号进行统一管理，我们将向国美真快乐电子商务有限公司及国美信科技投资有限公司共享您的用户ID、手机号码、账号密码信息，共享这些信息是用于为您提供统一便捷的账号注册服务以及保障您的账号安全，国美真快乐电子商务有限公司及国美信科技投资有限公司仅会基于为您提供统一账号服务之目的处理和使用前述您的个人信息，国美真快乐电子商务有限公司及国美信科技投资有限公司如要改变个人信息的处理和使用目的的，将再次征求您的授权同意。<br />
+      <br />
+      另外，在您使用国美易卡产品或服务过程中，某些环节下我们需要对您进行身份认证，您同意我们为了为您提供统一的认证服务之目的，我们将与国美信科技投资有限公司共享您的姓名、身份证号码，我们及国美信科技投资有限公司承诺仅在需要认证您的身份的情形下处理和使用您的该信息，如需改变个人信息的处理和使用目的的，我们将再次征求您的授权同意。<br />
+      <br />
+      （2）某些产品或服务可能由第三方（包括为您提供担保/信贷服务的担保机构/金融机构、为您提供商品销售服务的商家、为您提供会员/联合会员服务的第三方平台，您可以在具体产品页面/服务协议/授权书中查看该第三方合作机构的类型和名称）提供或由我们与第三方联合提供，我们必须将您的个人信息、订单信息及与交易有关的必要信息与第三方机构共享来实现您向其购买商品或申请服务的需求，并促使其可以完成后续的服务。<br />
+      <br />
+      （3）某些营销活动可能由我们与第三方联合举办（您可以在具体活动规则相关页面中查看该第三方合作机构的名称），只有将您参与活动过程中产生的、为完成活动所必要的信息共享给第三方时，才能及时与您联系、发放奖品、提供服务。<br />
+      <br />
+      （4）为了让您完成交易、实现交易目的，我们需要向您的交易相对方提供交易信息与相关支付信息，同时您的交易相对方可在付款过程中或付款成功后查看您的部分注册信息。&nbsp;<br />
+      <br />
+      （5）提供技术服务的第三方SDK提供商。关于提供商的身份、收集个人信息的目的、方式、范围等情况，请您详细本隐私政策第一条第（六）款。<br />
+      <br />
+      （6）为了为您提供全方位的贷款及担保相关服务，我们将与我们的关联公司博盛安融（天津）融资担保有限公司、国美小额贷款有限公司、国美信科技投资有限公司共享您通过国美易卡填写的个人信息及您在国美易卡上使用产品或服务形成的相关信息。我们在共享您的前述信息时将采取去标识化的方式对您的个人信息进行脱敏、在共享的过程中采用加密措施，并且仅用于为您提供贷款及担保相关服务而进行存储、加工、使用。针对共享的您的个人信息，我们的前述关联公司与我们对您负有同等的义务，包括个人信息合法合规使用的义务、信息安全保护义务、响应您的信息主体权利的义务等。<br />
+      <br />
+      （7）为了向您及时发送业务信息及最新产品或服务信息，我们可能会与第三方电信运营商及其代理商合作为您提供短信推送功能，因此我们需要将您的平台账号信息、姓名、手机号、业务信息与第三方服务方共享。我们将评估该第三方收集信息的合法性、正当性、必要性。我们将要求第三方对您的信息采取保护措施，并且严格遵守相关法律法规与监管要求。另外，我们会按照法律法规、国家标准或行业标准（如有）的要求以确认协议、具体场景下的文案确认、弹窗提示、短信、语音等形式征得您的同意，或确认第三方已经征得您的同意。<br />
+      <br />
+      2．纠纷处理<br />
+      <br />
+      为了保障您及他人的合法权益，如您与其他用户、商家等第三方发生纠纷、投诉或被投诉时，我们会将您的姓名、有效证件号码、联系方式、投诉相关内容提供给消费者权益保护部门及监管机关，以便及时解决投诉纠纷，但法律法规明确禁止提供的除外。<br />
+      <br />
+      3．我们可能会根据法律法规规定，或按政府主管部门的强制性要求，对外共享您的个人信息。如果我们在此过程中违反法律法规的规定，给您造成损失的，我们将承担因此引起的相应责任。<br />
+      <br />
+      （二）转让<br />
+      <br />
+      除以下情形外，我们不会将您的信息转让给任何主体：<br />
+      <br />
+      1．获得您的明确同意后；<br />
+      <br />
+      2．如果国美易卡参与兼并、收购或出售其资产的全部或部分，且涉及到个人信息转让，我们会要求新的持有您个人信息的公司继续受本隐私政策的约束，否则，我们会要求该公司重新获得您的授权。如适用，我们将通过电子邮件和/或在我们网站上发布醒目通知，告知对您个人信息所有权、使用方面的任何变化，以及您可能拥有的关于您个人信息的任何选择。<br />
+      <br />
+      （三）委托处理<br />
+      <br />
+      为了提升服务效率，降低服务成本，提高服务质量，我们可能需要委托专业机构（以下合称“受托机构”）协助完成部分服务或职责，例如：<br />
+      <br />
+      1. 委托受托机构按照约定采集您的信息或对您的信息进行分析、加工和处理，并将处理的结果返回我们，用于我们服务的风险控制或维护、改善平台服务。<br />
+      <br />
+      2. 委托受托机构评估您的履约能力及履约意愿，供我们自身判断及协助授信机构决策参考。<br />
+      <br />
+      为此，我们将在我们服务相关的必要范围内向受托机构提供您的部分信息，并接受该受托机构反馈的处理结果。我们承诺受托机构同样遵守严格的保密义务及采取有效的保密措施，禁止将这些信息用于未经您同意的用途。<br />
+      <br />
+      （四）公开披露<br />
+      <br />
+      我们仅会在以下情况下才会公开披露您的个人信息：<br />
+      <br />
+      1．获得您的明确同意后，按您明确同意的披露方式披露您所指定的个人信息；<br />
+      <br />
+      2．在法律、法律程序、诉讼或政府主管部门强制性要求的情况下，我们可能会公开披露您的个人信息。在符合法律法规的前提下，当我们收到上述披露信息的请求时，我们会要求必须出具与之相应的法律文件，如传票或调查函。我们坚信，对于要求我们提供的信息，应该在法律允许的范围内尽可能保持透明。我们对所有的请求都进行了慎重的审查，以确保其具备合法依据，且仅限于执法部门因特定调查目的且有合法权利获取的数据。<br />
+      <br />
+      （五）共享、转让、公开披露个人信息时事先征得授权同意的例外<br />
+      <br />
+      根据相关法律法规及国家标准，以下情形中，我们共享、转让、公开披露您的个人信息不必事先征得您的授权同意：<br />
+      <br />
+      1．与您履行法律法规规定的义务相关的；<br />
+      <br />
+      2．与国家安全、国防安全直接相关的；<br />
+      <br />
+      3．与公共安全、公共卫生、重大公共利益直接相关的；<br />
+      <br />
+      4．与刑事侦查、起诉、审判和判决执行等直接相关的；<br />
+      <br />
+      5．出于维护您或其他个人的生命、财产等重大合法权益但又很难得到本人授权同意的；<br />
+      <br />
+      6．您自行向社会公众公开的个人信息；<br />
+      <br />
+      7．从合法公开披露的信息中收集个人信息的，如合法的新闻报道、政府信息公开等渠道。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      五、我们如何保存和保护您的个人信息<br />
+      <br />
+      （一）安全措施<br />
+      <br />
+      1. 我们承诺保证您的个人信息安全。为了防止未经授权的访问、披露或其他类似风险，我们落实了合理的物理、电子和管理措施流程，保护我们收集的您的个人信息。我们将采取所有合理的措施保护您的个人信息。<br />
+      <br />
+      2. 您的个人信息全都被储存在安全的服务器上，并在受控设施中受到保护。我们依据重要性和敏感性对您的数据进行分级分类，并且保证您的个人信息具有合理的安全等级。同样，我们对以云为基础的数据存储设有专门的访问控制措施。总而言之，我们定期审查信息收集、储存和处理实践，包括物理安全措施，以防止任何未经授权的访问和使用。<br />
+      <br />
+      3. 我们会严格甄选业务合作伙伴和服务提供商，将在个人信息保护方面的要求落实到双方的商务合同或审计、考核等活动中。我们保证通过访问这些信息来帮助向您提供产品或服务的员工和第三方服务供应商具有严格的合同保密义务，如果其未能履行这些义务，其将会受到纪律处分或被终止合作。<br />
+      <br />
+      4. 我们会举办安全和隐私保护培训课程、测试与宣传活动，加强员工对于保护个人信息重要性的认识。我们将采取所有可行的措施保护您的个人信息。<br />
+      <br />
+      5. 互联网环境并非百分之百安全，我们将尽力确保您发送给我们的任何信息的安全性。如果我们的物理、技术、或管理防护设施遭到破坏，导致信息被非授权访问、公开披露、篡改、或毁坏，导致您的合法权益受损，我们将承担相应的法律责任。一旦发生个人信息安全事件，我们将按照法律法规的要求，及时向您告知安全事件的基本情况和可能的影响、我们已采取或将要采取的处置措施、您可自主防范和降低风险的建议、对您的补救措施等。我们同时将及时将事件相关情况以邮件、信函、电话、推送通知等方式告知您，难以逐一告知个人信息主体时，我们会采取合理、有效的方式发布公告。同时，我们还将按照监管部门要求，主动上报个人信息安全事件的处置情况。<br />
+      <br />
+      （二）您能做什么?<br />
+      <br />
+      1. 您可以通过不向任何人（除非此人经您正式授权）披露您的登录密码或账号信息，您可以为国美易卡设置唯一的密码，以防止其他网站密码泄露危害您在国美易卡的账号安全。无论何时，请不要向任何人（包括自称是国美易卡客服的人士）透露您收到的验证码。无论您何时作为国美易卡账号用户登录国美易卡，尤其是在他人的计算机或公共互联网终端上登录时，在会话结束时您总应注销登出。<br />
+      <br />
+      2. 我们不对因您未能保持个人信息的私密性而导致第三方访问您的个人信息进而造成的安全疏漏承担责任。尽管有上述规定，如果发生其他任何互联网用户未经授权使用您账号的情况或其他任何安全漏洞，您应当立即通知我们。您的协助将有助于我们保护您个人信息的私密性。<br />
+      <br />
+      （三）个人信息存储及保留<br />
+      <br />
+      1.我们基于本隐私政策中所述的信息收集的目的所必需的期间，或者遵守适用的相关法律要求保留个人信息。为了保证您的消费者权益，除非法律法规另有规定，您的个人信息我们将保存至您账号注销之日后的一个月。当您的个人信息超出我们所保存的期限后，我们将停止保留，并做删除或匿名化处理。<br />
+      <br />
+      2.您的信息将会保存至中华人民共和国境内。我们将在中华人民共和国大陆地区运营中收集和产生的个人信息，存储在中国大陆地区的数据中心。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      六、您的权利<br />
+      <br />
+      （一）查阅您的个人信息<br />
+      <br />
+      1．您有权随时查阅您的个人信息，法律法规规定的例外情况除外。如果您想行使数据查阅权，可以通过以下方式自行查阅：<br />
+      <br />
+      您可以通过国美易卡APP内如下操作路径查阅您的相关信息：<br />
+      <br />
+      （1）“首页－我的－设置（右上角图标）－个人信息”查阅或更正您的个人信息、居住信息、单位信息；<br />
+      <br />
+      （2）“首页－我的－设置（右上角图标）－地址管理”查阅或更正您的地址信息；<br />
+      <br />
+      （3）“首页－我的－设置（右上角图标）－修改登陆密码”变更您的登陆密码；<br />
+      <br />
+      （4）“首页－我的－设置（右上角图标）－修改手机号”查阅或变更您的手机号码；<br />
+      <br />
+      （5）“首页－我的－设置（右上角图标）－隐私政策”查阅隐私政策；<br />
+      <br />
+      （6）“首页－我的－设置（右上角图标）－服务协议”查阅相关服务协议；<br />
+      <br />
+      （7）“首页－我的－账单”查阅您的账单信息（包括历史账单、进行中账单以及相关合同）；<br />
+      <br />
+      （8）“首页－我的－银行卡”查阅或变更您的银行卡；<br />
+      <br />
+      （9）“首页－我的－商城订单”查阅您的商城交易信息。<br />
+      <br />
+      （10）“首页-会员”或“首页-我的（页面上方）”查阅您的会员信息及相关权益。<br />
+      <br />
+      2．如果您无法通过上述链接查阅这些个人信息，您可以随时通过本隐私政策【如何联系我们】约定的联系方式联络我们。我们将在15个工作日内响应您的请求。<br />
+      <br />
+      3．对于您在使用我们的产品或服务过程中产生的其他个人信息，只要我们不需要过多投入，我们会向您提供。如果您想行使数据查阅权，请通过本隐私政策【如何联系我们】约定的联系方式联络我们。<br />
+      <br />
+      （二）更正您的个人信息<br />
+      <br />
+      当您发现我们处理的关于您的个人信息有错误时，您有权要求我们进行更正。您可以通过“（一）访问您的个人信息”中罗列的方式提出更正申请。如果您无法通过上述链接更正这些个人信息，您可以随时通过本隐私政策【如何联系我们】约定的联系方式联络我们。我们将在15个工作日内回复您的更正请求并完成核查与处理。<br />
+      <br />
+      （三）删除您的个人信息<br />
+      <br />
+      1. 在以下情形中，您可以通过拨打客服电话【400-8133-233】向我们提出删除个人信息的请求：<br />
+      <br />
+      （1）如果我们处理个人信息的行为违反法律法规；<br />
+      <br />
+      （2）如果我们收集、使用您的个人信息，却未征得您的同意；<br />
+      <br />
+      （3）如果我们处理个人信息的行为违反了与您的约定；<br />
+      <br />
+      （4）如果您不再使用我们的产品或服务，或您注销了国美易卡账号；<br />
+      <br />
+      （5）如果我们不再为您提供产品或服务。<br />
+      <br />
+      2．收到您的删除请求后，我们会根据您及相关法律法规的要求进行后续删除处理并向您反馈结果。当您从我们的服务中删除信息后，我们可能不会立即备份系统中删除相应的信息，但会在备份更新时删除这些信息。<br />
+      <br />
+      （四）注销您的账户<br />
+      <br />
+      您可以在我们的产品与/或服务中直接申请注销账号或注销您申请的具体服务功能，您如果选择注销账户须满足注销须知所述的要求。您可以通过国美易卡APP访问“首页-我的-设置（右上角图标）-账户注销”完成账户注销，还可以通过本隐私政策【如何联系我们】约定的联系方式与我们联系，经核实您的注销信息、您的合同履行情况等具体细节后，我们对您的注销账号申请进行处理。<br />
+      <br />
+      （五）撤回同意或授权<br />
+      <br />
+      1. 您可以回复“TD”（具体以短信内容中提示为准）来取消我们给您发送的营销短信。<br />
+      <br />
+      2．如果您希望关闭您之前已开启的设备调用权限，您可以在设备系统设置或国美易卡APP“首页－我的－设置（右上角图标）－隐私管理”进行自主设置。<br />
+      <br />
+      3. 如果您希望关闭定向推送信息权限，您可以在国美易卡APP“首页－我的－设置（右上角图标）－隐私管理”进行自主设置。<br />
+      <br />
+      4. 您还可以通过发送邮件到finance-service@gomefinance.com.cn、拨打我们的客服电话要求取消营销站内信、营销PUSH通知、营销电话等授权。<br />
+      <br />
+      5. 您也可以通过注销具体产品、注销国美易卡账号的方式，撤回我们继续收集您个人信息的全部授权。<br />
+      <br />
+      请您理解，每个业务功能需要一些基本的个人信息才能得以完成（详见本隐私政策“第一部分”），当您撤回同意或授权后，我们无法继续为您提供撤回同意或授权所对应的服务，也不再处理您相应的个人信息。但您撤回同意或授权的决定，不会影响此前基于您的授权而开展的个人信息处理。<br />
+      <br />
+      （六）获取您的个人信息副本<br />
+      <br />
+      您有权获取您的个人信息副本。如您需要获取我们收集的您的个人信息副本，您可通过拨打客服热线400-8133-233，人工客服会对您进行身份核验后，将个人信息副本提交给您。在符合相关法律规定且技术可行的前提下，我们将根据您的要求向您提供您的个人信息副本。<br />
+      <br />
+      （七）约束信息系统自动决策<br />
+      <br />
+      在某些业务功能中，我们可能仅依据信息系统、算法等在内的非人工自动决策机制作出决定。如果这些决定显著影响您的合法权益，您有权要求我们作出解释，我们也将提供适当的救济方式。<br />
+      <br />
+      （八）响应您的上述请求<br />
+      <br />
+      1. 为保障安全，您可能需要提供书面请求，或以其他方式证明您的身份。我们可能会先要求您验证自己的身份，然后再处理您的请求。<br />
+      <br />
+      2. 通常情况下我们将在十五个工作日内作出答复并完成核查与处理。如您不满意前述处理结果或者在业务办理过程中有任何问题，还可以拨打电话400-8133-233进行投诉与举报，针对您进行的投诉与举报，我们承诺将在十五个工作日内受理并进行相应处理，请您在投诉或举报后随时保持联系方式畅通以便我们给您回复处理结果。<br />
+      <br />
+      3. 对于您合理的请求，我们原则上不收取费用，但对多次重复、超出合理限度的请求，我们将视情况收取一定成本费用。对于那些无端重复、需要过多技术手段（例如，需要开发新系统或从根本上改变现行惯例）、给他人合法权益带来风险或者非常不切实际（例如，涉及备份磁带上存放的信息）的请求，我们可能会予以拒绝。<br />
+      <br />
+      4. 在以下情形中，我们将无法响应您的请求：<br />
+      <br />
+      （1）与个人信息控制者履行法律法规规定的义务相关的；<br />
+      <br />
+      （2）与国家安全、国防安全有关的；<br />
+      <br />
+      （3）与公共安全、公共卫生、重大公共利益直接有关的；<br />
+      <br />
+      （4）与刑事侦查、起诉、审判和执行判决等直接有关的；<br />
+      <br />
+      （5）有充分证据表明个人信息主体存在主观恶意或滥用权利的；<br />
+      <br />
+      （6）出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；<br />
+      <br />
+      （7）响应您的请求将导致您或其他个人、组织的合法权益受到严重损害的；<br />
+      <br />
+      （8）涉及商业秘密的。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      七、未成年人信息的保护<br />
+      <br />
+      （一）我们的产品和服务主要面向成年人，若您是14周岁以下的儿童，在使用我们的产品或服务或向我们提供个人信息前，应事先取得您家长或法定监护人的同意。<br />
+      <br />
+      （二）我们认为监督未成年人使用我们的产品或服务是家长或监护人的责任。但是，我们拒绝获得未成年人的个人信息，或者向这类人群发送任何促销资料。<br />
+      <br />
+      （三）我们不会寻求或试图寻求接收来自未成年人的任何个人信息。如果家长或监护人有理由相信未成年人未经事先同意而向我们提交了个人信息，请通过本隐私政策所述联系方式联系我们以确保删除此类个人信息，并保证未成年人取消订阅任何适用的服务。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      八、第三方网站和服务<br />
+      <br />
+      我们的隐私政策不适用于第三方提供的产品或服务。您在使用国美易卡的产品或服务时，其中可能包括第三方的产品或服务，其中一些会以第三方网站的链接形式提供，当您使用这些产品或服务时，这些第三方也可能收集您的信息，在此情况下，我们强烈建议您花时间阅读该第三方的隐私政策，就像阅读我们的政策一样。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      九、本隐私政策如何更新<br />
+      <br />
+      我们会基于业务和技术的变更对隐私政策进行定期审核，我们可能会更新本隐私政策。如果我们对本隐私政策进行重大变更，我们将通过您登记的联系方式如电子邮件（向您账号指定的邮箱地址发送）或在国美易卡网页公布或通过移动设备通知您，这样您可以了解我们收集的信息以及我们如何使用这些信息。本隐私政策所指的重大变更包括但不限于：<br />
+      <br />
+      1、 我们的服务模式发生重大变化。如处理个人信息的目的、处理的个人信息类型、个人信息的使用方式等；<br />
+      <br />
+      2、 我们在所有权结构、组织架构等方面发生重大变化。如业务调整、破产并购等引起的所有者变更等；<br />
+      <br />
+      3、 个人信息共享、转让或公开披露的主要对象发生变化；<br />
+      <br />
+      4、 您参与个人信息处理方面的权利及其行使方式发生重大变化；<br />
+      <br />
+      5、 我们负责处理个人信息安全的责任部门、联络方式及投诉渠道发生变化时；<br />
+      <br />
+      6、 个人信息安全影响评估报告表明存在高风险时。<br />
+      <br />
+      此类隐私政策变化将从通知或网站规定的生效日期开始适用。我们鼓励您在每次使用我们服务时都查阅本隐私政策。您可以在国美易卡APP通过“首页－我的－设置（右上角图标）－隐私政策”中查看本隐私政策。您继续使用产品和网站、手机和/或其他任何设备上的服务，将被视为接受更新的隐私政策。在我们向您收集更多的个人信息或我们因为新的目的使用或披露您的个人信息时，我们会再次征得您的同意。<br />
+      <br />
+      &nbsp;<br />
+      <br />
+      十、如何联系我们<br />
+      <br />
+      如果您对本隐私政策有任何意见或问题，或者您对我们收集、使用或披露您的个人信息有任何问题，请通过下列方式联系我们，并提及“隐私政策”。针对您关于个人信息相关的权利请求、问题咨询等时，我们有专业的团队解决你的问题。一般情况下，我们将在十五天内回复。如果你的问题本身涉及比较重大的事项，我们可能会要求你提供更多信息。如果您对收到的答复不满意，您可以将投诉移交给所在司法辖区的相关监管机构。如果您咨询我们，我们会根据您的实际情况，提供可能适用的相关投诉途径的信息。<br />
+      <br />
+      联系地址：北京市通州区潞城镇胡郎路80号1044室；<br />
+      <br />
+      客服邮箱：finance-service@gomefinance.com.cn；<br />
+      <br />
+      客服电话： 400-8133-233；<br />
+      <br />
+      进入国美易卡APP内点击“首页-我的-设置（右上角图标）-帮助与反馈-意见反馈”；<br />
+      <br />
+      进入国美易卡APP内点击“首页-客服中心（右上角图标）”。<br />
     </div>
   </div>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
-      headTitle: '注册协议',
-      dealType: 1 //1 - 注册协议  2 - 隐私协议
-    }
+      dealType: 1, //1 - 注册协议  2 - 隐私协议
+    };
   },
   computed: {},
-  components: {
+  components: {},
+  mounted() {
+    this.dealType = Number(this.$route.params.type);
   },
-  mounted () {
-    this.dealType = Number(this.$route.params.type)
-  },
-  created () {},
+  created() {},
   methods: {
-    toNext () {}
-  }
-}
+    toNext() {},
+  },
+};
 </script>
 <style scoped lang="scss">
 .deal-container {

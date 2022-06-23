@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-04-29 00:04:34
  * @LastEditors: your name
- * @LastEditTime: 2022-06-23 23:18:46
+ * @LastEditTime: 2022-06-23 23:17:08
 -->
 
 <template>
@@ -50,9 +50,9 @@
 <script>
 import AsyncValidator from "async-validator";
 import utils from "@/utils";
+import { verifyUser } from "@/service/getData";
 import { Indicator } from "mint-ui";
 import { mapMutations } from "vuex";
-import { verifyUser } from "@/service/getData";
 export default {
   data() {
     return {
@@ -129,7 +129,7 @@ export default {
         this.$toast({
           message: res.message || "验证通过",
         });
-        this.$router.push("/loanFlow/basicInfo");
+        this.$router.push("/rightNow/loanFlow/basicInfo");
       } else {
         //表单重置
         this.qualityInfo.realName = "";

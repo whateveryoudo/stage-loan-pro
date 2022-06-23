@@ -25,7 +25,7 @@ _axios.interceptors.response.use(
         Toast('请求地址错误')
         break;
       case 500:
-        Toast('服务器内部错误')
+        Toast(error.response.message || '服务器内部错误')
         break;
       case 403:
         Toast('请求被拒绝')

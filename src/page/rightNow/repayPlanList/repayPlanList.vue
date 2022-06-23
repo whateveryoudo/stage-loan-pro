@@ -40,32 +40,33 @@ export default {
   data () {
     return {
       bankLogo: require('@/assets/icons/bank-logo.png'),
-      payStatusMap: ['未开始', '待还清', '已还清'],
+      payStatusMap: ['待还款', '待还清', '已还清'],
       loanList: [
         {
           period: 1,
           status: 0,
-          money: 779.27,
+          money: 2090,
           repayDate: moment()
-            .subtract(2, 'M')
-            .date(4)
+            .add(1, 'M')
+            .date(14)
             .format('YYYY-MM-DD')
         },
         {
           period: 2,
           status: 0,
-          money: 779.27,
+          money: 2090,
           repayDate: moment()
-            .subtract(1, 'M')
-            .date(4)
+            .add(2, 'M')
+            .date(14)
             .format('YYYY-MM-DD')
         },
         {
           period: 3,
           status: 0,
-          money: 779.27,
+          money: 2090,
            repayDate: moment()
-            .date(4)
+            .add(3, 'M')
+            .date(14)
             .format('YYYY-MM-DD')
         }
       ],

@@ -1,3 +1,11 @@
+<!--
+ * @Author: ykx
+ * @Date: 2022-06-23 22:54:56
+ * @LastEditTime: 2022-06-23 22:55:36
+ * @LastEditors: your name
+ * @Description: 好分期协议
+ * @FilePath: \stage-load-pro\src\page\deal\deal.vue
+-->
 <template>
   <div class="deal-container">
     <div class="deal-page" v-show="dealType === 1">

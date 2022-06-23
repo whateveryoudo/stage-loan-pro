@@ -1,7 +1,7 @@
 /*
  * @Author: ykx
  * @Date: 2021-04-29 10:37:59
- * @LastEditTime: 2021-05-06 09:21:41
+ * @LastEditTime: 2022-06-23 22:00:34
  * @LastEditors: your name
  * @Description: 请求集合
  * @FilePath: \stage-load-pro\src\service\getData.js
@@ -50,3 +50,4 @@ export const fetchCaptcha = () => axios.get("/getCaptcha"); // 获取图形验�
 export const toRegist = (params) => axios.post("/user/regist", params); // 用户注册
 export const updateUserStatus = (userId) =>
   axios.post("/flow/updateStatus", { userId }); // 更新用户状态（实际应是提交审核资料）
+export const verifyUser = (params) => axios.post("/verify/verifyUserInfo", params); // 用户信息认证

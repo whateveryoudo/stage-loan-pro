@@ -3,16 +3,18 @@
  * @Autor: ykx
  * @Date: 2021-04-28 20:43:40
  * @LastEditors: your name
- * @LastEditTime: 2021-04-29 15:11:04
+ * @LastEditTime: 2022-06-23 22:36:03
 -->
 <template>
-  <header :class="theme">
+  <header :class="[theme,sysName]">
     <i class="arrow_left" v-if="isBack" @click="goback"></i>
     <span class="titleName tdd">{{ headTitle }}</span>
   </header>
 </template>
 <script>
+import sysMixins from './sysMixins'
 export default {
+  mixins: [sysMixins],
   name: 'HeadTop',
   data () {
     return {}
@@ -78,5 +80,11 @@ header {
       background-size: 100% 100%;
     }
   }
+}
+header.dark.guoMei{
+  background-color: $gm-color-primary;
+}
+header.dark.rightNow{
+  background-color: $rn-btn-color;
 }
 </style>

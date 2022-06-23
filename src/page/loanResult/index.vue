@@ -2,8 +2,8 @@
  * @Description: 
  * @Autor: ykx
  * @Date: 2021-05-07 19:06:36
- * @LastEditors: 
- * @LastEditTime: 2022-06-23 02:11:30
+ * @LastEditors: your name
+ * @LastEditTime: 2022-06-23 22:15:54
 -->
 <template>
   <div class="result_container">

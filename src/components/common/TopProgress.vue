@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="fill"></section>
-    <div class="progress_container">
+    <div :class="['progress_container', sysName]">
       <!--顶部留白padding无法改变高度-->
       <section class="prev_step_con">
         <section
@@ -16,13 +16,11 @@
           <div class="line"></div>
           <span class="step_name">{{ item.title }}</span>
         </section>
-        <div
-          :class="[
+        <div :class="[
             'last_step_con',
             lastStep.isComplete && 'stepOver',
             lastStep.waiting && 'waiting',
-          ]"
-        >
+          ]">
           <span class="step_name">{{ lastStep.title }}</span>
         </div>
       </section>
@@ -30,7 +28,9 @@
   </div>
 </template>
 <script>
+import sysMixins from "./sysMixins";
 export default {
+  mixins: [sysMixins],
   data() {
     return {};
   },
@@ -157,6 +157,36 @@ export default {
       background-color: $red;
       border-color: $red;
     }
+  }
+}
+
+// 国美
+.progress_container.guoMei {
+  .prev_step_con .progress_item.waiting:after {
+    background-color: $gm-color-primary;
+    border-color: $gm-color-primary;
+  }
+  .prev_step_con .progress_item.stepOver .line {
+    background-color: $gm-color-primary;
+  }
+  .last_step_con.waiting:after {
+    background-color: $gm-color-primary;
+    border-color: $gm-color-primary;
+  }
+}
+
+// 马上
+.progress_container.rightNow {
+  .prev_step_con .progress_item.waiting:after {
+    background-color: $rn-btn-color;
+    border-color: $rn-btn-color;
+  }
+  .prev_step_con .progress_item.stepOver .line {
+    background-color: $rn-btn-color;
+  }
+  .last_step_con.waiting:after {
+    background-color: $rn-btn-color;
+    border-color: $rn-btn-color;
   }
 }
 </style>

@@ -2,7 +2,11 @@
   <div class="login_container">
     <div class="rating-page">
       <div class="top-img-wrapper">
-        <img class="res-img" :src="require('@/assets/right-now/top.png')" alt="" />
+        <img
+          class="res-img"
+          :src="require('@/assets/right-now/top.png')"
+          alt=""
+        />
       </div>
       <div class="login_form">
         <section class="field-item-container simple-form">
@@ -46,25 +50,22 @@
           :class="{ selected: userInfo.dealFlag }"
           @click="toggleDealStatus"
         >
-          <svg class="icon" aria-hidden="true">
-            <use
-              :xlink:href="
+          <svg
+            class="icon"
+            aria-hidden="true"
+          >
+            <use :xlink:href="
                 userInfo.dealFlag
                   ? '#icon-choosehandle'
                   : '#icon-yuanxingweixuanzhong'
-              "
-            ></use>
+              "></use>
           </svg>
         </span>
 
         <div>
-          我已阅读并接受
-          <router-link :to="{ path: '/rightNow/deal/1' }"
-            >《国美易卡服务协议》</router-link
-          >
-          <router-link :to="{ path: '/rightNow/deal/2' }"
-            >《国美易卡隐私权政策》</router-link
-          >
+          我已阅读并同意
+          <router-link :to="{ path: '/rightNow/deal/1' }">《注册服务协议》</router-link>及
+          <router-link :to="{ path: '/rightNow/deal/2' }">《隐私权政策》</router-link>
         </div>
       </div>
       <div class="footer-wrapper">
@@ -78,163 +79,158 @@
   </div>
 </template>
 <script>
-import LoginBtn from '@/components/rightNow/LoginBtn'
-import { verifyRules } from '@/config/verifyRules'
-import { Toast } from 'mint-ui'
-import { toLogin, toRegist } from '@/service/getData'
-import { Indicator } from 'mint-ui'
+import LoginBtn from "@/components/rightNow/LoginBtn";
+import { verifyRules } from "@/config/verifyRules";
+import { Toast } from "mint-ui";
+import { toLogin, toRegist } from "@/service/getData";
+import { Indicator } from "mint-ui";
 export default {
-  data () {
+  data() {
     return {
-      submitType: 'login',
-      imgCaptcha: '',
+      submitType: "login",
+      imgCaptcha: "",
       captchaLock: false, // 防止快速点击
       captchaIndex: Math.floor(Math.random() * 5),
       captchaImgs: [
-        require('@/assets/icons/8ydq.png'),
-        require('@/assets/icons/egmp.png'),
-        require('@/assets/icons/kpma.png'),
-        require('@/assets/icons/qw6x.png'),
-        require('@/assets/icons/uwwy.png')
+        require("@/assets/icons/8ydq.png"),
+        require("@/assets/icons/egmp.png"),
+        require("@/assets/icons/kpma.png"),
+        require("@/assets/icons/qw6x.png"),
+        require("@/assets/icons/uwwy.png"),
       ],
-      captchaCodes: ['8ydq', 'egmp', 'kpma', 'qw6x', 'uwwy'],
+      captchaCodes: ["8ydq", "egmp", "kpma", "qw6x", "uwwy"],
       userInfo: {
-        username: '',
-        password: '',
-        captcha: '', //图形验证码
+        username: "",
+        password: "",
+        captcha: "", //图形验证码
         // message: "", //短信验证码
-        dealFlag: true
-      }
-    }
+        dealFlag: true,
+      },
+    };
   },
   computed: {
-    rightCode () {
-      return this.captchaCodes[this.captchaIndex]
+    rightCode() {
+      return this.captchaCodes[this.captchaIndex];
     },
     validSuc: function () {
       if (
         verifyRules.phone(this.userInfo.username, false) &&
         this.userInfo.dealFlag
       ) {
-        if (this.submitType === 'login' && this.userInfo.password) {
-          return true
+        if (this.submitType === "login" && this.userInfo.password) {
+          return true;
         } else {
           //手机号正确 & 校验表单都填写(未对格式进行校验)
-          if (Object.keys(this.userInfo).every(key => !!this.userInfo[key])) {
-            return true
+          if (Object.keys(this.userInfo).every((key) => !!this.userInfo[key])) {
+            return true;
           }
         }
       }
-      return false
-    }
+      return false;
+    },
   },
   components: {
-    LoginBtn
+    LoginBtn,
   },
-  mounted () {},
-  created () {},
+  mounted() {},
+  created() {},
   methods: {
     /**
      * @description: 初始化 & 刷新验证码, fix:由于网络问题，采用本地存储
      * @param {*}
      */
-    async getImgCaptcha () {
+    async getImgCaptcha() {
       if (this.captchaLock) {
-        return
+        return;
       }
-      this.captchaLock = true
-      this.captchaIndex = Math.floor(Math.random() * 5)
-      this.captchaLock = false
+      this.captchaLock = true;
+      this.captchaIndex = Math.floor(Math.random() * 5);
+      this.captchaLock = false;
     },
     //勾选协议
-    toggleDealStatus () {
-      this.userInfo.dealFlag = !this.userInfo.dealFlag
+    toggleDealStatus() {
+      this.userInfo.dealFlag = !this.userInfo.dealFlag;
     },
-    changeType (type) {
-      this.submitType = type
+    changeType(type) {
+      this.submitType = type;
     },
-    handleSubmit () {
-      this.submitType === 'login' ? this.submitForm() : this.registForm()
+    handleSubmit() {
+      this.submitType === "login" ? this.submitForm() : this.registForm();
     },
-    submitForm () {
-      Indicator.open('登录中...')
+    submitForm() {
+      Indicator.open("登录中...");
       // 校验输入是否正确
       if (verifyRules.phone(this.userInfo.username)) {
         //md5加密账号密码(提交上传)
         toLogin(this.userInfo)
-          .then(res => {
-            Indicator.close()
-            const { data } = res
+          .then((res) => {
+            Indicator.close();
+            const { data } = res;
             // 将token存入本地
-            sessionStorage.setItem('token', data.token)
-            sessionStorage.setItem('userInfo', JSON.stringify(data)) // 存入当前用户信息
+            sessionStorage.setItem("token", data.token);
+            sessionStorage.setItem("userInfo", JSON.stringify(data)); // 存入当前用户信息
             if (res.code === 200) {
-              // 判断是否是测试账号，测试账号直接进入详情界面
-              if (data.isTestAccount === 1) {
-                 Toast('登录成功!')
-                this.$router.push('/rightNow/confirmLoan')
-              } else { // 未做其他处理了
-                Toast('未知异常,请联系管理员！')
-                // 判断用户是否已经进件过，进件过 -> 申请成功界面    未进件  -> 走申请流程
-                // if (data.isApplyed === 0) {
-                //   this.$router.push('/loanFlow')
-                // } else if (data.isApplyed === 1) {
-                //   this.$router.push('/loanResult')
-                // }
+              // 判断这里测试账号 & 已经进件过直接进入结果界面
+              if (data.isTestAccount === 1 || data.isApplyed === 1) {
+                Toast("登录成功!");
+                this.$router.push("/rightNow/repayDetail");
+              } else {
+                // 未进件
+                this.$router.push("/rightNow/loanFlow");
               }
             }
           })
           .catch(() => {
-            Indicator.close()
-          })
+            Indicator.close();
+          });
       }
     },
-    registForm () {
+    registForm() {
       if (this.userInfo.captcha !== this.rightCode) {
         // 这里修改为前端校验验证码
-        Toast('验证码错误')
-        this.getImgCaptcha()
-        return
+        Toast("验证码错误");
+        this.getImgCaptcha();
+        return;
       }
-      Indicator.open('注册中...')
-      const { username } = this.userInfo
+      Indicator.open("注册中...");
+      const { username } = this.userInfo;
       // 校验输入是否正确
       if (verifyRules.phone(username)) {
         //md5加密账号密码(提交上传)
         toRegist(this.userInfo)
-          .then(res => {
-            Indicator.close()
-            const { data, code } = res
+          .then((res) => {
+            Indicator.close();
+            const { data, code } = res;
             // if (code === 10001) {
             //   this.getImgCaptcha()
             //   return
             // }
             if (code === 200) {
               // 将token存入本地
-              sessionStorage.setItem('token', data.token)
-              sessionStorage.setItem('userInfo', JSON.stringify(data)) // 存入当前用户信息
-              Toast('登录成功!')
+              sessionStorage.setItem("token", data.token);
+              sessionStorage.setItem("userInfo", JSON.stringify(data)); // 存入当前用户信息
+              Toast("登录成功!");
               // 这里直接取登录后的界面（新注册的用户跳转填写资料）
-              this.$router.push('/loanFlow')
+              this.$router.push("/rightNow/loanFlow");
             }
           })
           .catch(() => {
-            Indicator.close()
-          })
+            Indicator.close();
+          });
       }
-    }
+    },
   },
   watch: {
-    submitType (val) {
+    submitType(val) {
       // 清空部分输入框
-      if (val === 'register') {
-        this.userInfo.username = ''
-        this.userInfo.captcha = ''
-        this.userInfo.password = ''
+      if (val === "register") {
+        this.userInfo.username = "";
+        this.userInfo.captcha = "";
+        this.userInfo.password = "";
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style lang="scss">
 .login_container {
@@ -244,7 +240,7 @@ export default {
 }
 </style>
 <style lang="scss" scoped>
-@import 'src/style/scss/mixin';
+@import "src/style/scss/mixin";
 .logo {
   text-align: center;
   width: 0.7rem;
@@ -269,7 +265,7 @@ export default {
       color: #000;
     }
     &.selected:after {
-      content: ' ';
+      content: " ";
       background-color: $color-primary;
       width: 0.3rem;
       height: 3px;
@@ -303,7 +299,8 @@ export default {
   font-size: 0.12rem;
   color: #575e70;
   a {
-    color: #575e70;
+    color: #000;
+    font-weight: bold;
   }
   div:last-child {
     margin-left: 0.05rem;
