@@ -170,13 +170,17 @@ export default {
             sessionStorage.setItem("token", data.token);
             sessionStorage.setItem("userInfo", JSON.stringify(data)); // 存入当前用户信息
             if (res.code === 200) {
-              // 判断这里测试账号 & 已经进件过直接进入结果界面
-              if (data.isTestAccount === 1 || data.isApplyed === 1) {
-                Toast("登录成功!");
+              Toast("登录成功!");
+              // 判断是否是测试账号，测试账号直接进入详情界面
+              if (data.isTestAccount === 1) {
                 this.$router.push("/guoMei/confirmLoan");
               } else {
-                // 未进件
-                this.$router.push("/guoMei/loanFlow");
+                // 判断用户是否已经进件过，进件过 -> 申请成功界面    未进件  -> 走申请流程
+                if (data.isApplyed === 0) {
+                  this.$router.push("/guoMei/loanFlow");
+                } else if (data.isApplyed === 1) {
+                  this.$router.push("/guoMei/loanResult");
+                }
               }
             }
           })

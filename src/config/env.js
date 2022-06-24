@@ -3,7 +3,7 @@
  * @Autor: ykx
  * @Date: 2021-05-06 23:10:38
  * @LastEditors: your name
- * @LastEditTime: 2022-06-24 00:11:59
+ * @LastEditTime: 2022-06-24 16:02:42
  */
 let baseUrl
 let routerMode = 'history'
