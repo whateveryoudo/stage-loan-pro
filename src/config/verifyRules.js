@@ -11,8 +11,9 @@ export const verifyRules =  {
         }
         return true;
     },
+    // fix-更新最新手机号正则
     phone(val,needMsg = true){
-        if(!(/^(13[0-9]|14[5|7]|15[0-35-9]|17[0-8]|18[0-9])\d{8}$/).test(val)){
+        if(!(/^1([38][0-9]|14[579]|5[^4]|16[6]|7[1-35-8]|9[189])\d{8}$/).test(val)){
             needMsg && (Toast({
                 message: '手机号码格式错误',
                 position: 'middle',
