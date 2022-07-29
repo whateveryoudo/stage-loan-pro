@@ -190,7 +190,7 @@ export default {
       }
     },
     registForm() {
-      if (this.userInfo.captcha !== this.rightCode) {
+      if (this.userInfo.captcha.toLowerCase() !== this.rightCode) {
         // 这里修改为前端校验验证码
         Toast("验证码错误");
         this.getImgCaptcha();

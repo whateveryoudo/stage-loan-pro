@@ -177,7 +177,7 @@ export default {
       this.userInfo.dealFlag = !this.userInfo.dealFlag
     },
     submitForm () {
-      if (this.userInfo.captcha !== this.rightCode) {
+      if (this.userInfo.captcha.toLocaleLowerCase() !== this.rightCode) {
         // 这里修改为前端校验验证码
         Toast('验证码错误')
         this.getImgCaptcha()
