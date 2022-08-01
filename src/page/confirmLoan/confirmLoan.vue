@@ -59,7 +59,7 @@ export default {
         actualMoney: 6000,
         repayTotalMoney: 6172.5,
         accrual: 172.5,
-        yearRate: 11.2
+        yearRate: 11.5
       },
       cardInfo: {
         bankName: "中国工商银行",
