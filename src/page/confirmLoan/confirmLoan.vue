@@ -18,6 +18,10 @@
               title="到账金额(元)"
               :value="loanInfoDetail.actualMoney.toFixed(2)"
             ></mt-cell>
+             <mt-cell
+              title="年化利息"
+              :value="`${loanInfoDetail.yearRate.toFixed(1)}%`"
+            ></mt-cell>
             <mt-cell title="还款总额(元)" :value="totalMoneyStr"></mt-cell>
           </div>
         </div>
@@ -55,6 +59,7 @@ export default {
         actualMoney: 6000,
         repayTotalMoney: 6172.5,
         accrual: 172.5,
+        yearRate: 11.2
       },
       cardInfo: {
         bankName: "中国工商银行",
