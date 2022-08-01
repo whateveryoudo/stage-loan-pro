@@ -1,7 +1,7 @@
 <!--
  * @Author: ykx
  * @Date: 2021-05-13 15:25:39
- * @LastEditTime: 2021-05-26 15:06:52
+ * @LastEditTime: 2022-08-01 17:25:17
  * @LastEditors: your name
  * @Description: 底部备注信息
  * @FilePath: \stage-load-pro\src\components\common\FooterMsg.vue
@@ -26,12 +26,5 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-.footer {
-  color: #aaa;
-  font-size: 10px;
-  line-height: 1.8;
-  text-align: center;
-  padding: 0 0.05rem;
-  margin-bottom: 0.2rem;
-}
+
 </style>

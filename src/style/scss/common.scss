@@ -228,7 +228,14 @@ body,
   }
 
 }
-
+.footer {
+  color: #aaa;
+  font-size: 10px;
+  line-height: 1.8;
+  text-align: center;
+  padding: 0 0.05rem;
+  margin-bottom: 0.2rem;
+}
 //checkbox span模拟
 span.checkbox {
   display: inline-block;
