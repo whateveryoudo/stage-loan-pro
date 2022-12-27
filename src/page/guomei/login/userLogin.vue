@@ -2,63 +2,34 @@
   <div class="login_container">
     <div class="rating-page">
       <div class="top-img-wrapper">
-        <img
-          class="res-img"
-          :src="require('@/assets/guomei/top.png')"
-          alt=""
-        />
+        <img class="res-img" :src="require('@/assets/guomei/top.png')" alt="" />
+        <div class="total-money">
+          <span class="num">9,000</span>
+          <span class="unit">元</span>
+        </div>
+        <div class="white-cover-block"></div>
       </div>
       <div class="login_form">
         <section class="field-item-container simple-form">
-          <mt-field
-            label="手机号码"
-            placeholder="请输入手机号码"
-            v-model="userInfo.username"
-          ></mt-field>
-          <mt-field
-            label="账号密码"
-            placeholder="请输入账号密码"
-            type="password"
-            v-model="userInfo.password"
-          ></mt-field>
-          <mt-field
-            label="图形验证码"
-            placeholder="请输入"
-            v-if="submitType === 'regist'"
-            v-model="userInfo.captcha"
-            :attr="{ maxlength: 4 }"
-          >
-            <img
-              :src="captchaImgs[captchaIndex]"
-              alt=""
-              class="captcha-img"
-              @click="getImgCaptcha"
-            />
+          <mt-field label="手机号码" placeholder="请输入手机号码" v-model="userInfo.username"></mt-field>
+          <mt-field label="账号密码" placeholder="请输入账号密码" type="password" v-model="userInfo.password"></mt-field>
+          <mt-field label="图形验证码" placeholder="请输入" v-if="submitType === 'regist'" v-model="userInfo.captcha"
+            :attr="{ maxlength: 4 }">
+            <img :src="captchaImgs[captchaIndex]" alt="" class="captcha-img" @click="getImgCaptcha" />
           </mt-field>
         </section>
       </div>
 
-      <LoginBtn
-        :enable="validSuc"
-        :submitType="submitType"
-        @toNext="handleSubmit"
-        @onChangeType="changeType"
-      ></LoginBtn>
+      <LoginBtn :enable="validSuc" :submitType="submitType" @toNext="handleSubmit" @onChangeType="changeType">
+      </LoginBtn>
       <div class="deal-wrapper">
-        <span
-          class="switch"
-          :class="{ selected: userInfo.dealFlag }"
-          @click="toggleDealStatus"
-        >
-          <svg
-            class="icon"
-            aria-hidden="true"
-          >
+        <span class="switch" :class="{ selected: userInfo.dealFlag }" @click="toggleDealStatus">
+          <svg class="icon" aria-hidden="true">
             <use :xlink:href="
-                userInfo.dealFlag
-                  ? '#icon-choosehandle'
-                  : '#icon-yuanxingweixuanzhong'
-              "></use>
+  userInfo.dealFlag
+    ? '#icon-choosehandle'
+    : '#icon-yuanxingweixuanzhong'
+"></use>
           </svg>
         </span>
 
@@ -69,11 +40,7 @@
         </div>
       </div>
       <div class="footer-wrapper">
-        <img
-          class="res-img"
-          :src="require('@/assets/guomei/bottom.png')"
-          alt=""
-        />
+        <img class="res-img" :src="require('@/assets/guomei/bottom.png')" alt="" />
       </div>
     </div>
   </div>
@@ -132,8 +99,8 @@ export default {
   components: {
     LoginBtn,
   },
-  mounted() {},
-  created() {},
+  mounted() { },
+  created() { },
   methods: {
     /**
      * @description: 初始化 & 刷新验证码, fix:由于网络问题，采用本地存储
@@ -245,29 +212,35 @@ export default {
 </style>
 <style lang="scss" scoped>
 @import "src/style/scss/mixin";
+
 .logo {
   text-align: center;
   width: 0.7rem;
   margin: 0 auto;
   margin-bottom: 0.2rem;
+
   img {
     width: 100%;
     height: auto;
   }
 }
+
 .nav_wrapper {
   box-sizing: border-box;
   margin-bottom: 0.3rem;
   padding-left: 0.15rem;
   @include fj(flex-start);
   @include sc(24px, #000);
+
   div.nav_item {
     color: #ccc;
     position: relative;
     padding-bottom: 0.1rem;
+
     &.selected {
       color: #000;
     }
+
     &.selected:after {
       content: " ";
       background-color: $color-primary;
@@ -280,6 +253,7 @@ export default {
       transform: translateX(-50%);
     }
   }
+
   .divider-line {
     background-color: #ddd;
     width: 1px;
@@ -290,33 +264,78 @@ export default {
     margin: 0 0.13rem;
   }
 }
+
 .login_container {
   .rating-page {
     top: 0;
     background-color: #f4f4fc;
   }
+
+  .top-img-wrapper {
+    position: relative;
+  }
+
+  .white-cover-block {
+    position: absolute;
+    height: 0.6rem;
+    background-color: #fff;
+    width: 80%;
+    bottom: 0.9rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+  }
+
+  .total-money {
+    z-index: 10;
+    position: absolute;
+    height: 0.6rem;
+    width: 80%;
+    bottom: 0.85rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+    color:rgba(0,0,0,.8);
+    .num {
+      font-size: .6rem;
+      font-family: Number1;
+
+    }
+    .unit{
+      font-size: .14rem;
+      margin-left: 2px;
+      font-weight: bold;
+    }
+  }
 }
+
 .deal-wrapper {
   display: flex;
   padding: 0 0.37rem;
   margin-top: 0.2rem;
   font-size: 0.12rem;
   color: #575e70;
+
   a {
     color: #575e70;
   }
+
   div:last-child {
     margin-left: 0.05rem;
     line-height: 1.7;
   }
 }
+
 .divider-block {
   width: 100%;
   height: 0.15rem;
 }
+
 .bto-wrapper {
   padding: 0 0.15rem;
   text-align: right;
+
   a {
     color: #333;
   }
@@ -326,6 +345,7 @@ export default {
   height: 35px;
   margin-left: 0.5rem;
 }
+
 .captcha-img {
   display: inline-block;
   width: 100px;

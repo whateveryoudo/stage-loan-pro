@@ -1,8 +1,8 @@
 /*
  * @Author: ykx
  * @Date: 2021-04-28 09:46:16
- * @LastEditTime: 2021-05-02 15:08:33
- * @LastEditors: your name
+ * @LastEditTime: 2022-12-27 20:05:05
+ * @LastEditors: Please set LastEditors
  * @Description: 
  * @FilePath: \stage-load-pro\src\main.js
  */
@@ -20,6 +20,7 @@ import utils from '@/utils'
 import "mint-ui/lib/style.css";
 import "./style/scss/common.scss";
 import "./style/scss/mint-ui-reset.scss";
+import "./assets/style/iconfont.css";
 Vue.prototype.$toast = Toast;
 Vue.prototype.$utils = utils;
 //注册组件
