@@ -10,9 +10,9 @@ let routerMode = 'history'
 let imgBaseUrl = 'https://gw.alicdn.com/tfs/'
 let imgBaseUrl1 = 'https://gw.alicdn.com/i3/'
 if (process.env.NODE_ENV == 'development') {
-  // baseUrl = 'http://localhost:5050'
+  baseUrl = 'http://localhost:5050'
   // baseUrl = 'http://www.qdqfa.cn'
-  baseUrl = 'http://loan.dlbgp.cn'
+  // baseUrl = 'http://loan.dlbgp.cn'
 
 } else if (process.env.NODE_ENV == 'production') {
   // baseUrl = 'https://quickloanapi.applinzi.com';
