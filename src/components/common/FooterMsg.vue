@@ -12,7 +12,7 @@
     <p>贷款额度、放款时间以实际审批结果为准</p>
     <p>贷款资金由小额贷款公司联合银行金融机构共同授信</p>
     <!-- <p>重庆市黑卡小额贷款有限公司 渝ICP备20000928号-1</p> -->
-    <p>海南德花小额贷款有限公司 <a href="https://beian.miit.gov.cn/#/Integrated/index">琼ICP备2023003614号-1号</a></p>
+    <p>海南德祐小额贷款有限公司 <a href="https://beian.miit.gov.cn/#/Integrated/index">琼ICP备2023003614号-1号</a></p>
   </div>
 </template>
 
