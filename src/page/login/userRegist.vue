@@ -64,7 +64,7 @@
         <div>
           我已阅读并同意
           <router-link :to="{ path: '/deal/1' }"
-            >《好分期注册协议》</router-link
+            >《有德贷款注册协议》</router-link
           >
           <router-link :to="{ path: '/deal/2' }">《隐私权政策》</router-link>
         </div>
@@ -232,9 +232,12 @@ export default {
   width: 0.7rem;
   margin: 0 auto;
   margin-bottom: 0.2rem;
+  border-radius: .05rem;
+  overflow: hidden;
   img {
     width: 100%;
     height: auto;
+    vertical-align: middle;
   }
 }
 .nav_wrapper {

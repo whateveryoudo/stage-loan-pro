@@ -6,7 +6,7 @@
           :src="sucImg"
           alt=""
         >
-        <p class="desc">还款申请已提交，<br />更多操作请前往好分期app</p>
+        <p class="desc">还款申请已提交，<br />更多操作请前往有德贷款app</p>
       </div>
     </div>
   </div>

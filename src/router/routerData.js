@@ -5,7 +5,7 @@
  * @LastEditors: your name
  * @LastEditTime: 2022-06-24 00:02:56
  */
-// 好分期
+// 有德贷款
 const userLogin = () => import("../page/login/userLogin.vue");
 const userRegist = () => import("../page/login/userRegist.vue");
 const loanFlow = () => import("../page/loanFlow");

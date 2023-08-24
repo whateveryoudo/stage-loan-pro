@@ -21,7 +21,7 @@ export default {
           targetColor = colorMap[k];
         }
       });
-      return targetColor || "hfq"; // '返回好分期'
+      return targetColor || "hfq"; // '返回有德贷款'
     },
   },
 };

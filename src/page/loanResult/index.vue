@@ -2,8 +2,8 @@
  * @Description: 
  * @Autor: ykx
  * @Date: 2021-05-07 19:06:36
- * @LastEditors: your name
- * @LastEditTime: 2022-06-23 22:15:54
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-08-24 21:26:36
 -->
 <template>
   <div class="result_container">
@@ -12,7 +12,7 @@
         <img :src="sucImg" alt="" />
         <div class="desc">
           <h2>获得额度：<strong>6000</strong></h2>
-          <h2 style="margin-top:5px">提现请前往好分期APP完成</h2>
+          <h2 style="margin-top:5px">信贷审核人员会在工作日向你致电，请留意接听!</h2>
           <!-- <mt-button type="primary" @click="toLoanPage">查看借款信息</mt-button> -->
         </div>
       </div>

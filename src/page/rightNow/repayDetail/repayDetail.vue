@@ -101,7 +101,7 @@ export default {
     toNext () {
       // 这里不跳转界面，直接toast提示
       // this.$router.push("/repayResult");
-      this.$toast('你已获得6000元额度，提现请前往好分期APP完成')
+      this.$toast('你已获得6000元额度，提现请前往有德贷款APP完成')
     }
   }
 }
