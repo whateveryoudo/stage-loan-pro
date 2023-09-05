@@ -42,7 +42,7 @@
       </div>
       <!--底部下一步按钮组件-->
       <next-btn :enable="true" text="确认借款" @toNext="toNext"></next-btn>
-      <footer-msg></footer-msg>
+      <pd-footer-msg></pd-footer-msg>
     </div>
   </div>
 </template>
