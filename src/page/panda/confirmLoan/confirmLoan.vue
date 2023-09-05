@@ -1,0 +1,113 @@
+<template>
+  <div class="loan_info_container">
+    <head-top :headTitle="$route.meta.title"></head-top>
+    <div class="rating-page">
+      <div class="loan-info-top">
+        <p class="title">借款金额(元)</p>
+        <p class="money">{{ money }}</p>
+      </div>
+      <div class="loan-info-content">
+        <div class="info-block-item">
+          <div class="info-block-item-header">贷款详情</div>
+          <div class="info-block-item-body">
+            <mt-cell
+              title="期限"
+              :value="`${loanInfoDetail.periodNum}期`"
+            ></mt-cell>
+            <mt-cell
+              title="到账金额(元)"
+              :value="loanInfoDetail.actualMoney.toFixed(2)"
+            ></mt-cell>
+             <mt-cell
+              title="年化利息"
+              :value="`${loanInfoDetail.yearRate.toFixed(1)}%`"
+            ></mt-cell>
+            <mt-cell title="还款总额(元)" :value="totalMoneyStr"></mt-cell>
+          </div>
+        </div>
+        <div class="divider-block"></div>
+        <div class="info-block-item">
+          <div class="info-block-item-header">收款银行卡</div>
+          <div class="info-block-item-body">
+            <div class="info-item-cell">
+              <img class="bank-logo" :src="bankLogo" alt="" />
+              <span
+                >{{ cardInfo.bankName }}&nbsp;&nbsp;&nbsp;{{
+                  cardInfo.cardDesc
+                }}</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--底部下一步按钮组件-->
+      <next-btn :enable="true" text="确认借款" @toNext="toNext"></next-btn>
+      <footer-msg></footer-msg>
+    </div>
+  </div>
+</template>
+<script>
+import NextBtn from '@/components/common/NextBtn'
+export default {
+  data() {
+    return {
+      headTitle: "确认借款",
+      bankLogo: require("@/assets/icons/bank-logo.png"),
+      money: 6000,
+      loanInfoDetail: {
+        periodNum: 3,
+        actualMoney: 6000,
+        repayTotalMoney: 6172.5,
+        accrual: 172.5,
+        yearRate: 11.5
+      },
+      cardInfo: {
+        bankName: "中国工商银行",
+        cardDesc: "储蓄卡|尾号8511",
+      },
+    };
+  },
+  computed: {
+    totalMoneyStr: function () {
+      return (
+        this.loanInfoDetail.repayTotalMoney.toFixed(2) +
+        `含利息(${this.loanInfoDetail.accrual})`
+      );
+    },
+  },
+  components: { NextBtn },
+  mounted() {},
+  created() {},
+  methods: {
+    toNext() {
+      this.$router.push("/panda/repayDetail");
+    },
+  },
+};
+</script>
+<style lang="scss" scoped>
+@import "src/style/scss/mixin";
+.info-block-item,
+.loan-info-top {
+  background-color: #fff;
+}
+.loan-info-top {
+  text-align: center;
+  padding: 0.3rem 0;
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.1rem;
+  p.title {
+    @include sc(14px, #555);
+  }
+  p.money {
+    @include sc(25px, #000);
+  }
+}
+.loan-info-content {
+}
+.bank-logo {
+  width: 0.2rem;
+  height: auto;
+  margin-right: 0.05rem;
+}
+</style>

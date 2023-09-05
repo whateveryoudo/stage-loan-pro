@@ -12,7 +12,7 @@ import config from '../config'
 import routerData from './routerData'
 
 Vue.use(Router)
-const whiteListPath = ['/guoMei/deal/1', '/guoMei/deal/2', '/deal/1', '/deal/2', '/regist'] // TODO正则匹配
+const whiteListPath = ['/panda/regist', '/panda/deal/1', '/panda/deal/2', '/guoMei/deal/1', '/guoMei/deal/2', '/deal/1', '/deal/2', '/regist'] // TODO正则匹配
 const router = new Router({
   routes: routerData
 })
@@ -25,7 +25,7 @@ router.beforeEach((to, from, next) => {
   } else {
     if (sessionStorage.getItem('token')) {
       if (to.path === '/login') {
-        // 这里退回登录，清空本地数据
+        // 这里退 回登录，清空本地数据
         sessionStorage.removeItem('token')
         sessionStorage.removeItem('userInfo')
       }
@@ -38,6 +38,8 @@ router.beforeEach((to, from, next) => {
           next({ path: '/guoMei/login' })
         } else if (to.path.includes('/rightNow')) {
           next({ path: '/rightNow/login' })
+        } else if (to.path.includes('/panda')) {
+          next({ path: '/panda/login' })
         } else {
           next({ path: '/login' })
         }

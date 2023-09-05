@@ -5,77 +5,38 @@
         <img :src="logo" alt="" />
       </div>
       <div class="nav_wrapper" style="display: none">
-        <div
-          class="nav_item"
-          @click="toggleTab(0)"
-          :class="{ selected: selectedTab === 0 }"
-        >
+        <div class="nav_item" @click="toggleTab(0)" :class="{ selected: selectedTab === 0 }">
           账号密码
         </div>
         <span class="divider-line"></span>
-        <div
-          class="nav_item"
-          @click="toggleTab(1)"
-          :class="{ selected: selectedTab === 1 }"
-        >
+        <div class="nav_item" @click="toggleTab(1)" :class="{ selected: selectedTab === 1 }">
           验证码
         </div>
       </div>
       <div class="login_form">
         <section class="field-item-container">
-          <mt-field
-            label="手机号码"
-            placeholder="请输入手机号码"
-            v-model="userInfo.username"
-          ></mt-field>
-          <mt-field
-            v-show="selectedTab === 0"
-            label="账号密码"
-            placeholder="请输入账号密码"
-            type="password"
-            v-model="userInfo.password"
-          ></mt-field>
-          <mt-field
-            v-show="selectedTab === 1"
-            label="短信验证码"
-            placeholder="请输入"
-            v-model="userInfo.message"
-            :attr="{ maxlength: 4 }"
-          >
-            <mt-button
-              class="getMsgCode"
-              type="primary"
-              size="normal"
-              @click.native="getMsgCode"
-              :class="!isSendBtnEable && 'disabled'"
-              v-text="btnText"
-            ></mt-button>
+          <mt-field label="手机号码" placeholder="请输入手机号码" v-model="userInfo.username"></mt-field>
+          <mt-field v-show="selectedTab === 0" label="账号密码" placeholder="请输入账号密码" type="password"
+            v-model="userInfo.password"></mt-field>
+          <mt-field v-show="selectedTab === 1" label="短信验证码" placeholder="请输入" v-model="userInfo.message"
+            :attr="{ maxlength: 4 }">
+            <mt-button class="getMsgCode" type="primary" size="normal" @click.native="getMsgCode"
+              :class="!isSendBtnEable && 'disabled'" v-text="btnText"></mt-button>
           </mt-field>
         </section>
       </div>
       <div class="deal-wrapper">
-        <span
-          class="checkbox"
-          :class="{ selected: userInfo.dealFlag }"
-          @click="toggleDealStatus"
-        ></span>
+        <span class="checkbox" :class="{ selected: userInfo.dealFlag }" @click="toggleDealStatus"></span>
         <div>
           我已阅读并同意
-          <router-link :to="{ path: '/deal/1' }"
-            >《有德贷款注册协议》</router-link
-          >
-          <router-link :to="{ path: '/deal/2' }">《隐私权政策》</router-link>
+          <router-link :to="{ path: '/panda/deal/1' }">《熊猫优贷注册协议》</router-link>
+          <router-link :to="{ path: '/panda/deal/2' }">《隐私权政策》</router-link>
         </div>
       </div>
       <!--底部下一步按钮组件-->
-      <next-btn
-        :enable="validSuc"
-        formType="login"
-        text="登录"
-        @toNext="submitForm"
-      ></next-btn>
+      <next-btn :enable="validSuc" formType="login" text="登录" @toNext="submitForm"></next-btn>
       <div class="bto-wrapper">
-        <router-link to="/regist">
+        <router-link to="/panda/regist">
           <span>新用户注册</span>
         </router-link>
       </div>
@@ -85,7 +46,7 @@
         <p>具体利息因个人征信不同略有浮动</p>
         <p>总体贷款年化利率（单利）7.3%-24%</p>
       </div>
-      <footer-msg style="margin-top: .2rem"></footer-msg>
+      <pd-footer-msg style="margin-top: .2rem"></pd-footer-msg>
     </div>
   </div>
 </template>
@@ -93,12 +54,12 @@
 import NextBtn from "@/components/common/NextBtn";
 import { verifyRules } from "@/config/verifyRules";
 import { Toast } from "mint-ui";
-import { toLogin } from "@/service/getData";
+import { toLogin } from "@/service/pdGetData";
 import { Indicator } from "mint-ui";
 export default {
   data() {
     return {
-      logo: require("@/assets/app_logo.png"),
+      logo: require("@/assets/pd_app_logo.png"),
       selectedTab: 0,
       timer: null,
       count: 59,
@@ -128,7 +89,7 @@ export default {
   components: {
     NextBtn,
   },
-  mounted() {},
+  mounted() { },
   created() {
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("userInfo");
@@ -158,15 +119,15 @@ export default {
               Toast("登录成功!");
               // 判断是否是测试账号，测试账号直接进入详情界面
               if (data.isTestAccount === 1) {
-                this.$router.push("/confirmLoan");
+                this.$router.push("/panda/confirmLoan");
               } else {
                 // 判断用户是否已经进件过，进件过 -> 申请成功界面    未进件  -> 走申请流程
                 if (data.isApplyed === 0) {
-                  this.$router.push("/loanFlow");
+                  this.$router.push("/panda/loanFlow");
                 } else if (data.isApplyed === 1) {
                   // this.$router.push("/loanResult");
                   // 这里修改为进入详情界面
-                  this.$router.push("/confirmLoan");
+                  this.$router.push("/panda/confirmLoan");
                 }
               }
             }
@@ -188,6 +149,7 @@ export default {
 </style>
 <style lang="scss" scoped>
 @import "src/style/scss/mixin";
+
 .logo {
   text-align: center;
   width: 0.7rem;
@@ -195,25 +157,30 @@ export default {
   margin-bottom: 0.2rem;
   border-radius: .05rem;
   overflow: hidden;
+
   img {
     width: 100%;
     height: auto;
     vertical-align: middle;
   }
 }
+
 .nav_wrapper {
   box-sizing: border-box;
   margin-bottom: 0.3rem;
   padding-left: 0.15rem;
   @include fj(flex-start);
   @include sc(24px, #000);
+
   div.nav_item {
     color: #ccc;
     position: relative;
     padding-bottom: 0.1rem;
+
     &.selected {
       color: #000;
     }
+
     &.selected:after {
       content: " ";
       background-color: $color-primary;
@@ -226,6 +193,7 @@ export default {
       transform: translateX(-50%);
     }
   }
+
   .divider-line {
     background-color: #ddd;
     width: 1px;
@@ -236,6 +204,7 @@ export default {
     margin: 0 0.13rem;
   }
 }
+
 .login_container {
   .rating-page {
     top: 0;
@@ -243,22 +212,27 @@ export default {
     background-color: #fff;
   }
 }
+
 .deal-wrapper {
   display: flex;
   padding: 0 0.15rem;
   margin: 0.2rem 0;
+
   div:last-child {
     margin-left: 0.05rem;
     line-height: 1.7;
   }
 }
+
 .divider-block {
   width: 100%;
   height: 0.15rem;
 }
+
 .bto-wrapper {
   padding: 0 0.15rem;
   text-align: right;
+
   a {
     color: #333;
   }
