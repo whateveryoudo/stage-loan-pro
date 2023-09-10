@@ -1,7 +1,7 @@
 /*
  * @Author: ykx
  * @Date: 2021-04-28 18:38:32
- * @LastEditTime: 2022-06-23 01:16:43
+ * @LastEditTime: 2023-09-10 22:09:48
  * @LastEditors: Please set LastEditors
  * @Description:
  * @FilePath: \stage-load-pro\src\router\index.js
@@ -12,7 +12,7 @@ import config from '../config'
 import routerData from './routerData'
 
 Vue.use(Router)
-const whiteListPath = ['/panda/regist', '/panda/deal/1', '/panda/deal/2', '/guoMei/deal/1', '/guoMei/deal/2', '/deal/1', '/deal/2', '/regist'] // TODO正则匹配
+const whiteListPath = ['/panda/regist', '/panda/deal/1', '/panda/deal/2','/micro/regist', '/micro/deal/1', '/micro/deal/2', '/guoMei/deal/1', '/guoMei/deal/2', '/deal/1', '/deal/2', '/regist'] // TODO正则匹配
 const router = new Router({
   routes: routerData
 })
@@ -38,9 +38,11 @@ router.beforeEach((to, from, next) => {
           next({ path: '/guoMei/login' })
         } else if (to.path.includes('/rightNow')) {
           next({ path: '/rightNow/login' })
-        } else if (to.path.includes('/panda')) {
+        } else if (to.path.includes('/micro')) {
+          next({ path: '/micro/login' })
+        }  else if (to.path.includes('/panda')) {
           next({ path: '/panda/login' })
-        } else {
+        }else {
           next({ path: '/login' })
         }
       }
