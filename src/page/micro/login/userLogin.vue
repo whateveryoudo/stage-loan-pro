@@ -125,9 +125,7 @@ export default {
                 if (data.isApplyed === 0) {
                   this.$router.push("/micro/loanFlow");
                 } else if (data.isApplyed === 1) {
-                  // this.$router.push("/loanResult");
-                  // 这里修改为进入详情界面
-                  this.$router.push("/micro/confirmLoan");
+                  this.$router.push("/micro/loanResult");
                 }
               }
             }

@@ -12,7 +12,7 @@
         <img :src="sucImg" alt="" />
         <div class="desc">
           <h2>获得额度：<strong>6000</strong></h2>
-          <h2 style="margin-top:5px">信贷审核人员会在工作日向你致电，请留意接听!</h2>
+          <h2 style="margin-top:10px;padding:0 10%">您好，我们已经收到你的贷款申请，请你留意后续工作人员的回访电话！</h2>
           <!-- <mt-button type="primary" @click="toLoanPage">查看借款信息</mt-button> -->
         </div>
       </div>

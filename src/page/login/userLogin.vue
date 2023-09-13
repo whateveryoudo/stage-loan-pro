@@ -164,9 +164,7 @@ export default {
                 if (data.isApplyed === 0) {
                   this.$router.push("/loanFlow");
                 } else if (data.isApplyed === 1) {
-                  // this.$router.push("/loanResult");
-                  // 这里修改为进入详情界面
-                  this.$router.push("/confirmLoan");
+                  this.$router.push("/loanResult");
                 }
               }
             }
