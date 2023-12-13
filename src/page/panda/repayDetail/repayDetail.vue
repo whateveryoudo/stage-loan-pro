@@ -95,7 +95,7 @@ export default {
     toNext() {
       // 这里不跳转界面，直接toast提示
       // this.$router.push("/panda/repayResult");
-      this.$toast('你已获得6000元额度，提现请前往熊猫优贷APP完成')
+      this.$toast('你已获得6000元额度，提现请前往应急借钱放心贷APP完成')
     },
   },
 };

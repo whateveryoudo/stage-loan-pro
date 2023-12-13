@@ -64,7 +64,7 @@
         <div>
           我已阅读并同意
           <router-link :to="{ path: '/micro/deal/1' }"
-            >《微消费注册协议》</router-link
+            >《借条借钱花注册协议》</router-link
           >
           <router-link :to="{ path: '/micro/deal/2' }">《隐私权政策》</router-link>
         </div>

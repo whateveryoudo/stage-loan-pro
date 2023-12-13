@@ -13,7 +13,7 @@
           :src="sucImg"
           alt=""
         >
-        <p class="desc">还款申请已提交，<br />更多操作请前往微消费app</p>
+        <p class="desc">还款申请已提交，<br />更多操作请前往借条借钱花app</p>
       </div>
     </div>
   </div>

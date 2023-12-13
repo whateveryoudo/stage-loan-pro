@@ -29,7 +29,7 @@
         <span class="checkbox" :class="{ selected: userInfo.dealFlag }" @click="toggleDealStatus"></span>
         <div>
           我已阅读并同意
-          <router-link :to="{ path: '/panda/deal/1' }">《熊猫优贷注册协议》</router-link>
+          <router-link :to="{ path: '/panda/deal/1' }">《应急借钱放心贷注册协议》</router-link>
           <router-link :to="{ path: '/panda/deal/2' }">《隐私权政策》</router-link>
         </div>
       </div>

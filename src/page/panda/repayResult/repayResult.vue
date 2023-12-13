@@ -13,7 +13,7 @@
           :src="sucImg"
           alt=""
         >
-        <p class="desc">还款申请已提交，<br />更多操作请前往熊猫优贷app</p>
+        <p class="desc">还款申请已提交，<br />更多操作请前往应急借钱放心贷app</p>
       </div>
     </div>
   </div>

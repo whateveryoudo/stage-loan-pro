@@ -19,7 +19,7 @@
         class="tc"
         style='font-size:15px;text-align:center;color:rgba(0, 0, 0, 0.9);font-family:"'
       >
-        最后更新时间：【2020】年【07】月【27】日
+        最后更新时间：【{{moment().year()}}】年【07】月【27】日
       </p>
       <p
         class="t2"
@@ -704,7 +704,7 @@
         class="tc"
         style='font-size:15px;text-align:center;color:rgba(0, 0, 0, 0.9);font-family:"'
       >
-        最后更新时间：2018年【06】月【21】日
+        最后更新时间：{{moment().year()}}年【06】月【21】日
       </p>
       <p style='font-size:15px;color:rgba(0, 0, 0, 0.9);font-family:"'>
         【有德贷款】非常重视用户个人信息和隐私权的保护，鉴于此，我们根据相关法律法规规定，制定本隐私权政策，帮助您了解我们将如何收集、使用并保护您的个人信息。本隐私权政策适用于我们提供的产品或服务，请您在使用我们的产品或服务前认真阅读并确认充分理解本隐私权政策，以便您做出您认为适当的选择。<span
@@ -1512,9 +1512,11 @@
   </div>
 </template>
 <script>
+import moment from 'moment'
 export default {
   data () {
     return {
+      moment,
       headTitle: '注册协议',
       dealType: 1 //1 - 注册协议  2 - 隐私协议
     }

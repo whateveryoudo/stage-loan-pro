@@ -95,7 +95,7 @@ export default {
     toNext() {
       // 这里不跳转界面，直接toast提示
       // this.$router.push("/micro/repayResult");
-      this.$toast('你已获得6000元额度，提现请前往微消费APP完成')
+      this.$toast('你已获得6000元额度，提现请前往借条借钱花APP完成')
     },
   },
 };
