@@ -9,10 +9,11 @@
   <div class="result_container">
     <div class="rating-page">
       <div class="result-wrapper">
-        <img :src="sucImg" alt="" />
+        <img :src="failImg" alt="" />
         <div class="desc">
-          <h2>获得额度：<strong>6000</strong></h2>
-          <h2 style="margin-top:10px;padding:0 10%">您好，我们已经收到你的贷款申请，请你留意后续工作人员的回访电话！</h2>
+          <!-- <h2>获得额度：<strong>6000</strong></h2> -->
+          <!-- <h2 style="margin-top:10px;padding:0 10%">您好，我们已经收到你的贷款申请，请你留意后续工作人员的回访电话！</h2> -->
+          <h2 style="margin-top:10px;padding:0 10%">您好，你的资质暂不符合我们的贷款申请条件。我们已经同步删除你的贷款申请资料！</h2>
           <!-- <mt-button type="primary" @click="toLoanPage">查看借款信息</mt-button> -->
         </div>
       </div>
@@ -24,7 +25,7 @@ export default {
   data() {
     return {
       headTitle: "还款结果",
-      sucImg: require("@/assets/icons/success.png"),
+      failImg: require("@/assets/icons/apply-fail.png"),
     };
   },
   computed: {},
