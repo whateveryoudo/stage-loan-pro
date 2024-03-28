@@ -13,13 +13,19 @@ import FooterMsg from "./common/FooterMsg.vue";
 import PdFooterMsg from "./common/PdFooterMsg.vue";
 // 微消费底部
 import MicroFooterMsg from "./common/MicroFooterMsg.vue";
+
+// 应急贷款
+import EmgFooterMsg from "./common/EmgFooterMsg.vue";
+// 安逸借钱
+
+import EasyFooterMsg from "./common/EasyFooterMsg.vue";
 // 国美全局组件
 import GmHeadTop from "./guomei/HeadTop.vue";
 // 马上金融全局组件
 import RnHeadTop from "./rightNow/HeadTop.vue";
 
 let isInstalledAll = false;
-const coms = [HeadTop, CellSelect, MicroFooterMsg, PdFooterMsg, SelectPicker, FooterMsg, GmHeadTop, RnHeadTop];
+const coms = [HeadTop, CellSelect, MicroFooterMsg, EmgFooterMsg, EasyFooterMsg, PdFooterMsg, SelectPicker, FooterMsg, GmHeadTop, RnHeadTop];
 const install = (Vue) => {
   if (isInstalledAll) {
     return;

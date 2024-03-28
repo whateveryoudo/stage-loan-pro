@@ -12,7 +12,7 @@ import config from '../config'
 import routerData from './routerData'
 
 Vue.use(Router)
-const whiteListPath = ['/panda/regist', '/panda/deal/1', '/panda/deal/2','/micro/regist', '/micro/deal/1', '/micro/deal/2', '/guoMei/deal/1', '/guoMei/deal/2', '/deal/1', '/deal/2', '/regist'] // TODO正则匹配
+// const whiteListPath = ['/regist', '/deal/1', '/deal/2'] // TODO正则匹配
 const router = new Router({
   routes: routerData
 })
@@ -20,7 +20,7 @@ const router = new Router({
 // 路由守卫
 router.beforeEach((to, from, next) => {
   document.title = to.meta ? to.meta.title : config.APP_NAME
-  if (whiteListPath.includes(to.path)) {
+  if (/\/(regist|deal\/\d+)/.test(to.path)) {
     next()
   } else {
     if (sessionStorage.getItem('token')) {

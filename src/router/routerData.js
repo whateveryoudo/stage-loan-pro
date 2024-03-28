@@ -5,6 +5,12 @@
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-09-10 22:18:47
  */
+import PandaRouters from './panda'
+import MicroRouters from './micro'
+import EmgRouters from './emergency'
+import EasyRouters from './easy'
+
+
 // 有德贷款
 const userLogin = () => import("../page/login/userLogin.vue");
 const userRegist = () => import("../page/login/userRegist.vue");
@@ -20,48 +26,8 @@ const confirmLoan = () => import("../page/confirmLoan/confirmLoan.vue");
 const repayDetail = () => import("../page/repayDetail/repayDetail.vue");
 const repayPlanList = () => import("../page/repayPlanList/repayPlanList.vue");
 const repayResult = () => import("../page/repayResult/repayResult.vue");
-//  熊猫优贷款
-const PdLayout = () => import("@/layout/PdLayout");
-const PdUserLogin = () => import("@/page/panda/login/userLogin.vue");
-const PdUserRegist = () => import("@/page/panda/login/userRegist.vue");
-const PdDeal = () => import("@/page/panda/deal/deal.vue");
-const PdConfirmLoan = () => import("@/page/panda/confirmLoan/confirmLoan.vue");
-const PdRepayDetail = () =>
-  import("@/page/panda/repayDetail/repayDetail.vue");
-
-const PdRepayPlanList = () =>
-  import("@/page/panda/repayPlanList/repayPlanList.vue");
-
-const PdLoanFlow = () => import("@/page/panda/loanFlow");
-const PdLoanInfo = () => import("@/page/panda/loanFlow/loanInfo.vue");
-const PdQualityVerify = () =>
-  import("@/page/panda/loanFlow/qualityVerify.vue");
-const PdBasicInfo = () => import("@/page/panda/loanFlow/basicInfo.vue");
-const PdCardInfo = () => import("@/page/panda/loanFlow/cardInfo.vue");
-
-const PdLoanResult = () => import("@/page/panda/loanResult");
 
 
-//  微消费贷款
-const McLayout = () => import("@/layout/McLayout");
-const McUserLogin = () => import("@/page/micro/login/userLogin.vue");
-const McUserRegist = () => import("@/page/micro/login/userRegist.vue");
-const McDeal = () => import("@/page/micro/deal/deal.vue");
-const McConfirmLoan = () => import("@/page/micro/confirmLoan/confirmLoan.vue");
-const McRepayDetail = () =>
-  import("@/page/micro/repayDetail/repayDetail.vue");
-
-const McRepayPlanList = () =>
-  import("@/page/micro/repayPlanList/repayPlanList.vue");
-
-const McLoanFlow = () => import("@/page/micro/loanFlow");
-const McLoanInfo = () => import("@/page/micro/loanFlow/loanInfo.vue");
-const McQualityVerify = () =>
-  import("@/page/micro/loanFlow/qualityVerify.vue");
-const McBasicInfo = () => import("@/page/micro/loanFlow/basicInfo.vue");
-const McCardInfo = () => import("@/page/micro/loanFlow/cardInfo.vue");
-
-const McLoanResult = () => import("@/page/micro/loanResult");
 
 
 // 国美易卡
@@ -209,192 +175,10 @@ export default [
       title: "用户注册",
     },
   },
-    // 熊猫优贷
-  {
-    path: "/panda",
-    component: PdLayout,
-    redirect: "/panda/login",
-    children: [
-      {
-        path: "login",
-        component: PdUserLogin,
-        meta: {
-          title: "用户登录",
-        },
-      },
-      {
-        path: "regist",
-        component: PdUserRegist,
-        meta: {
-          title: "用户注册",
-        },
-      },
-      {
-        path: "deal/:type",
-        component: PdDeal,
-        meta: {
-          title: "用户注册",
-        },
-      },
-      // 进件流程
-      {
-        path: "loanFlow",
-        component: PdLoanFlow,
-        redirect: "/panda/loanFlow/loanInfo",
-        children: [
-          {
-            path: "loanInfo",
-            component: PdLoanInfo,
-            meta: {
-              title: "申请借款",
-            },
-          },
-          {
-            path: "qualityVerify",
-            component: PdQualityVerify,
-            meta: {
-              title: "资格验证",
-            },
-          },
-          {
-            path: "basicInfo",
-            component: PdBasicInfo,
-            meta: {
-              title: "信息补充",
-            },
-          },
-          {
-            path: "cardInfo",
-            component: PdCardInfo,
-            meta: {
-              title: "绑定银行卡",
-            },
-          },
-        ],
-      },
-      {
-        path: "loanResult",
-        component: PdLoanResult,
-        meta: {
-          title: "申请状态",
-        },
-      },
-      {
-        path: "repayDetail",
-        component: PdRepayDetail,
-        meta: {
-          title: "借还详情",
-        },
-      },
-      {
-        path: "confirmLoan",
-        component: PdConfirmLoan,
-        meta: {
-          title: "还款",
-        },
-      },
-      {
-        path: "repayPlanList",
-        component: PdRepayPlanList,
-        meta: {
-          title: "还款计划",
-        },
-      },
-    ],
-  },
-    // 微消费
-    { 
-      path: "/micro",
-      component: McLayout,
-      redirect: "/micro/login",
-      children: [
-        {
-          path: "login",
-          component: McUserLogin,
-          meta: {
-            title: "用户登录",
-          },
-        },
-        {
-          path: "regist",
-          component: McUserRegist,
-          meta: {
-            title: "用户注册",
-          },
-        },
-        {
-          path: "deal/:type",
-          component: McDeal,
-          meta: {
-            title: "用户注册",
-          },
-        },
-        // 进件流程
-        {
-          path: "loanFlow",
-          component: McLoanFlow,
-          redirect: "/micro/loanFlow/loanInfo",
-          children: [
-            {
-              path: "loanInfo",
-              component: McLoanInfo,
-              meta: {
-                title: "申请借款",
-              },
-            },
-            {
-              path: "qualityVerify",
-              component: McQualityVerify,
-              meta: {
-                title: "资格验证",
-              },
-            },
-            {
-              path: "basicInfo",
-              component: McBasicInfo,
-              meta: {
-                title: "信息补充",
-              },
-            },
-            {
-              path: "cardInfo",
-              component: McCardInfo,
-              meta: {
-                title: "绑定银行卡",
-              },
-            },
-          ],
-        },
-        {
-          path: "loanResult",
-          component: McLoanResult,
-          meta: {
-            title: "申请状态",
-          },
-        },
-        {
-          path: "repayDetail",
-          component: McRepayDetail,
-          meta: {
-            title: "借还详情",
-          },
-        },
-        {
-          path: "confirmLoan",
-          component: McConfirmLoan,
-          meta: {
-            title: "还款",
-          },
-        },
-        {
-          path: "repayPlanList",
-          component: McRepayPlanList,
-          meta: {
-            title: "还款计划",
-          },
-        },
-      ],
-    },
+  ...PandaRouters,
+  ...MicroRouters,
+  ...EmgRouters,
+  ...EasyRouters,
   // 马上金融
   // {
   //   path: "/rightNow",
