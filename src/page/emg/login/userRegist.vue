@@ -84,7 +84,7 @@
       <div class="footer" style="margin-top: .4rem">
         <p>5000元贷款额度最低利息1元/天</p>
         <p>具体利息因个人征信不同略有浮动</p>
-        <p>总体贷款年化利率（单利）7.3%-24%</p>
+        <p>总体贷款年化利率（单利）7.3%-14%</p>
       </div>
       <emg-footer-msg style="margin-top: .2rem"></emg-footer-msg>
     </div>
